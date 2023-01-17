@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SisClinicaModel11" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="ReporteEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <EntitySet Name="Reporte" EntityType="SisClinicaModel11.Reporte" />
+    <EntitySet Name="ReporteDetalle" EntityType="SisClinicaModel11.ReporteDetalle" />
+    <AssociationSet Name="fkReporteDetalle_Reporte" Association="SisClinicaModel11.fkReporteDetalle_Reporte">
+      <End Role="Reporte" EntitySet="Reporte" />
+      <End Role="ReporteDetalle" EntitySet="ReporteDetalle" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Reporte">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Orden" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Codigo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Query" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Binary" Name="ConfXml1" MaxLength="Max" FixedLength="false" />
+    <Property Type="Binary" Name="ConfXml2" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="ReporteDetalle" Relationship="SisClinicaModel11.fkReporteDetalle_Reporte" FromRole="Reporte" ToRole="ReporteDetalle" />
+    <Property Type="Boolean" Name="Filtro" Nullable="false" />
+    <Property Type="String" Name="FormFiltro" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="MostrarPivot" Nullable="false" />
+    <Property Type="Boolean" Name="FiltroFecha" Nullable="false" />
+    <Property Type="String" Name="ColumnFecha" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ReporteDetalle">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="IDReporte" Nullable="false" />
+    <Property Type="Int32" Name="Numero" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FieldName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Caption" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TipoInterno" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Reporte" Relationship="SisClinicaModel11.fkReporteDetalle_Reporte" FromRole="ReporteDetalle" ToRole="Reporte" />
+  </EntityType>
+  <Association Name="fkReporteDetalle_Reporte">
+    <End Type="SisClinicaModel11.Reporte" Role="Reporte" Multiplicity="1" />
+    <End Type="SisClinicaModel11.ReporteDetalle" Role="ReporteDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reporte">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ReporteDetalle">
+        <PropertyRef Name="IDReporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

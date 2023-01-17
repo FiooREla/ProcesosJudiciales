@@ -1,0 +1,106 @@
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BIN\Sistema.UI.dll
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BIN\Sistema.UI.pdb
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.csprojAssemblyReference.cache
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FMensajeProximaA.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FMensaje.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Caudalosa.View.MUsuario.FLogin.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.FSistema.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FExpedienteInstancia.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FRListadosTrimestrales.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FRListadosExpedientes.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FClaseProceso.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FUsuarios.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FOpciones.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FActoProcesalE.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FExpediente.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FInstanciaJudicial.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FRAgendaJudicial.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FTipoProceso.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FSedeJudicial.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FTipoContenido.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FOrganoJudicial.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.RExpedienteDetalle.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Persona.FInicio.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Persona.FLocalidad.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Persona.FPersona.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Properties.Resources.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.csproj.GenerateResource.cache
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.dll.licenses
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.csproj.CoreCompileInputs.cache
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.csproj.CopyComplete
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.dll
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.pdb
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.csproj.AssemblyReference.cache
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FMensajeProximaA.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FMensaje.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Caudalosa.View.MUsuario.FLogin.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.FSistema.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FActoProcesalArbitralEdit.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FExpedienteArbitrales.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FExpedienteInstancia.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FRListadosExpedientesArb.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FRListadosTrimestrales.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FRListadosExpedientes.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FClaseProceso.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FSedeArbitral.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FUsuarios.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FOpciones.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FActoProcesalE.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FExpediente.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FInstanciaJudicial.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FRAgendaJudicial.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FTipoProceso.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FSedeJudicial.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FTipoContenido.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FOrganoJudicial.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.RExpedienteDetalleArbitral.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Judicial.RExpedienteDetalle.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Persona.FInicio.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Persona.FLocalidad.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Persona.FPersona.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.Properties.Resources.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.csproj.GenerateResource.cache
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.dll.licenses
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.csproj.CoreCompileInputs.cache
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BIN\Sistema.UI.dll
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BIN\Sistema.UI.pdb
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.csproj.CopyComplete
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.dll
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.UI\obj\Debug\Sistema.UI.pdb
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BIN\Sistema.UI.dll
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BIN\Sistema.UI.pdb
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FMensajeProximaA.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FMensaje.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Caudalosa.View.MUsuario.FLogin.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.FSistema.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FActoProcesalArbitralEdit.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FExpedienteArbitrales.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FExpedienteInstancia.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FRListadosExpedientesArb.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FRListadosTrimestrales.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FRListadosExpedientes.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FClaseProceso.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FSedeArbitral.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FUsuarios.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FOpciones.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FActoProcesalE.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FExpediente.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FInstanciaJudicial.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FRAgendaJudicial.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FTipoProceso.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FSedeJudicial.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FTipoContenido.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.FOrganoJudicial.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.RExpedienteDetalleArbitral.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Judicial.RExpedienteDetalle.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Persona.FInicio.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Persona.FLocalidad.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Persona.FPersona.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.Properties.Resources.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.csproj.GenerateResource.cache
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.dll.licenses
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.csproj.CoreCompileInputs.cache
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.csproj.CopyComplete
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.dll
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.pdb
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.UI\obj\Debug\Sistema.UI.csproj.AssemblyReference.cache

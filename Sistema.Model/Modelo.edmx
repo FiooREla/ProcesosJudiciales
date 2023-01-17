@@ -1,0 +1,2738 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SIGCLINEWModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ActoProcesal">
+          <Key>
+            <PropertyRef Name="IdActoPro" />
+          </Key>
+          <Property Name="IdActoPro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdExpediente" Type="int" />
+          <Property Name="IdExpedienteInstancia" Type="int" />
+          <Property Name="Codigo" Type="varchar(max)" />
+          <Property Name="Contenido" Type="varchar(max)" />
+          <Property Name="Contenido1" Type="xml" />
+          <Property Name="IdNEWID" Type="varchar" MaxLength="50" />
+          <Property Name="FechaRegistro" Type="datetime" />
+          <Property Name="FechaAvisoAlerta" Type="datetime" />
+          <Property Name="FechaRecepcion" Type="datetime" />
+          <Property Name="IdNotificacionTipoContenido" Type="int" />
+          <Property Name="EtapaProceso" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ActoProcesalContenido">
+          <Key>
+            <PropertyRef Name="IdActoProCont" />
+          </Key>
+          <Property Name="IdActoProCont" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdActoPro" Type="int" />
+          <Property Name="IdTipoContenido" Type="int" />
+        </EntityType>
+        <EntityType Name="ClaseProceso">
+          <Key>
+            <PropertyRef Name="IdClaseProceso" />
+          </Key>
+          <Property Name="IdClaseProceso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="Sigla" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Documento">
+          <Key>
+            <PropertyRef Name="IdDocumento" />
+          </Key>
+          <Property Name="IdDocumento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar(max)" />
+          <Property Name="Extension" Type="varchar" MaxLength="20" />
+          <Property Name="IdNEWID" Type="varchar" MaxLength="50" />
+          <Property Name="Documento" Type="image" />
+          <Property Name="RutaPc" Type="varchar" MaxLength="500" />
+          <Property Name="Tipo" Type="varchar" MaxLength="100" />
+          <Property Name="TipoInterno" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Expediente">
+          <Key>
+            <PropertyRef Name="IdExpediente" />
+          </Key>
+          <Property Name="IdExpediente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" />
+          <Property Name="IdTipoProceso" Type="int" />
+          <Property Name="FechaInicio" Type="datetime" />
+          <Property Name="IdDemandante" Type="int" />
+          <Property Name="IdDemandado" Type="int" />
+          <Property Name="IdClaseProceso" Type="int" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="Observacion" Type="varchar(max)" />
+          <Property Name="IdAbogado" Type="int" />
+          <Property Name="IdExpedientePadre" Type="int" />
+          <Property Name="IdNEWID" Type="varchar" MaxLength="50" />
+          <Property Name="FechaMovimiento" Type="datetime" />
+          <Property Name="NroInstancia" Type="int" />
+          <Property Name="MontoSoles" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="MontoDolares" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NDemandantes" Type="varchar(max)" />
+          <Property Name="NDemandados" Type="varchar(max)" />
+          <Property Name="IdNotificacionTipoContenido" Type="int" />
+          <Property Name="IdSupervisorInterno" Type="int" />
+          <Property Name="IdContrato" Type="int" />
+          <Property Name="IdAbogadoPatrocinante" Type="int" />
+          <Property Name="TipoNotificacion" Type="varchar" MaxLength="50" />
+          <Property Name="NroCasillaNotificacion" Type="varchar" MaxLength="50" />
+          <Property Name="TipoContingencia" Type="varchar" MaxLength="50" />
+          <Property Name="FechaProximaAudiencia" Type="datetime" />
+          <Property Name="HoraProximaAudiencia" Type="datetime" />
+          <Property Name="LugarProximaAudiencia" Type="varchar" MaxLength="5000" />
+          <Property Name="FechaVencimiento" Type="datetime" />
+          <Property Name="Archivado" Type="bit" />
+          <Property Name="MontoProbable" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="IdEstadoActual" Type="int" />
+          <Property Name="IdSupervisorINternoRela" Type="int" />
+          <Property Name="TipoNotificacionMail" Type="varchar" MaxLength="500" />
+          <Property Name="NroDiasNotificacion" Type="int" />
+          <Property Name="NroDiasNotificacionRest" Type="int" />
+          <Property Name="TipoExpediente" Type="varchar" MaxLength="50" />
+          <Property Name="TercerArbitro" Type="varchar" MaxLength="500" />
+          <Property Name="DescripcionContrato" Type="varchar" MaxLength="500" />
+          <Property Name="DescripcionEstadoActual" Type="varchar" MaxLength="500" />
+          <Property Name="DescripcionTipoArbitraje" Type="varchar" MaxLength="500" />
+          <Property Name="IdTipoContenidadMateria" Type="int" />
+          <Property Name="DescripcionTipoContenidadMateria" Type="int" />
+          <Property Name="CorreoParaNotificacion" Type="varchar" MaxLength="500" />
+          <Property Name="TipoDocumento" Type="varchar" MaxLength="500" />
+          <Property Name="Modalidad" Type="varchar" MaxLength="500" />
+          <Property Name="ubicacion" Type="varchar" MaxLength="500" />
+          <Property Name="FechaInstalacionTrib" Type="datetime" />
+          <Property Name="TipoMonedaControversia" Type="varchar" MaxLength="50" />
+          <Property Name="MontoControversia" Type="varchar" MaxLength="50" />
+          <Property Name="TipoMonedaReconvencion" Type="varchar" MaxLength="50" />
+          <Property Name="MontoReconvencion" Type="varchar" MaxLength="50" />
+          <Property Name="TipoMonedaLaudado" Type="varchar" MaxLength="50" />
+          <Property Name="MontoLaudado" Type="varchar" MaxLength="50" />
+          <Property Name="IdSedeArbitral" Type="int" />
+          <Property Name="LaudoFavor" Type="varchar" MaxLength="100" />
+          <Property Name="JustificacionContingencia" Type="varchar" MaxLength="500" />
+          <Property Name="SecretarioArbitral" Type="varchar" MaxLength="500" />
+          <Property Name="UsuarioCrea" Type="varchar" MaxLength="50" />
+          <Property Name="UsuarioModifica" Type="varchar" MaxLength="50" />
+          <Property Name="FechaInstalacionTribText" Type="varchar" MaxLength="500" />
+          <Property Name="FechaEdicion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ExpedienteAsesorLegal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdExpediente" Type="int" />
+          <Property Name="IdAsesorLegalEstudio" Type="int" />
+          <Property Name="IdAsesorLegalAbogado" Type="int" />
+          <Property Name="FechaInicio" Type="datetime" />
+          <Property Name="FechaFIn" Type="datetime" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="5000" />
+          <Property Name="NroOS_RA_C" Type="varchar" MaxLength="255" />
+          <Property Name="NroOS_RA_C_Descripcion" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ExpedienteInstancia">
+          <Key>
+            <PropertyRef Name="IdExpedienteInstancia" />
+          </Key>
+          <Property Name="IdExpedienteInstancia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdExpediente" Type="int" />
+          <Property Name="IdInstancia" Type="int" />
+          <Property Name="IdOrgano" Type="int" />
+          <Property Name="FechaInicio" Type="datetime" />
+          <Property Name="FechaFinal" Type="datetime" />
+          <Property Name="Observacion" Type="varchar(max)" />
+          <Property Name="IdNEWID" Type="varchar" MaxLength="50" />
+          <Property Name="IdPersonaContrato" Type="int" />
+          <Property Name="Automisorio" Type="varchar(max)" />
+          <Property Name="TasacionInstancia" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Apelacion" Type="varchar(max)" />
+          <Property Name="Comentarios" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="InstanciaJudicial">
+          <Key>
+            <PropertyRef Name="IdInstancia" />
+          </Key>
+          <Property Name="IdInstancia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="Sigla" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Localidad">
+          <Key>
+            <PropertyRef Name="IdLocalidad" />
+          </Key>
+          <Property Name="IdLocalidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="IdLocalidadPadre" Type="int" />
+        </EntityType>
+        <EntityType Name="OrganoExpedientePersona">
+          <Key>
+            <PropertyRef Name="IdOrganoPersona" />
+          </Key>
+          <Property Name="IdOrganoPersona" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdOrgano" Type="int" />
+          <Property Name="IdJuez" Type="int" />
+          <Property Name="IdOrganoSecretario" Type="int" />
+          <Property Name="IdSecretario" Type="int" />
+          <Property Name="IdExpediente" Type="int" />
+          <Property Name="IdDemandante" Type="int" />
+          <Property Name="IdExpedienteDemandado" Type="int" />
+          <Property Name="IdDemandado" Type="int" />
+        </EntityType>
+        <EntityType Name="OrganoJudicial">
+          <Key>
+            <PropertyRef Name="IdOrgano" />
+          </Key>
+          <Property Name="IdOrgano" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdSede" Type="int" />
+          <Property Name="Tipo" Type="varchar(max)" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="Direccion" Type="varchar(max)" />
+          <Property Name="IdLocalidad" Type="int" />
+          <Property Name="IdJuez" Type="int" />
+          <Property Name="IdSecretario" Type="int" />
+        </EntityType>
+        <EntityType Name="PersonaEmpresa">
+          <Key>
+            <PropertyRef Name="IdPersonaEmpresa" />
+          </Key>
+          <Property Name="IdPersonaEmpresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar(max)" />
+          <Property Name="Documento" Type="varchar" MaxLength="11" />
+          <Property Name="Direccion" Type="varchar(max)" />
+          <Property Name="IdLocalidad" Type="int" />
+          <Property Name="Telefono" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="TipoInterno" Type="varchar" MaxLength="50" />
+          <Property Name="TipoFiltro" Type="varchar" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="5000" />
+          <Property Name="FechaIncio" Type="datetime" />
+          <Property Name="FechaFin" Type="datetime" />
+          <Property Name="RepresentanteLegal" Type="varchar" MaxLength="500" />
+          <Property Name="RepresentanteLegalNombre" Type="varchar" MaxLength="500" />
+          <Property Name="RepresentanteLegalDNI" Type="varchar" MaxLength="8" />
+        </EntityType>
+        <EntityType Name="SedeJudicial">
+          <Key>
+            <PropertyRef Name="IdSede" />
+          </Key>
+          <Property Name="IdSede" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="Direccion" Type="varchar(max)" />
+          <Property Name="IdLocalidad" Type="int" />
+          <Property Name="Telefono" Type="varchar" MaxLength="50" />
+          <Property Name="TipoInterno" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TipoContenido">
+          <Key>
+            <PropertyRef Name="IdTipoContenido" />
+          </Key>
+          <Property Name="IdTipoContenido" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="Abreviado" Type="varchar" MaxLength="50" />
+          <Property Name="Titulo" Type="varchar" MaxLength="500" />
+          <Property Name="NroDias" Type="int" />
+          <Property Name="TipoInterno" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TipoProceso">
+          <Key>
+            <PropertyRef Name="IdTipoProceso" />
+          </Key>
+          <Property Name="IdTipoProceso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="Sigla" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Derecho">
+          <Key>
+            <PropertyRef Name="IdDerecho" />
+          </Key>
+          <Property Name="IdDerecho" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="IdOpcion" Type="int" />
+          <Property Name="Derecho" Type="bit" />
+        </EntityType>
+        <EntityType Name="Opcion">
+          <Key>
+            <PropertyRef Name="IdOpcion" />
+          </Key>
+          <Property Name="IdOpcion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar(max)" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="NroGrupo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="20" />
+          <Property Name="Nombre" Type="varchar(max)" />
+          <Property Name="Clave" Type="varchar" MaxLength="20" />
+          <Property Name="Detalle" Type="varchar(max)" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SIG-PJ.Judicial.viewEstructuraTotales' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="viewEstructuraTotales">
+          <Key>
+            <PropertyRef Name="IDSYS" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDSYS" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="Total" Type="int" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SIG-PJ.Judicial.viewExpediente' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="viewExpediente">
+          <Key>
+            <PropertyRef Name="IdExpediente" />
+          </Key>
+          <Property Name="IdExpediente" Type="int" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" />
+          <Property Name="IdTipoProceso" Type="int" />
+          <Property Name="DescripcionTipoProceso" Type="varchar(max)" />
+          <Property Name="FechaInicio" Type="datetime" />
+          <Property Name="IdDemandante" Type="int" />
+          <Property Name="NombreDemandante" Type="varchar(max)" />
+          <Property Name="NroDocumentoDemandante" Type="varchar" MaxLength="11" />
+          <Property Name="IdDemandado" Type="int" />
+          <Property Name="NombreDemandado" Type="varchar(max)" />
+          <Property Name="DocumentoDemandado" Type="varchar" MaxLength="11" />
+          <Property Name="IdClaseProceso" Type="int" />
+          <Property Name="DescripcionClaseProceso" Type="varchar(max)" />
+          <Property Name="SiglaClaseProceso" Type="varchar" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="Observacion" Type="varchar(max)" />
+          <Property Name="IdAbogado" Type="int" />
+          <Property Name="NombreAbogado" Type="varchar(max)" />
+          <Property Name="DocumentoAbogado" Type="varchar" MaxLength="11" />
+          <Property Name="IdExpedientePadre" Type="int" />
+          <Property Name="IdNEWID" Type="varchar" MaxLength="50" />
+          <Property Name="FechaMovimiento" Type="datetime" />
+          <Property Name="NroInstancia" Type="int" />
+          <Property Name="MontoSoles" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="MontoDolares" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NDemandantes" Type="varchar(max)" />
+          <Property Name="NDemandados" Type="varchar(max)" />
+          <Property Name="ArchivadoSIoNO" Type="varchar" MaxLength="2" />
+          <Property Name="Archivado" Type="bit" />
+          <Property Name="TipoExpediente" Type="varchar" MaxLength="50" />
+          <Property Name="MateriaArbitral" Type="varchar(max)" />
+          <Property Name="Modalidad" Type="varchar" MaxLength="500" />
+          <Property Name="SedeArbitral" Type="varchar(max)" />
+          <Property Name="DescripcionTipoArbitraje" Type="varchar" MaxLength="500" />
+          <Property Name="TipoMonedaControversia" Type="varchar" MaxLength="50" />
+          <Property Name="NombreAsesorLegalPatrocinador" Type="varchar(max)" />
+          <Property Name="UsuarioCrea" Type="varchar" MaxLength="50" />
+          <Property Name="UsuarioModifica" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SIG-PJ.Judicial.viewExpedienteInstancia' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="viewExpedienteInstancia">
+          <Key>
+            <PropertyRef Name="IdExpedienteInstancia" />
+            <PropertyRef Name="IdSede" />
+          </Key>
+          <Property Name="IdExpedienteInstancia" Type="int" Nullable="false" />
+          <Property Name="IdExpediente" Type="int" />
+          <Property Name="IdInstancia" Type="int" />
+          <Property Name="DescripcionInstancia" Type="varchar(max)" />
+          <Property Name="SiglaInstancia" Type="varchar" MaxLength="20" />
+          <Property Name="FechaInicio" Type="datetime" />
+          <Property Name="FechaFinal" Type="datetime" />
+          <Property Name="Observacion" Type="varchar(max)" />
+          <Property Name="IdOrgano" Type="int" />
+          <Property Name="TipoOrganoJ" Type="varchar(max)" />
+          <Property Name="DescripcionOrganoJ" Type="varchar(max)" />
+          <Property Name="IdSede" Type="int" Nullable="false" />
+          <Property Name="DescripcionSedeJudicial" Type="varchar(max)" />
+          <Property Name="Automisorio" Type="varchar(max)" />
+          <Property Name="TasacionInstancia" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Apelacion" Type="varchar(max)" />
+          <Property Name="Comentarios" Type="varchar(max)" />
+          <Property Name="NroContrato" Type="varchar" MaxLength="11" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SIG-PJ.Judicial.viewExpedienteReport' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="viewExpedienteReport">
+          <Key>
+            <PropertyRef Name="IdExpediente" />
+          </Key>
+          <Property Name="IdExpediente" Type="int" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" />
+          <Property Name="IdTipoProceso" Type="int" />
+          <Property Name="DescripcionTipoProceso" Type="varchar(max)" />
+          <Property Name="FechaInicio" Type="datetime" />
+          <Property Name="IdDemandante" Type="int" />
+          <Property Name="NombreDemandante" Type="varchar(max)" />
+          <Property Name="NroDocumentoDemandante" Type="varchar" MaxLength="11" />
+          <Property Name="IdDemandado" Type="int" />
+          <Property Name="NombreDemandado" Type="varchar(max)" />
+          <Property Name="DocumentoDemandado" Type="varchar" MaxLength="11" />
+          <Property Name="IdClaseProceso" Type="int" />
+          <Property Name="DescripcionClaseProceso" Type="varchar(max)" />
+          <Property Name="SiglaClaseProceso" Type="varchar" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="Observacion" Type="varchar(max)" />
+          <Property Name="IdAbogado" Type="int" />
+          <Property Name="NombreAbogado" Type="varchar(max)" />
+          <Property Name="DocumentoAbogado" Type="varchar" MaxLength="11" />
+          <Property Name="IdExpedientePadre" Type="int" />
+          <Property Name="IdNEWID" Type="varchar" MaxLength="50" />
+          <Property Name="FechaMovimiento" Type="datetime" />
+          <Property Name="NroInstancia" Type="int" />
+          <Property Name="MontoSoles" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="MontoDolares" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="IdExpedienteInstancia" Type="int" />
+          <Property Name="IdInstancia" Type="int" />
+          <Property Name="DescripcionInstancia" Type="varchar(max)" />
+          <Property Name="IdActoPro" Type="int" />
+          <Property Name="CodigoActoProcesal" Type="varchar(max)" />
+          <Property Name="ContenidoActoProcesal" Type="varchar(max)" />
+          <Property Name="FechaRegistroActoPro" Type="datetime" />
+          <Property Name="FechaAvisoAlertaActoPro" Type="datetime" />
+          <Property Name="NDemandantes" Type="varchar(max)" />
+          <Property Name="NDemandados" Type="varchar(max)" />
+          <Property Name="TipoExpediente" Type="varchar" MaxLength="50" />
+          <Property Name="MateriaArbitral" Type="varchar(max)" />
+          <Property Name="Modalidad" Type="varchar" MaxLength="500" />
+          <Property Name="SedeArbitral" Type="varchar(max)" />
+          <Property Name="DescripcionTipoArbitraje" Type="varchar" MaxLength="500" />
+          <Property Name="TipoMonedaControversia" Type="varchar" MaxLength="50" />
+          <Property Name="NombreAsesorLegalPatrocinador" Type="varchar(max)" />
+          <Property Name="TipoDocumento" Type="varchar" MaxLength="500" />
+          <Property Name="SupervisorInterno" Type="varchar(max)" />
+          <Property Name="EstadoProceso" Type="varchar" MaxLength="500" />
+          <Property Name="ubicacion" Type="varchar" MaxLength="500" />
+          <Property Name="CorreoParaNotificacion" Type="varchar" MaxLength="500" />
+          <Property Name="ContratoOrigen" Type="varchar" MaxLength="500" />
+          <Property Name="FechaInstalacionTribText" Type="varchar" MaxLength="500" />
+          <Property Name="CentroArbitral" Type="varchar" MaxLength="50" />
+          <Property Name="SecretarioArbitral" Type="varchar" MaxLength="500" />
+          <Property Name="ArbitroUnicoPresidente" Type="varchar(max)" />
+          <Property Name="ArbitroParteEntidad" Type="varchar(max)" />
+          <Property Name="ArbitroParteDemandante" Type="varchar" MaxLength="500" />
+          <Property Name="LaudoFavor" Type="varchar" MaxLength="100" />
+          <Property Name="Contingencia" Type="varchar" MaxLength="50" />
+          <Property Name="JustificacionContingencia" Type="varchar" MaxLength="500" />
+          <Property Name="MontoControversia" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TipoMonedaReconvencion" Type="varchar" MaxLength="50" />
+          <Property Name="MontoReconvencion" Type="varchar" MaxLength="50" />
+          <Property Name="TipoMonedaLaudado" Type="varchar" MaxLength="50" />
+          <Property Name="MontoLaudado" Type="varchar" MaxLength="50" />
+          <Property Name="FechaEdicion" Type="datetime" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SIG-PJ.Judicial.VLocalidad' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VLocalidad">
+          <Key>
+            <PropertyRef Name="IdLocalidad" />
+          </Key>
+          <Property Name="IdLocalidad" Type="int" Nullable="false" />
+          <Property Name="DescripcionPro" Type="varchar(max)" />
+          <Property Name="DescripcionDis" Type="varchar(max)" />
+          <Property Name="DescripcionLugar" Type="varchar(max)" />
+        </EntityType>
+        <Association Name="FK_ActoProcesal_Expediente">
+          <End Role="Expediente" Type="Self.Expediente" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ActoProcesal" Type="Self.ActoProcesal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expediente">
+              <PropertyRef Name="IdExpediente" />
+            </Principal>
+            <Dependent Role="ActoProcesal">
+              <PropertyRef Name="IdExpediente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ActoProcesal_TipoContenidoNotificacion">
+          <End Role="TipoContenido" Type="Self.TipoContenido" Multiplicity="0..1" />
+          <End Role="ActoProcesal" Type="Self.ActoProcesal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoContenido">
+              <PropertyRef Name="IdTipoContenido" />
+            </Principal>
+            <Dependent Role="ActoProcesal">
+              <PropertyRef Name="IdNotificacionTipoContenido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ActoProcesalContenido_ActoProcesal">
+          <End Role="ActoProcesal" Type="Self.ActoProcesal" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ActoProcesalContenido" Type="Self.ActoProcesalContenido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ActoProcesal">
+              <PropertyRef Name="IdActoPro" />
+            </Principal>
+            <Dependent Role="ActoProcesalContenido">
+              <PropertyRef Name="IdActoPro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ActoProcesalContenido_TipoContenido">
+          <End Role="TipoContenido" Type="Self.TipoContenido" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ActoProcesalContenido" Type="Self.ActoProcesalContenido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoContenido">
+              <PropertyRef Name="IdTipoContenido" />
+            </Principal>
+            <Dependent Role="ActoProcesalContenido">
+              <PropertyRef Name="IdTipoContenido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Derecho_Opcion">
+          <End Role="Opcion" Type="Self.Opcion" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Derecho" Type="Self.Derecho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Opcion">
+              <PropertyRef Name="IdOpcion" />
+            </Principal>
+            <Dependent Role="Derecho">
+              <PropertyRef Name="IdOpcion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Derecho_Usuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Derecho" Type="Self.Derecho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Derecho">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Expediente_ClaseProceso">
+          <End Role="ClaseProceso" Type="Self.ClaseProceso" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Expediente" Type="Self.Expediente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClaseProceso">
+              <PropertyRef Name="IdClaseProceso" />
+            </Principal>
+            <Dependent Role="Expediente">
+              <PropertyRef Name="IdClaseProceso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Expediente_Expediente">
+          <End Role="Expediente" Type="Self.Expediente" Multiplicity="0..1" />
+          <End Role="Expediente1" Type="Self.Expediente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expediente">
+              <PropertyRef Name="IdExpediente" />
+            </Principal>
+            <Dependent Role="Expediente1">
+              <PropertyRef Name="IdExpedientePadre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Expediente_SupervisorInternoPersonaEmpresa">
+          <End Role="PersonaEmpresa" Type="Self.PersonaEmpresa" Multiplicity="0..1" />
+          <End Role="Expediente" Type="Self.Expediente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="Expediente">
+              <PropertyRef Name="IdSupervisorINternoRela" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Expediente_TEstadoActual">
+          <End Role="TipoContenido" Type="Self.TipoContenido" Multiplicity="0..1" />
+          <End Role="Expediente" Type="Self.Expediente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoContenido">
+              <PropertyRef Name="IdTipoContenido" />
+            </Principal>
+            <Dependent Role="Expediente">
+              <PropertyRef Name="IdEstadoActual" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Expediente_TipoContenidoNotificacion">
+          <End Role="TipoContenido" Type="Self.TipoContenido" Multiplicity="0..1" />
+          <End Role="Expediente" Type="Self.Expediente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoContenido">
+              <PropertyRef Name="IdTipoContenido" />
+            </Principal>
+            <Dependent Role="Expediente">
+              <PropertyRef Name="IdNotificacionTipoContenido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Expediente_TipoProceso">
+          <End Role="TipoProceso" Type="Self.TipoProceso" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Expediente" Type="Self.Expediente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoProceso">
+              <PropertyRef Name="IdTipoProceso" />
+            </Principal>
+            <Dependent Role="Expediente">
+              <PropertyRef Name="IdTipoProceso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ExpedienteAsesorLegal_AbogadoEngargado_PersonaEmpresa">
+          <End Role="PersonaEmpresa" Type="Self.PersonaEmpresa" Multiplicity="0..1" />
+          <End Role="ExpedienteAsesorLegal" Type="Self.ExpedienteAsesorLegal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="ExpedienteAsesorLegal">
+              <PropertyRef Name="IdAsesorLegalAbogado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ExpedienteAsesorLegal_EstudioAbogado_PersonaEmpresa">
+          <End Role="PersonaEmpresa" Type="Self.PersonaEmpresa" Multiplicity="0..1" />
+          <End Role="ExpedienteAsesorLegal" Type="Self.ExpedienteAsesorLegal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="ExpedienteAsesorLegal">
+              <PropertyRef Name="IdAsesorLegalEstudio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ExpedienteAsesorLegal_Expediente">
+          <End Role="Expediente" Type="Self.Expediente" Multiplicity="0..1" />
+          <End Role="ExpedienteAsesorLegal" Type="Self.ExpedienteAsesorLegal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expediente">
+              <PropertyRef Name="IdExpediente" />
+            </Principal>
+            <Dependent Role="ExpedienteAsesorLegal">
+              <PropertyRef Name="IdExpediente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExpedienteInstancia_Expediente">
+          <End Role="Expediente" Type="Self.Expediente" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ExpedienteInstancia" Type="Self.ExpedienteInstancia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expediente">
+              <PropertyRef Name="IdExpediente" />
+            </Principal>
+            <Dependent Role="ExpedienteInstancia">
+              <PropertyRef Name="IdExpediente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExpedienteInstancia_InstanciaJudicial">
+          <End Role="InstanciaJudicial" Type="Self.InstanciaJudicial" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ExpedienteInstancia" Type="Self.ExpedienteInstancia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InstanciaJudicial">
+              <PropertyRef Name="IdInstancia" />
+            </Principal>
+            <Dependent Role="ExpedienteInstancia">
+              <PropertyRef Name="IdInstancia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExpedienteInstancia_OrganoJudicial">
+          <End Role="OrganoJudicial" Type="Self.OrganoJudicial" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ExpedienteInstancia" Type="Self.ExpedienteInstancia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganoJudicial">
+              <PropertyRef Name="IdOrgano" />
+            </Principal>
+            <Dependent Role="ExpedienteInstancia">
+              <PropertyRef Name="IdOrgano" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ExpedienteIntancia_PersonaEmpresaContrato">
+          <End Role="PersonaEmpresa" Type="Self.PersonaEmpresa" Multiplicity="0..1" />
+          <End Role="ExpedienteInstancia" Type="Self.ExpedienteInstancia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="ExpedienteInstancia">
+              <PropertyRef Name="IdPersonaContrato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Localidad_Localidad">
+          <End Role="Localidad" Type="Self.Localidad" Multiplicity="0..1" />
+          <End Role="Localidad1" Type="Self.Localidad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IdLocalidad" />
+            </Principal>
+            <Dependent Role="Localidad1">
+              <PropertyRef Name="IdLocalidadPadre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_Expediente">
+          <End Role="Expediente" Type="Self.Expediente" Multiplicity="0..1" />
+          <End Role="OrganoExpedientePersona" Type="Self.OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expediente">
+              <PropertyRef Name="IdExpediente" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdExpediente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_Expediente1">
+          <End Role="Expediente" Type="Self.Expediente" Multiplicity="0..1" />
+          <End Role="OrganoExpedientePersona" Type="Self.OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expediente">
+              <PropertyRef Name="IdExpediente" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdExpedienteDemandado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_OrganoJudicial">
+          <End Role="OrganoJudicial" Type="Self.OrganoJudicial" Multiplicity="0..1" />
+          <End Role="OrganoExpedientePersona" Type="Self.OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganoJudicial">
+              <PropertyRef Name="IdOrgano" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdOrgano" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_OrganoJudicial1">
+          <End Role="OrganoJudicial" Type="Self.OrganoJudicial" Multiplicity="0..1" />
+          <End Role="OrganoExpedientePersona" Type="Self.OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganoJudicial">
+              <PropertyRef Name="IdOrgano" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdOrganoSecretario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_PersonaEmpresa">
+          <End Role="PersonaEmpresa" Type="Self.PersonaEmpresa" Multiplicity="0..1" />
+          <End Role="OrganoExpedientePersona" Type="Self.OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdJuez" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_PersonaEmpresa1">
+          <End Role="PersonaEmpresa" Type="Self.PersonaEmpresa" Multiplicity="0..1" />
+          <End Role="OrganoExpedientePersona" Type="Self.OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdSecretario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_PersonaEmpresa2">
+          <End Role="PersonaEmpresa" Type="Self.PersonaEmpresa" Multiplicity="0..1" />
+          <End Role="OrganoExpedientePersona" Type="Self.OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdDemandante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_PersonaEmpresa3">
+          <End Role="PersonaEmpresa" Type="Self.PersonaEmpresa" Multiplicity="0..1" />
+          <End Role="OrganoExpedientePersona" Type="Self.OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdDemandado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoJudicial_SedeJudicial">
+          <End Role="SedeJudicial" Type="Self.SedeJudicial" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="OrganoJudicial" Type="Self.OrganoJudicial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SedeJudicial">
+              <PropertyRef Name="IdSede" />
+            </Principal>
+            <Dependent Role="OrganoJudicial">
+              <PropertyRef Name="IdSede" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonaEmpresa_Localidad">
+          <End Role="Localidad" Type="Self.Localidad" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PersonaEmpresa" Type="Self.PersonaEmpresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IdLocalidad" />
+            </Principal>
+            <Dependent Role="PersonaEmpresa">
+              <PropertyRef Name="IdLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonaEmpresa_PersonaEmpresa">
+          <End Role="PersonaEmpresa" Type="Self.PersonaEmpresa" Multiplicity="0..1" />
+          <End Role="PersonaEmpresa1" Type="Self.PersonaEmpresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="PersonaEmpresa1">
+              <PropertyRef Name="IdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SedeJudicial_Localidad">
+          <End Role="Localidad" Type="Self.Localidad" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SedeJudicial" Type="Self.SedeJudicial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IdLocalidad" />
+            </Principal>
+            <Dependent Role="SedeJudicial">
+              <PropertyRef Name="IdLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="uspExpedientesJudicialesClaseProcesoTotales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Judicial">
+          <Parameter Name="Inicio" Type="datetime" Mode="In" />
+          <Parameter Name="Fin" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="uspExpedientesJudicialesSedeJudicialTotales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Judicial">
+          <Parameter Name="Inicio" Type="datetime" Mode="In" />
+          <Parameter Name="Fin" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="uspExpedientesJudicialesTotales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Judicial">
+          <Parameter Name="Inicio" Type="datetime" Mode="In" />
+          <Parameter Name="Fin" Type="datetime" Mode="In" />
+        </Function>
+        <EntityContainer Name="SIGCLINEWModelStoreContainer">
+          <EntitySet Name="ActoProcesal" EntityType="Self.ActoProcesal" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="ActoProcesalContenido" EntityType="Self.ActoProcesalContenido" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="ClaseProceso" EntityType="Self.ClaseProceso" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="Documento" EntityType="Self.Documento" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="Expediente" EntityType="Self.Expediente" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="ExpedienteAsesorLegal" EntityType="Self.ExpedienteAsesorLegal" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="ExpedienteInstancia" EntityType="Self.ExpedienteInstancia" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="InstanciaJudicial" EntityType="Self.InstanciaJudicial" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="Localidad" EntityType="Self.Localidad" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="OrganoExpedientePersona" EntityType="Self.OrganoExpedientePersona" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="OrganoJudicial" EntityType="Self.OrganoJudicial" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="PersonaEmpresa" EntityType="Self.PersonaEmpresa" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="SedeJudicial" EntityType="Self.SedeJudicial" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="TipoContenido" EntityType="Self.TipoContenido" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="TipoProceso" EntityType="Self.TipoProceso" Schema="Judicial" store:Type="Tables" />
+          <EntitySet Name="Derecho" EntityType="Self.Derecho" Schema="Seguridad" store:Type="Tables" />
+          <EntitySet Name="Opcion" EntityType="Self.Opcion" Schema="Seguridad" store:Type="Tables" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="Seguridad" store:Type="Tables" />
+          <EntitySet Name="viewEstructuraTotales" EntityType="Self.viewEstructuraTotales" store:Type="Views" store:Schema="Judicial">
+            <DefiningQuery>SELECT 
+[viewEstructuraTotales].[IDSYS] AS [IDSYS], 
+[viewEstructuraTotales].[ID] AS [ID], 
+[viewEstructuraTotales].[Descripcion] AS [Descripcion], 
+[viewEstructuraTotales].[Total] AS [Total]
+FROM [Judicial].[viewEstructuraTotales] AS [viewEstructuraTotales]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="viewExpediente" EntityType="Self.viewExpediente" store:Type="Views" store:Schema="Judicial">
+            <DefiningQuery>SELECT 
+[viewExpediente].[IdExpediente] AS [IdExpediente], 
+[viewExpediente].[Codigo] AS [Codigo], 
+[viewExpediente].[IdTipoProceso] AS [IdTipoProceso], 
+[viewExpediente].[DescripcionTipoProceso] AS [DescripcionTipoProceso], 
+[viewExpediente].[FechaInicio] AS [FechaInicio], 
+[viewExpediente].[IdDemandante] AS [IdDemandante], 
+[viewExpediente].[NombreDemandante] AS [NombreDemandante], 
+[viewExpediente].[NroDocumentoDemandante] AS [NroDocumentoDemandante], 
+[viewExpediente].[IdDemandado] AS [IdDemandado], 
+[viewExpediente].[NombreDemandado] AS [NombreDemandado], 
+[viewExpediente].[DocumentoDemandado] AS [DocumentoDemandado], 
+[viewExpediente].[IdClaseProceso] AS [IdClaseProceso], 
+[viewExpediente].[DescripcionClaseProceso] AS [DescripcionClaseProceso], 
+[viewExpediente].[SiglaClaseProceso] AS [SiglaClaseProceso], 
+[viewExpediente].[Descripcion] AS [Descripcion], 
+[viewExpediente].[Observacion] AS [Observacion], 
+[viewExpediente].[IdAbogado] AS [IdAbogado], 
+[viewExpediente].[NombreAbogado] AS [NombreAbogado], 
+[viewExpediente].[DocumentoAbogado] AS [DocumentoAbogado], 
+[viewExpediente].[IdExpedientePadre] AS [IdExpedientePadre], 
+[viewExpediente].[IdNEWID] AS [IdNEWID], 
+[viewExpediente].[FechaMovimiento] AS [FechaMovimiento], 
+[viewExpediente].[NroInstancia] AS [NroInstancia], 
+[viewExpediente].[MontoSoles] AS [MontoSoles], 
+[viewExpediente].[MontoDolares] AS [MontoDolares], 
+[viewExpediente].[NDemandantes] AS [NDemandantes], 
+[viewExpediente].[NDemandados] AS [NDemandados], 
+[viewExpediente].[ArchivadoSIoNO] AS [ArchivadoSIoNO], 
+[viewExpediente].[Archivado] AS [Archivado], 
+[viewExpediente].[TipoExpediente] AS [TipoExpediente], 
+[viewExpediente].[MateriaArbitral] AS [MateriaArbitral], 
+[viewExpediente].[Modalidad] AS [Modalidad], 
+[viewExpediente].[SedeArbitral] AS [SedeArbitral], 
+[viewExpediente].[DescripcionTipoArbitraje] AS [DescripcionTipoArbitraje], 
+[viewExpediente].[TipoMonedaControversia] AS [TipoMonedaControversia], 
+[viewExpediente].[NombreAsesorLegalPatrocinador] AS [NombreAsesorLegalPatrocinador], 
+[viewExpediente].[UsuarioCrea] AS [UsuarioCrea], 
+[viewExpediente].[UsuarioModifica] AS [UsuarioModifica]
+FROM [Judicial].[viewExpediente] AS [viewExpediente]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="viewExpedienteInstancia" EntityType="Self.viewExpedienteInstancia" store:Type="Views" store:Schema="Judicial">
+            <DefiningQuery>SELECT 
+[viewExpedienteInstancia].[IdExpedienteInstancia] AS [IdExpedienteInstancia], 
+[viewExpedienteInstancia].[IdExpediente] AS [IdExpediente], 
+[viewExpedienteInstancia].[IdInstancia] AS [IdInstancia], 
+[viewExpedienteInstancia].[DescripcionInstancia] AS [DescripcionInstancia], 
+[viewExpedienteInstancia].[SiglaInstancia] AS [SiglaInstancia], 
+[viewExpedienteInstancia].[FechaInicio] AS [FechaInicio], 
+[viewExpedienteInstancia].[FechaFinal] AS [FechaFinal], 
+[viewExpedienteInstancia].[Observacion] AS [Observacion], 
+[viewExpedienteInstancia].[IdOrgano] AS [IdOrgano], 
+[viewExpedienteInstancia].[TipoOrganoJ] AS [TipoOrganoJ], 
+[viewExpedienteInstancia].[DescripcionOrganoJ] AS [DescripcionOrganoJ], 
+[viewExpedienteInstancia].[IdSede] AS [IdSede], 
+[viewExpedienteInstancia].[DescripcionSedeJudicial] AS [DescripcionSedeJudicial], 
+[viewExpedienteInstancia].[Automisorio] AS [Automisorio], 
+[viewExpedienteInstancia].[TasacionInstancia] AS [TasacionInstancia], 
+[viewExpedienteInstancia].[Apelacion] AS [Apelacion], 
+[viewExpedienteInstancia].[Comentarios] AS [Comentarios], 
+[viewExpedienteInstancia].[NroContrato] AS [NroContrato]
+FROM [Judicial].[viewExpedienteInstancia] AS [viewExpedienteInstancia]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="viewExpedienteReport" EntityType="Self.viewExpedienteReport" store:Type="Views" store:Schema="Judicial">
+            <DefiningQuery>SELECT 
+[viewExpedienteReport].[IdExpediente] AS [IdExpediente], 
+[viewExpedienteReport].[Codigo] AS [Codigo], 
+[viewExpedienteReport].[IdTipoProceso] AS [IdTipoProceso], 
+[viewExpedienteReport].[DescripcionTipoProceso] AS [DescripcionTipoProceso], 
+[viewExpedienteReport].[FechaInicio] AS [FechaInicio], 
+[viewExpedienteReport].[IdDemandante] AS [IdDemandante], 
+[viewExpedienteReport].[NombreDemandante] AS [NombreDemandante], 
+[viewExpedienteReport].[NroDocumentoDemandante] AS [NroDocumentoDemandante], 
+[viewExpedienteReport].[IdDemandado] AS [IdDemandado], 
+[viewExpedienteReport].[NombreDemandado] AS [NombreDemandado], 
+[viewExpedienteReport].[DocumentoDemandado] AS [DocumentoDemandado], 
+[viewExpedienteReport].[IdClaseProceso] AS [IdClaseProceso], 
+[viewExpedienteReport].[DescripcionClaseProceso] AS [DescripcionClaseProceso], 
+[viewExpedienteReport].[SiglaClaseProceso] AS [SiglaClaseProceso], 
+[viewExpedienteReport].[Descripcion] AS [Descripcion], 
+[viewExpedienteReport].[Observacion] AS [Observacion], 
+[viewExpedienteReport].[IdAbogado] AS [IdAbogado], 
+[viewExpedienteReport].[NombreAbogado] AS [NombreAbogado], 
+[viewExpedienteReport].[DocumentoAbogado] AS [DocumentoAbogado], 
+[viewExpedienteReport].[IdExpedientePadre] AS [IdExpedientePadre], 
+[viewExpedienteReport].[IdNEWID] AS [IdNEWID], 
+[viewExpedienteReport].[FechaMovimiento] AS [FechaMovimiento], 
+[viewExpedienteReport].[NroInstancia] AS [NroInstancia], 
+[viewExpedienteReport].[MontoSoles] AS [MontoSoles], 
+[viewExpedienteReport].[MontoDolares] AS [MontoDolares], 
+[viewExpedienteReport].[IdExpedienteInstancia] AS [IdExpedienteInstancia], 
+[viewExpedienteReport].[IdInstancia] AS [IdInstancia], 
+[viewExpedienteReport].[DescripcionInstancia] AS [DescripcionInstancia], 
+[viewExpedienteReport].[IdActoPro] AS [IdActoPro], 
+[viewExpedienteReport].[CodigoActoProcesal] AS [CodigoActoProcesal], 
+[viewExpedienteReport].[ContenidoActoProcesal] AS [ContenidoActoProcesal], 
+[viewExpedienteReport].[FechaRegistroActoPro] AS [FechaRegistroActoPro], 
+[viewExpedienteReport].[FechaAvisoAlertaActoPro] AS [FechaAvisoAlertaActoPro], 
+[viewExpedienteReport].[NDemandantes] AS [NDemandantes], 
+[viewExpedienteReport].[NDemandados] AS [NDemandados], 
+[viewExpedienteReport].[TipoExpediente] AS [TipoExpediente], 
+[viewExpedienteReport].[MateriaArbitral] AS [MateriaArbitral], 
+[viewExpedienteReport].[Modalidad] AS [Modalidad], 
+[viewExpedienteReport].[SedeArbitral] AS [SedeArbitral], 
+[viewExpedienteReport].[DescripcionTipoArbitraje] AS [DescripcionTipoArbitraje], 
+[viewExpedienteReport].[TipoMonedaControversia] AS [TipoMonedaControversia], 
+[viewExpedienteReport].[NombreAsesorLegalPatrocinador] AS [NombreAsesorLegalPatrocinador], 
+[viewExpedienteReport].[TipoDocumento] AS [TipoDocumento], 
+[viewExpedienteReport].[SupervisorInterno] AS [SupervisorInterno], 
+[viewExpedienteReport].[EstadoProceso] AS [EstadoProceso], 
+[viewExpedienteReport].[ubicacion] AS [ubicacion], 
+[viewExpedienteReport].[CorreoParaNotificacion] AS [CorreoParaNotificacion], 
+[viewExpedienteReport].[ContratoOrigen] AS [ContratoOrigen], 
+[viewExpedienteReport].[FechaInstalacionTribText] AS [FechaInstalacionTribText], 
+[viewExpedienteReport].[CentroArbitral] AS [CentroArbitral], 
+[viewExpedienteReport].[SecretarioArbitral] AS [SecretarioArbitral], 
+[viewExpedienteReport].[ArbitroUnicoPresidente] AS [ArbitroUnicoPresidente], 
+[viewExpedienteReport].[ArbitroParteEntidad] AS [ArbitroParteEntidad], 
+[viewExpedienteReport].[ArbitroParteDemandante] AS [ArbitroParteDemandante], 
+[viewExpedienteReport].[LaudoFavor] AS [LaudoFavor], 
+[viewExpedienteReport].[Contingencia] AS [Contingencia], 
+[viewExpedienteReport].[JustificacionContingencia] AS [JustificacionContingencia], 
+[viewExpedienteReport].[MontoControversia] AS [MontoControversia], 
+[viewExpedienteReport].[TipoMonedaReconvencion] AS [TipoMonedaReconvencion], 
+[viewExpedienteReport].[MontoReconvencion] AS [MontoReconvencion], 
+[viewExpedienteReport].[TipoMonedaLaudado] AS [TipoMonedaLaudado], 
+[viewExpedienteReport].[MontoLaudado] AS [MontoLaudado], 
+[viewExpedienteReport].[FechaEdicion] AS [FechaEdicion]
+FROM [Judicial].[viewExpedienteReport] AS [viewExpedienteReport]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VLocalidad" EntityType="Self.VLocalidad" store:Type="Views" store:Schema="Judicial">
+            <DefiningQuery>SELECT 
+[VLocalidad].[IdLocalidad] AS [IdLocalidad], 
+[VLocalidad].[DescripcionPro] AS [DescripcionPro], 
+[VLocalidad].[DescripcionDis] AS [DescripcionDis], 
+[VLocalidad].[DescripcionLugar] AS [DescripcionLugar]
+FROM [Judicial].[VLocalidad] AS [VLocalidad]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_ActoProcesal_Expediente" Association="Self.FK_ActoProcesal_Expediente">
+            <End Role="Expediente" EntitySet="Expediente" />
+            <End Role="ActoProcesal" EntitySet="ActoProcesal" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ActoProcesal_TipoContenidoNotificacion" Association="Self.fk_ActoProcesal_TipoContenidoNotificacion">
+            <End Role="TipoContenido" EntitySet="TipoContenido" />
+            <End Role="ActoProcesal" EntitySet="ActoProcesal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ActoProcesalContenido_ActoProcesal" Association="Self.FK_ActoProcesalContenido_ActoProcesal">
+            <End Role="ActoProcesal" EntitySet="ActoProcesal" />
+            <End Role="ActoProcesalContenido" EntitySet="ActoProcesalContenido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ActoProcesalContenido_TipoContenido" Association="Self.FK_ActoProcesalContenido_TipoContenido">
+            <End Role="TipoContenido" EntitySet="TipoContenido" />
+            <End Role="ActoProcesalContenido" EntitySet="ActoProcesalContenido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Derecho_Opcion" Association="Self.FK_Derecho_Opcion">
+            <End Role="Opcion" EntitySet="Opcion" />
+            <End Role="Derecho" EntitySet="Derecho" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Derecho_Usuario" Association="Self.FK_Derecho_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Derecho" EntitySet="Derecho" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Expediente_ClaseProceso" Association="Self.FK_Expediente_ClaseProceso">
+            <End Role="ClaseProceso" EntitySet="ClaseProceso" />
+            <End Role="Expediente" EntitySet="Expediente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Expediente_Expediente" Association="Self.FK_Expediente_Expediente">
+            <End Role="Expediente" EntitySet="Expediente" />
+            <End Role="Expediente1" EntitySet="Expediente" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Expediente_SupervisorInternoPersonaEmpresa" Association="Self.fk_Expediente_SupervisorInternoPersonaEmpresa">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="Expediente" EntitySet="Expediente" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Expediente_TEstadoActual" Association="Self.fk_Expediente_TEstadoActual">
+            <End Role="TipoContenido" EntitySet="TipoContenido" />
+            <End Role="Expediente" EntitySet="Expediente" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Expediente_TipoContenidoNotificacion" Association="Self.fk_Expediente_TipoContenidoNotificacion">
+            <End Role="TipoContenido" EntitySet="TipoContenido" />
+            <End Role="Expediente" EntitySet="Expediente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Expediente_TipoProceso" Association="Self.FK_Expediente_TipoProceso">
+            <End Role="TipoProceso" EntitySet="TipoProceso" />
+            <End Role="Expediente" EntitySet="Expediente" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ExpedienteAsesorLegal_AbogadoEngargado_PersonaEmpresa" Association="Self.fk_ExpedienteAsesorLegal_AbogadoEngargado_PersonaEmpresa">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="ExpedienteAsesorLegal" EntitySet="ExpedienteAsesorLegal" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ExpedienteAsesorLegal_EstudioAbogado_PersonaEmpresa" Association="Self.fk_ExpedienteAsesorLegal_EstudioAbogado_PersonaEmpresa">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="ExpedienteAsesorLegal" EntitySet="ExpedienteAsesorLegal" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ExpedienteAsesorLegal_Expediente" Association="Self.fk_ExpedienteAsesorLegal_Expediente">
+            <End Role="Expediente" EntitySet="Expediente" />
+            <End Role="ExpedienteAsesorLegal" EntitySet="ExpedienteAsesorLegal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExpedienteInstancia_Expediente" Association="Self.FK_ExpedienteInstancia_Expediente">
+            <End Role="Expediente" EntitySet="Expediente" />
+            <End Role="ExpedienteInstancia" EntitySet="ExpedienteInstancia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExpedienteInstancia_InstanciaJudicial" Association="Self.FK_ExpedienteInstancia_InstanciaJudicial">
+            <End Role="InstanciaJudicial" EntitySet="InstanciaJudicial" />
+            <End Role="ExpedienteInstancia" EntitySet="ExpedienteInstancia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExpedienteInstancia_OrganoJudicial" Association="Self.FK_ExpedienteInstancia_OrganoJudicial">
+            <End Role="OrganoJudicial" EntitySet="OrganoJudicial" />
+            <End Role="ExpedienteInstancia" EntitySet="ExpedienteInstancia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ExpedienteIntancia_PersonaEmpresaContrato" Association="Self.fk_ExpedienteIntancia_PersonaEmpresaContrato">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="ExpedienteInstancia" EntitySet="ExpedienteInstancia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Localidad_Localidad" Association="Self.FK_Localidad_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="Localidad1" EntitySet="Localidad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_Expediente" Association="Self.FK_OrganoExpedientePersona_Expediente">
+            <End Role="Expediente" EntitySet="Expediente" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_Expediente1" Association="Self.FK_OrganoExpedientePersona_Expediente1">
+            <End Role="Expediente" EntitySet="Expediente" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_OrganoJudicial" Association="Self.FK_OrganoExpedientePersona_OrganoJudicial">
+            <End Role="OrganoJudicial" EntitySet="OrganoJudicial" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_OrganoJudicial1" Association="Self.FK_OrganoExpedientePersona_OrganoJudicial1">
+            <End Role="OrganoJudicial" EntitySet="OrganoJudicial" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_PersonaEmpresa" Association="Self.FK_OrganoExpedientePersona_PersonaEmpresa">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_PersonaEmpresa1" Association="Self.FK_OrganoExpedientePersona_PersonaEmpresa1">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_PersonaEmpresa2" Association="Self.FK_OrganoExpedientePersona_PersonaEmpresa2">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_PersonaEmpresa3" Association="Self.FK_OrganoExpedientePersona_PersonaEmpresa3">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoJudicial_SedeJudicial" Association="Self.FK_OrganoJudicial_SedeJudicial">
+            <End Role="SedeJudicial" EntitySet="SedeJudicial" />
+            <End Role="OrganoJudicial" EntitySet="OrganoJudicial" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonaEmpresa_Localidad" Association="Self.FK_PersonaEmpresa_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonaEmpresa_PersonaEmpresa" Association="Self.FK_PersonaEmpresa_PersonaEmpresa">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="PersonaEmpresa1" EntitySet="PersonaEmpresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SedeJudicial_Localidad" Association="Self.FK_SedeJudicial_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="SedeJudicial" EntitySet="SedeJudicial" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SIGCLINEWModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="ContextoModelo" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="ActoProcesal" EntityType="SIGCLINEWModel.ActoProcesal" />
+          <EntitySet Name="ActoProcesalContenido" EntityType="SIGCLINEWModel.ActoProcesalContenido" />
+          <EntitySet Name="ClaseProceso" EntityType="SIGCLINEWModel.ClaseProceso" />
+          <EntitySet Name="Documento" EntityType="SIGCLINEWModel.Documento" />
+          <EntitySet Name="Expediente" EntityType="SIGCLINEWModel.Expediente" />
+          <EntitySet Name="ExpedienteInstancia" EntityType="SIGCLINEWModel.ExpedienteInstancia" />
+          <EntitySet Name="InstanciaJudicial" EntityType="SIGCLINEWModel.InstanciaJudicial" />
+          <EntitySet Name="Localidad" EntityType="SIGCLINEWModel.Localidad" />
+          <EntitySet Name="PersonaEmpresa" EntityType="SIGCLINEWModel.PersonaEmpresa" />
+          <EntitySet Name="TipoContenido" EntityType="SIGCLINEWModel.TipoContenido" />
+          <EntitySet Name="TipoProceso" EntityType="SIGCLINEWModel.TipoProceso" />
+          <AssociationSet Name="FK_ActoProcesal_Expediente" Association="SIGCLINEWModel.FK_ActoProcesal_Expediente">
+            <End Role="Expediente" EntitySet="Expediente" />
+            <End Role="ActoProcesal" EntitySet="ActoProcesal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ActoProcesalContenido_ActoProcesal" Association="SIGCLINEWModel.FK_ActoProcesalContenido_ActoProcesal">
+            <End Role="ActoProcesal" EntitySet="ActoProcesal" />
+            <End Role="ActoProcesalContenido" EntitySet="ActoProcesalContenido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ActoProcesalContenido_TipoContenido" Association="SIGCLINEWModel.FK_ActoProcesalContenido_TipoContenido">
+            <End Role="TipoContenido" EntitySet="TipoContenido" />
+            <End Role="ActoProcesalContenido" EntitySet="ActoProcesalContenido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Expediente_ClaseProceso" Association="SIGCLINEWModel.FK_Expediente_ClaseProceso">
+            <End Role="ClaseProceso" EntitySet="ClaseProceso" />
+            <End Role="Expediente" EntitySet="Expediente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Expediente_Expediente" Association="SIGCLINEWModel.FK_Expediente_Expediente">
+            <End Role="Expediente" EntitySet="Expediente" />
+            <End Role="Expediente1" EntitySet="Expediente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Expediente_TipoProceso" Association="SIGCLINEWModel.FK_Expediente_TipoProceso">
+            <End Role="TipoProceso" EntitySet="TipoProceso" />
+            <End Role="Expediente" EntitySet="Expediente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExpedienteInstancia_Expediente" Association="SIGCLINEWModel.FK_ExpedienteInstancia_Expediente">
+            <End Role="Expediente" EntitySet="Expediente" />
+            <End Role="ExpedienteInstancia" EntitySet="ExpedienteInstancia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExpedienteInstancia_InstanciaJudicial" Association="SIGCLINEWModel.FK_ExpedienteInstancia_InstanciaJudicial">
+            <End Role="InstanciaJudicial" EntitySet="InstanciaJudicial" />
+            <End Role="ExpedienteInstancia" EntitySet="ExpedienteInstancia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Localidad_Localidad" Association="SIGCLINEWModel.FK_Localidad_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="Localidad1" EntitySet="Localidad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonaEmpresa_Localidad" Association="SIGCLINEWModel.FK_PersonaEmpresa_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonaEmpresa_PersonaEmpresa" Association="SIGCLINEWModel.FK_PersonaEmpresa_PersonaEmpresa">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="PersonaEmpresa1" EntitySet="PersonaEmpresa" />
+          </AssociationSet>
+          <EntitySet Name="viewExpediente" EntityType="SIGCLINEWModel.viewExpediente" />
+          <EntitySet Name="OrganoJudicial" EntityType="SIGCLINEWModel.OrganoJudicial" />
+          <AssociationSet Name="FK_ExpedienteInstancia_OrganoJudicial" Association="SIGCLINEWModel.FK_ExpedienteInstancia_OrganoJudicial">
+            <End Role="OrganoJudicial" EntitySet="OrganoJudicial" />
+            <End Role="ExpedienteInstancia" EntitySet="ExpedienteInstancia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoJudicial_Localidad" Association="SIGCLINEWModel.FK_OrganoJudicial_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="OrganoJudicial" EntitySet="OrganoJudicial" />
+          </AssociationSet>
+          <EntitySet Name="SedeJudicial" EntityType="SIGCLINEWModel.SedeJudicial" />
+          <AssociationSet Name="FK_SedeJudicial_Localidad" Association="SIGCLINEWModel.FK_SedeJudicial_Localidad">
+            <End Role="Localidad" EntitySet="Localidad" />
+            <End Role="SedeJudicial" EntitySet="SedeJudicial" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoJudicial_SedeJudicial" Association="SIGCLINEWModel.FK_OrganoJudicial_SedeJudicial">
+            <End Role="SedeJudicial" EntitySet="SedeJudicial" />
+            <End Role="OrganoJudicial" EntitySet="OrganoJudicial" />
+          </AssociationSet>
+          <EntitySet Name="viewExpedienteInstancia" EntityType="SIGCLINEWModel.viewExpedienteInstancia" />
+          <EntitySet Name="Opcion" EntityType="SIGCLINEWModel.Opcion" />
+          <EntitySet Name="viewExpedienteReport" EntityType="SIGCLINEWModel.viewExpedienteReport" />
+          <EntitySet Name="viewEstructuraTotales" EntityType="SIGCLINEWModel.viewEstructuraTotales" />
+          <FunctionImport Name="uspExpedientesJudicialesTotales" EntitySet="viewEstructuraTotales" ReturnType="Collection(SIGCLINEWModel.viewEstructuraTotales)">
+            <Parameter Name="Inicio" Mode="In" Type="DateTime" />
+            <Parameter Name="Fin" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="uspExpedientesJudicialesClaseProcesoTotales" EntitySet="viewEstructuraTotales" ReturnType="Collection(SIGCLINEWModel.viewEstructuraTotales)">
+            <Parameter Name="Inicio" Mode="In" Type="DateTime" />
+            <Parameter Name="Fin" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="uspExpedientesJudicialesSedeJudicialTotales" EntitySet="viewEstructuraTotales" ReturnType="Collection(SIGCLINEWModel.viewEstructuraTotales)">
+            <Parameter Name="Inicio" Mode="In" Type="DateTime" />
+            <Parameter Name="Fin" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <EntitySet Name="OrganoExpedientePersona" EntityType="SIGCLINEWModel.OrganoExpedientePersona" />
+          <AssociationSet Name="FK_OrganoExpedientePersona_Expediente" Association="SIGCLINEWModel.FK_OrganoExpedientePersona_Expediente">
+            <End Role="Expediente" EntitySet="Expediente" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_OrganoJudicial" Association="SIGCLINEWModel.FK_OrganoExpedientePersona_OrganoJudicial">
+            <End Role="OrganoJudicial" EntitySet="OrganoJudicial" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_PersonaEmpresa" Association="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_PersonaEmpresa1" Association="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa1">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_PersonaEmpresa2" Association="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa2">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_PersonaEmpresa3" Association="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa3">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_Expediente1" Association="SIGCLINEWModel.FK_OrganoExpedientePersona_Expediente1">
+            <End Role="Expediente" EntitySet="Expediente" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganoExpedientePersona_OrganoJudicial1" Association="SIGCLINEWModel.FK_OrganoExpedientePersona_OrganoJudicial1">
+            <End Role="OrganoJudicial" EntitySet="OrganoJudicial" />
+            <End Role="OrganoExpedientePersona" EntitySet="OrganoExpedientePersona" />
+          </AssociationSet>
+          <EntitySet Name="VLocalidad" EntityType="SIGCLINEWModel.VLocalidad" />
+          <EntitySet Name="Derecho" EntityType="SIGCLINEWModel.Derecho" />
+          <EntitySet Name="Usuario" EntityType="SIGCLINEWModel.Usuario" />
+          <AssociationSet Name="FK_Derecho_Opcion" Association="SIGCLINEWModel.FK_Derecho_Opcion">
+            <End Role="Opcion" EntitySet="Opcion" />
+            <End Role="Derecho" EntitySet="Derecho" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Derecho_Usuario" Association="SIGCLINEWModel.FK_Derecho_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Derecho" EntitySet="Derecho" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ActoProcesal_TipoContenidoNotificacion" Association="SIGCLINEWModel.fk_ActoProcesal_TipoContenidoNotificacion">
+            <End Role="TipoContenido" EntitySet="TipoContenido" />
+            <End Role="ActoProcesal" EntitySet="ActoProcesal" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ExpedienteIntancia_PersonaEmpresaContrato" Association="SIGCLINEWModel.fk_ExpedienteIntancia_PersonaEmpresaContrato">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="ExpedienteInstancia" EntitySet="ExpedienteInstancia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Expediente_TipoContenidoNotificacion" Association="SIGCLINEWModel.fk_Expediente_TipoContenidoNotificacion">
+            <End Role="TipoContenido" EntitySet="TipoContenido" />
+            <End Role="Expediente" EntitySet="Expediente" />
+          </AssociationSet>
+          <EntitySet Name="ExpedienteAsesorLegal" EntityType="SIGCLINEWModel.ExpedienteAsesorLegal" />
+          <AssociationSet Name="fk_ExpedienteAsesorLegal_Expediente" Association="SIGCLINEWModel.fk_ExpedienteAsesorLegal_Expediente">
+            <End Role="Expediente" EntitySet="Expediente" />
+            <End Role="ExpedienteAsesorLegal" EntitySet="ExpedienteAsesorLegal" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ExpedienteAsesorLegal_AbogadoEngargado_PersonaEmpresa" Association="SIGCLINEWModel.fk_ExpedienteAsesorLegal_AbogadoEngargado_PersonaEmpresa">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="ExpedienteAsesorLegal" EntitySet="ExpedienteAsesorLegal" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ExpedienteAsesorLegal_EstudioAbogado_PersonaEmpresa" Association="SIGCLINEWModel.fk_ExpedienteAsesorLegal_EstudioAbogado_PersonaEmpresa">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="ExpedienteAsesorLegal" EntitySet="ExpedienteAsesorLegal" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Expediente_TEstadoActual" Association="SIGCLINEWModel.fk_Expediente_TEstadoActual">
+            <End Role="TipoContenido" EntitySet="TipoContenido" />
+            <End Role="Expediente" EntitySet="Expediente" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Expediente_SupervisorInternoPersonaEmpresa" Association="SIGCLINEWModel.fk_Expediente_SupervisorInternoPersonaEmpresa">
+            <End Role="PersonaEmpresa" EntitySet="PersonaEmpresa" />
+            <End Role="Expediente" EntitySet="Expediente" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ActoProcesal">
+          <Key>
+            <PropertyRef Name="IdActoPro" />
+          </Key>
+          <Property Type="Int32" Name="IdActoPro" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="Int32" Name="IdExpediente" />
+          <Property Type="String" Name="Contenido" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Contenido1" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdNEWID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Expediente" Relationship="SIGCLINEWModel.FK_ActoProcesal_Expediente" FromRole="ActoProcesal" ToRole="Expediente" />
+          <NavigationProperty Name="ActoProcesalContenido" Relationship="SIGCLINEWModel.FK_ActoProcesalContenido_ActoProcesal" FromRole="ActoProcesal" ToRole="ActoProcesalContenido" />
+          <Property Type="Int32" Name="IdExpedienteInstancia" />
+          <Property Type="String" Name="Codigo" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaRegistro" Precision="3" />
+          <Property Type="DateTime" Name="FechaAvisoAlerta" Precision="3" />
+          <Property Type="DateTime" Name="FechaRecepcion" Precision="3" />
+          <Property Name="IdNotificacionTipoContenido" Type="Int32" />
+          <NavigationProperty Name="TipoContenido" Relationship="SIGCLINEWModel.fk_ActoProcesal_TipoContenidoNotificacion" FromRole="ActoProcesal" ToRole="TipoContenido" />
+          <Property Name="EtapaProceso" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ActoProcesalContenido">
+          <Key>
+            <PropertyRef Name="IdActoProCont" />
+          </Key>
+          <Property Type="Int32" Name="IdActoProCont" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="Int32" Name="IdActoPro" />
+          <Property Type="Int32" Name="IdTipoContenido" />
+          <NavigationProperty Name="ActoProcesal" Relationship="SIGCLINEWModel.FK_ActoProcesalContenido_ActoProcesal" FromRole="ActoProcesalContenido" ToRole="ActoProcesal" />
+          <NavigationProperty Name="TipoContenido" Relationship="SIGCLINEWModel.FK_ActoProcesalContenido_TipoContenido" FromRole="ActoProcesalContenido" ToRole="TipoContenido" />
+        </EntityType>
+        <EntityType Name="ClaseProceso">
+          <Key>
+            <PropertyRef Name="IdClaseProceso" />
+          </Key>
+          <Property Type="Int32" Name="IdClaseProceso" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Sigla" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Expediente" Relationship="SIGCLINEWModel.FK_Expediente_ClaseProceso" FromRole="ClaseProceso" ToRole="Expediente" />
+        </EntityType>
+        <EntityType Name="Documento">
+          <Key>
+            <PropertyRef Name="IdDocumento" />
+          </Key>
+          <Property Type="Int32" Name="IdDocumento" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Nombre" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Extension" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IdNEWID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="Documento1" MaxLength="Max" FixedLength="false" />
+          <Property Name="RutaPc" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TipoInterno" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Expediente">
+          <Key>
+            <PropertyRef Name="IdExpediente" />
+          </Key>
+          <Property Type="Int32" Name="IdExpediente" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Codigo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdTipoProceso" />
+          <Property Type="DateTime" Name="FechaInicio" Precision="3" />
+          <Property Type="Int32" Name="IdDemandante" />
+          <Property Type="Int32" Name="IdDemandado" />
+          <Property Type="Int32" Name="IdClaseProceso" />
+          <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Observacion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdAbogado" />
+          <Property Type="Int32" Name="IdExpedientePadre" />
+          <Property Type="String" Name="IdNEWID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ActoProcesal" Relationship="SIGCLINEWModel.FK_ActoProcesal_Expediente" FromRole="Expediente" ToRole="ActoProcesal" />
+          <NavigationProperty Name="ClaseProceso" Relationship="SIGCLINEWModel.FK_Expediente_ClaseProceso" FromRole="Expediente" ToRole="ClaseProceso" />
+          <NavigationProperty Name="Expediente1" Relationship="SIGCLINEWModel.FK_Expediente_Expediente" FromRole="Expediente" ToRole="Expediente1" />
+          <NavigationProperty Name="Expediente2" Relationship="SIGCLINEWModel.FK_Expediente_Expediente" FromRole="Expediente1" ToRole="Expediente" />
+          <NavigationProperty Name="TipoProceso" Relationship="SIGCLINEWModel.FK_Expediente_TipoProceso" FromRole="Expediente" ToRole="TipoProceso" />
+          <NavigationProperty Name="ExpedienteInstancia" Relationship="SIGCLINEWModel.FK_ExpedienteInstancia_Expediente" FromRole="Expediente" ToRole="ExpedienteInstancia" />
+          <Property Type="DateTime" Name="FechaMovimiento" Precision="3" />
+          <Property Type="Int32" Name="NroInstancia" />
+          <Property Type="Decimal" Name="MontoSoles" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="MontoDolares" Precision="18" Scale="2" />
+          <NavigationProperty Name="OrganoExpedienteDemandante" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_Expediente" FromRole="Expediente" ToRole="OrganoExpedientePersona" />
+          <NavigationProperty Name="OrganoExpedienteDemandado" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_Expediente1" FromRole="Expediente" ToRole="OrganoExpedientePersona" />
+          <Property Type="String" Name="NDemandantes" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NDemandados" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IdSupervisorInterno" Type="Int32" />
+          <Property Name="IdContrato" Type="Int32" />
+          <Property Name="IdNotificacionTipoContenido" Type="Int32" />
+          <NavigationProperty Name="TipoContenido" Relationship="SIGCLINEWModel.fk_Expediente_TipoContenidoNotificacion" FromRole="Expediente" ToRole="TipoContenido" />
+          <Property Name="IdAbogadoPatrocinante" Type="Int32" />
+          <NavigationProperty Name="ExpedienteAsesorLegal" Relationship="SIGCLINEWModel.fk_ExpedienteAsesorLegal_Expediente" FromRole="Expediente" ToRole="ExpedienteAsesorLegal" />
+          <Property Name="Archivado" Type="Boolean" />
+          <Property Name="TipoNotificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NroCasillaNotificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TipoContingencia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaProximaAudiencia" Type="DateTime" Precision="3" />
+          <Property Name="HoraProximaAudiencia" Type="DateTime" Precision="3" />
+          <Property Name="LugarProximaAudiencia" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="FechaVencimiento" Type="DateTime" Precision="3" />
+          <Property Name="MontoProbable" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="IdEstadoActual" Type="Int32" />
+          <NavigationProperty Name="TipoContenido1" Relationship="SIGCLINEWModel.fk_Expediente_TEstadoActual" FromRole="Expediente" ToRole="TipoContenido" />
+          <Property Name="TipoNotificacionMail" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="NroDiasNotificacion" Type="Int32" />
+          <Property Name="NroDiasNotificacionRest" Type="Int32" />
+          <Property Name="IdSupervisorINternoRela" Type="Int32" />
+          <NavigationProperty Name="PersonaEmpresa" Relationship="SIGCLINEWModel.fk_Expediente_SupervisorInternoPersonaEmpresa" FromRole="Expediente" ToRole="PersonaEmpresa" />
+          <Property Name="TipoExpediente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TercerArbitro" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="DescripcionContrato" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="DescripcionEstadoActual" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="DescripcionTipoArbitraje" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="IdTipoContenidadMateria" Type="Int32" />
+          <Property Name="DescripcionTipoContenidadMateria" Type="Int32" />
+          <Property Name="CorreoParaNotificacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="TipoDocumento" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Modalidad" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ubicacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FechaInstalacionTrib" Type="DateTime" Precision="3" />
+          <Property Name="TipoMonedaControversia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MontoControversia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TipoMonedaReconvencion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MontoReconvencion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TipoMonedaLaudado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MontoLaudado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IdSedeArbitral" Type="Int32" />
+          <Property Name="LaudoFavor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="JustificacionContingencia" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SecretarioArbitral" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="UsuarioCrea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UsuarioModifica" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaInstalacionTribText" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FechaEdicion" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ExpedienteInstancia">
+          <Key>
+            <PropertyRef Name="IdExpedienteInstancia" />
+          </Key>
+          <Property Type="Int32" Name="IdExpedienteInstancia" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="Int32" Name="IdExpediente" />
+          <Property Type="Int32" Name="IdInstancia" />
+          <Property Type="DateTime" Name="FechaInicio" Precision="3" />
+          <Property Type="DateTime" Name="FechaFinal" Precision="3" />
+          <Property Type="String" Name="Observacion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IdNEWID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Expediente" Relationship="SIGCLINEWModel.FK_ExpedienteInstancia_Expediente" FromRole="ExpedienteInstancia" ToRole="Expediente" />
+          <NavigationProperty Name="InstanciaJudicial" Relationship="SIGCLINEWModel.FK_ExpedienteInstancia_InstanciaJudicial" FromRole="ExpedienteInstancia" ToRole="InstanciaJudicial" />
+          <Property Type="Int32" Name="IdOrgano" />
+          <NavigationProperty Name="OrganoJudicial" Relationship="SIGCLINEWModel.FK_ExpedienteInstancia_OrganoJudicial" FromRole="ExpedienteInstancia" ToRole="OrganoJudicial" />
+          <Property Name="IdPersonaContrato" Type="Int32" />
+          <Property Name="Automisorio" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TasacionInstancia" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Apelacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Comentarios" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PersonaEmpresa" Relationship="SIGCLINEWModel.fk_ExpedienteIntancia_PersonaEmpresaContrato" FromRole="ExpedienteInstancia" ToRole="PersonaEmpresa" />
+        </EntityType>
+        <EntityType Name="InstanciaJudicial">
+          <Key>
+            <PropertyRef Name="IdInstancia" />
+          </Key>
+          <Property Type="Int32" Name="IdInstancia" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Sigla" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ExpedienteInstancia" Relationship="SIGCLINEWModel.FK_ExpedienteInstancia_InstanciaJudicial" FromRole="InstanciaJudicial" ToRole="ExpedienteInstancia" />
+        </EntityType>
+        <EntityType Name="Localidad">
+          <Key>
+            <PropertyRef Name="IdLocalidad" />
+          </Key>
+          <Property Type="Int32" Name="IdLocalidad" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdLocalidadPadre" />
+          <NavigationProperty Name="Localidad1" Relationship="SIGCLINEWModel.FK_Localidad_Localidad" FromRole="Localidad" ToRole="Localidad1" />
+          <NavigationProperty Name="Localidad2" Relationship="SIGCLINEWModel.FK_Localidad_Localidad" FromRole="Localidad1" ToRole="Localidad" />
+          <NavigationProperty Name="PersonaEmpresa" Relationship="SIGCLINEWModel.FK_PersonaEmpresa_Localidad" FromRole="Localidad" ToRole="PersonaEmpresa" />
+          <NavigationProperty Name="OrganoJudicial" Relationship="SIGCLINEWModel.FK_OrganoJudicial_Localidad" FromRole="Localidad" ToRole="OrganoJudicial" />
+          <NavigationProperty Name="SedeJudicial" Relationship="SIGCLINEWModel.FK_SedeJudicial_Localidad" FromRole="Localidad" ToRole="SedeJudicial" />
+        </EntityType>
+        <EntityType Name="PersonaEmpresa">
+          <Key>
+            <PropertyRef Name="IdPersonaEmpresa" />
+          </Key>
+          <Property Type="Int32" Name="IdPersonaEmpresa" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Nombre" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Documento" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Direccion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdLocalidad" />
+          <Property Type="String" Name="Telefono" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdEmpresa" />
+          <NavigationProperty Name="Localidad" Relationship="SIGCLINEWModel.FK_PersonaEmpresa_Localidad" FromRole="PersonaEmpresa" ToRole="Localidad" />
+          <NavigationProperty Name="Personas" Relationship="SIGCLINEWModel.FK_PersonaEmpresa_PersonaEmpresa" FromRole="PersonaEmpresa" ToRole="PersonaEmpresa1" />
+          <NavigationProperty Name="Empresa" Relationship="SIGCLINEWModel.FK_PersonaEmpresa_PersonaEmpresa" FromRole="PersonaEmpresa1" ToRole="PersonaEmpresa" />
+          <Property Type="String" Name="TipoInterno" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TipoFiltro" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="JuezOrganoJudicial" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa" FromRole="PersonaEmpresa" ToRole="OrganoExpedientePersona" />
+          <NavigationProperty Name="SecretarioOrganoJudicial" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa1" FromRole="PersonaEmpresa" ToRole="OrganoExpedientePersona" />
+          <NavigationProperty Name="DemandanteExpediente" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa2" FromRole="PersonaEmpresa" ToRole="OrganoExpedientePersona" />
+          <NavigationProperty Name="DemandadoExpediente" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa3" FromRole="PersonaEmpresa" ToRole="OrganoExpedientePersona" />
+          <Property Name="Descripcion" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="FechaIncio" Type="DateTime" Precision="3" />
+          <Property Name="FechaFin" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="ExpedienteInstancia" Relationship="SIGCLINEWModel.fk_ExpedienteIntancia_PersonaEmpresaContrato" FromRole="PersonaEmpresa" ToRole="ExpedienteInstancia" />
+          <NavigationProperty Name="ExpedienteAsesorLegal" Relationship="SIGCLINEWModel.fk_ExpedienteAsesorLegal_AbogadoEngargado_PersonaEmpresa" FromRole="PersonaEmpresa" ToRole="ExpedienteAsesorLegal" />
+          <NavigationProperty Name="ExpedienteAsesorLegal1" Relationship="SIGCLINEWModel.fk_ExpedienteAsesorLegal_EstudioAbogado_PersonaEmpresa" FromRole="PersonaEmpresa" ToRole="ExpedienteAsesorLegal" />
+          <NavigationProperty Name="Expediente" Relationship="SIGCLINEWModel.fk_Expediente_SupervisorInternoPersonaEmpresa" FromRole="PersonaEmpresa" ToRole="Expediente" />
+          <Property Name="RepresentanteLegal" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RepresentanteLegalNombre" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RepresentanteLegalDNI" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          </EntityType>
+        <EntityType Name="TipoContenido">
+          <Key>
+            <PropertyRef Name="IdTipoContenido" />
+          </Key>
+          <Property Type="Int32" Name="IdTipoContenido" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Abreviado" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ActoProcesalContenido" Relationship="SIGCLINEWModel.FK_ActoProcesalContenido_TipoContenido" FromRole="TipoContenido" ToRole="ActoProcesalContenido" />
+          <Property Name="Titulo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="NroDias" Type="Int32" />
+          <Property Name="TipoInterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ActoProcesal" Relationship="SIGCLINEWModel.fk_ActoProcesal_TipoContenidoNotificacion" FromRole="TipoContenido" ToRole="ActoProcesal" />
+          <NavigationProperty Name="Expediente" Relationship="SIGCLINEWModel.fk_Expediente_TipoContenidoNotificacion" FromRole="TipoContenido" ToRole="Expediente" />
+          <NavigationProperty Name="Expediente1" Relationship="SIGCLINEWModel.fk_Expediente_TEstadoActual" FromRole="TipoContenido" ToRole="Expediente" />
+        </EntityType>
+        <EntityType Name="TipoProceso">
+          <Key>
+            <PropertyRef Name="IdTipoProceso" />
+          </Key>
+          <Property Type="Int32" Name="IdTipoProceso" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Sigla" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Expediente" Relationship="SIGCLINEWModel.FK_Expediente_TipoProceso" FromRole="TipoProceso" ToRole="Expediente" />
+        </EntityType>
+        <Association Name="FK_ActoProcesal_Expediente">
+          <End Type="SIGCLINEWModel.Expediente" Role="Expediente" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SIGCLINEWModel.ActoProcesal" Role="ActoProcesal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expediente">
+              <PropertyRef Name="IdExpediente" />
+            </Principal>
+            <Dependent Role="ActoProcesal">
+              <PropertyRef Name="IdExpediente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ActoProcesalContenido_ActoProcesal">
+          <End Type="SIGCLINEWModel.ActoProcesal" Role="ActoProcesal" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SIGCLINEWModel.ActoProcesalContenido" Role="ActoProcesalContenido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ActoProcesal">
+              <PropertyRef Name="IdActoPro" />
+            </Principal>
+            <Dependent Role="ActoProcesalContenido">
+              <PropertyRef Name="IdActoPro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ActoProcesalContenido_TipoContenido">
+          <End Type="SIGCLINEWModel.TipoContenido" Role="TipoContenido" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SIGCLINEWModel.ActoProcesalContenido" Role="ActoProcesalContenido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoContenido">
+              <PropertyRef Name="IdTipoContenido" />
+            </Principal>
+            <Dependent Role="ActoProcesalContenido">
+              <PropertyRef Name="IdTipoContenido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Expediente_ClaseProceso">
+          <End Type="SIGCLINEWModel.ClaseProceso" Role="ClaseProceso" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SIGCLINEWModel.Expediente" Role="Expediente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClaseProceso">
+              <PropertyRef Name="IdClaseProceso" />
+            </Principal>
+            <Dependent Role="Expediente">
+              <PropertyRef Name="IdClaseProceso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Expediente_Expediente">
+          <End Type="SIGCLINEWModel.Expediente" Role="Expediente" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.Expediente" Role="Expediente1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expediente">
+              <PropertyRef Name="IdExpediente" />
+            </Principal>
+            <Dependent Role="Expediente1">
+              <PropertyRef Name="IdExpedientePadre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Expediente_TipoProceso">
+          <End Type="SIGCLINEWModel.TipoProceso" Role="TipoProceso" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SIGCLINEWModel.Expediente" Role="Expediente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoProceso">
+              <PropertyRef Name="IdTipoProceso" />
+            </Principal>
+            <Dependent Role="Expediente">
+              <PropertyRef Name="IdTipoProceso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExpedienteInstancia_Expediente">
+          <End Type="SIGCLINEWModel.Expediente" Role="Expediente" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SIGCLINEWModel.ExpedienteInstancia" Role="ExpedienteInstancia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expediente">
+              <PropertyRef Name="IdExpediente" />
+            </Principal>
+            <Dependent Role="ExpedienteInstancia">
+              <PropertyRef Name="IdExpediente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExpedienteInstancia_InstanciaJudicial">
+          <End Type="SIGCLINEWModel.InstanciaJudicial" Role="InstanciaJudicial" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SIGCLINEWModel.ExpedienteInstancia" Role="ExpedienteInstancia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InstanciaJudicial">
+              <PropertyRef Name="IdInstancia" />
+            </Principal>
+            <Dependent Role="ExpedienteInstancia">
+              <PropertyRef Name="IdInstancia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Localidad_Localidad">
+          <End Type="SIGCLINEWModel.Localidad" Role="Localidad" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.Localidad" Role="Localidad1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IdLocalidad" />
+            </Principal>
+            <Dependent Role="Localidad1">
+              <PropertyRef Name="IdLocalidadPadre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonaEmpresa_Localidad">
+          <End Type="SIGCLINEWModel.Localidad" Role="Localidad" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SIGCLINEWModel.PersonaEmpresa" Role="PersonaEmpresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IdLocalidad" />
+            </Principal>
+            <Dependent Role="PersonaEmpresa">
+              <PropertyRef Name="IdLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonaEmpresa_PersonaEmpresa">
+          <End Type="SIGCLINEWModel.PersonaEmpresa" Role="PersonaEmpresa" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.PersonaEmpresa" Role="PersonaEmpresa1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="PersonaEmpresa1">
+              <PropertyRef Name="IdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="viewExpediente">
+          <Key>
+            <PropertyRef Name="IdExpediente" />
+          </Key>
+          <Property Type="Int32" Name="IdExpediente" Nullable="false" />
+          <Property Type="String" Name="Codigo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdTipoProceso" />
+          <Property Type="String" Name="DescripcionTipoProceso" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaInicio" Precision="3" />
+          <Property Type="Int32" Name="IdDemandante" />
+          <Property Type="String" Name="NombreDemandante" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NroDocumentoDemandante" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdDemandado" />
+          <Property Type="String" Name="NombreDemandado" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DocumentoDemandado" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdClaseProceso" />
+          <Property Type="String" Name="DescripcionClaseProceso" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SiglaClaseProceso" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Observacion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdAbogado" />
+          <Property Type="String" Name="NombreAbogado" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DocumentoAbogado" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdExpedientePadre" />
+          <Property Type="String" Name="IdNEWID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaMovimiento" Precision="3" />
+          <Property Type="Int32" Name="NroInstancia" />
+          <Property Type="Decimal" Name="MontoSoles" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="MontoDolares" Precision="18" Scale="2" />
+          <Property Type="String" Name="NDemandantes" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NDemandados" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ArchivadoSIoNO" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Archivado" Type="Boolean" />
+          <Property Name="TipoExpediente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MateriaArbitral" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Modalidad" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SedeArbitral" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DescripcionTipoArbitraje" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="TipoMonedaControversia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NombreAsesorLegalPatrocinador" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UsuarioCrea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UsuarioModifica" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="OrganoJudicial">
+          <Key>
+            <PropertyRef Name="IdOrgano" />
+          </Key>
+          <Property Type="Int32" Name="IdOrgano" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Tipo" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Direccion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdLocalidad" />
+          <Property Type="Int32" Name="IdJuez" />
+          <Property Type="Int32" Name="IdSecretario" />
+          <NavigationProperty Name="ExpedienteInstancia" Relationship="SIGCLINEWModel.FK_ExpedienteInstancia_OrganoJudicial" FromRole="OrganoJudicial" ToRole="ExpedienteInstancia" />
+          <NavigationProperty Name="Localidad" Relationship="SIGCLINEWModel.FK_OrganoJudicial_Localidad" FromRole="OrganoJudicial" ToRole="Localidad" />
+          <Property Type="Int32" Name="IdSede" />
+          <NavigationProperty Name="SedeJudicial" Relationship="SIGCLINEWModel.FK_OrganoJudicial_SedeJudicial" FromRole="OrganoJudicial" ToRole="SedeJudicial" />
+          <NavigationProperty Name="OrganoJudicialJuez" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_OrganoJudicial" FromRole="OrganoJudicial" ToRole="OrganoExpedientePersona" />
+          <NavigationProperty Name="OrganoJudicialSecretario" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_OrganoJudicial1" FromRole="OrganoJudicial" ToRole="OrganoExpedientePersona" />
+        </EntityType>
+        <Association Name="FK_ExpedienteInstancia_OrganoJudicial">
+          <End Type="SIGCLINEWModel.OrganoJudicial" Role="OrganoJudicial" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SIGCLINEWModel.ExpedienteInstancia" Role="ExpedienteInstancia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganoJudicial">
+              <PropertyRef Name="IdOrgano" />
+            </Principal>
+            <Dependent Role="ExpedienteInstancia">
+              <PropertyRef Name="IdOrgano" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoJudicial_Localidad">
+          <End Type="SIGCLINEWModel.Localidad" Role="Localidad" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SIGCLINEWModel.OrganoJudicial" Role="OrganoJudicial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IdLocalidad" />
+            </Principal>
+            <Dependent Role="OrganoJudicial">
+              <PropertyRef Name="IdLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SedeJudicial">
+          <Key>
+            <PropertyRef Name="IdSede" />
+          </Key>
+          <Property Type="Int32" Name="IdSede" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Direccion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdLocalidad" />
+          <NavigationProperty Name="Localidad" Relationship="SIGCLINEWModel.FK_SedeJudicial_Localidad" FromRole="SedeJudicial" ToRole="Localidad" />
+          <NavigationProperty Name="OrganoJudicial" Relationship="SIGCLINEWModel.FK_OrganoJudicial_SedeJudicial" FromRole="SedeJudicial" ToRole="OrganoJudicial" />
+          <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TipoInterno" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_SedeJudicial_Localidad">
+          <End Type="SIGCLINEWModel.Localidad" Role="Localidad" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SIGCLINEWModel.SedeJudicial" Role="SedeJudicial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad">
+              <PropertyRef Name="IdLocalidad" />
+            </Principal>
+            <Dependent Role="SedeJudicial">
+              <PropertyRef Name="IdLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoJudicial_SedeJudicial">
+          <End Type="SIGCLINEWModel.SedeJudicial" Role="SedeJudicial" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SIGCLINEWModel.OrganoJudicial" Role="OrganoJudicial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SedeJudicial">
+              <PropertyRef Name="IdSede" />
+            </Principal>
+            <Dependent Role="OrganoJudicial">
+              <PropertyRef Name="IdSede" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="viewExpedienteInstancia">
+          <Key>
+            <PropertyRef Name="IdExpedienteInstancia" />
+            <PropertyRef Name="IdSede" />
+          </Key>
+          <Property Type="Int32" Name="IdExpedienteInstancia" Nullable="false" />
+          <Property Type="Int32" Name="IdExpediente" />
+          <Property Type="Int32" Name="IdInstancia" />
+          <Property Type="String" Name="DescripcionInstancia" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SiglaInstancia" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaInicio" Precision="3" />
+          <Property Type="DateTime" Name="FechaFinal" Precision="3" />
+          <Property Type="String" Name="Observacion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdOrgano" />
+          <Property Type="String" Name="TipoOrganoJ" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DescripcionOrganoJ" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdSede" Nullable="false" />
+          <Property Type="String" Name="DescripcionSedeJudicial" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Automisorio" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TasacionInstancia" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Apelacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Comentarios" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NroContrato" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Opcion">
+          <Key>
+            <PropertyRef Name="IdOpcion" />
+          </Key>
+          <Property Type="Int32" Name="IdOpcion" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Nombre" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NroGrupo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Derecho" Relationship="SIGCLINEWModel.FK_Derecho_Opcion" FromRole="Opcion" ToRole="Derecho" />
+        </EntityType>
+        <EntityType Name="viewExpedienteReport">
+          <Key>
+            <PropertyRef Name="IdExpediente" />
+          </Key>
+          <Property Type="Int32" Name="IdExpediente" Nullable="false" />
+          <Property Type="String" Name="Codigo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdTipoProceso" />
+          <Property Type="String" Name="DescripcionTipoProceso" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaInicio" Precision="3" />
+          <Property Type="Int32" Name="IdDemandante" />
+          <Property Type="String" Name="NombreDemandante" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NroDocumentoDemandante" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdDemandado" />
+          <Property Type="String" Name="NombreDemandado" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DocumentoDemandado" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdClaseProceso" />
+          <Property Type="String" Name="DescripcionClaseProceso" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SiglaClaseProceso" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Observacion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdAbogado" />
+          <Property Type="String" Name="NombreAbogado" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DocumentoAbogado" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdExpedientePadre" />
+          <Property Type="String" Name="IdNEWID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaMovimiento" Precision="3" />
+          <Property Type="Int32" Name="NroInstancia" />
+          <Property Type="Decimal" Name="MontoSoles" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="MontoDolares" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="IdExpedienteInstancia" />
+          <Property Type="Int32" Name="IdInstancia" />
+          <Property Type="String" Name="DescripcionInstancia" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdActoPro" />
+          <Property Type="String" Name="CodigoActoProcesal" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ContenidoActoProcesal" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaRegistroActoPro" Precision="3" />
+          <Property Type="DateTime" Name="FechaAvisoAlertaActoPro" Precision="3" />
+          <Property Type="String" Name="NDemandantes" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NDemandados" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TipoExpediente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MateriaArbitral" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Modalidad" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SedeArbitral" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DescripcionTipoArbitraje" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="TipoMonedaControversia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NombreAsesorLegalPatrocinador" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TipoDocumento" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SupervisorInterno" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoProceso" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ubicacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CorreoParaNotificacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ContratoOrigen" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FechaInstalacionTribText" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CentroArbitral" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SecretarioArbitral" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ArbitroUnicoPresidente" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ArbitroParteEntidad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ArbitroParteDemandante" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LaudoFavor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Contingencia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="JustificacionContingencia" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="MontoControversia" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TipoMonedaReconvencion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MontoReconvencion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TipoMonedaLaudado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MontoLaudado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaEdicion" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="viewEstructuraTotales">
+          <Key>
+            <PropertyRef Name="IDSYS" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="IDSYS" Nullable="false" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Total" />
+        </EntityType>
+        <ComplexType Name="uspExpedientesJudicialesTotales_Result">
+          <Property Type="Int32" Name="IDSYS" Nullable="false" />
+          <Property Type="Int32" Name="ID" Nullable="true" />
+          <Property Type="String" Name="Descripcion" Nullable="true" />
+          <Property Type="Int32" Name="Total" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="uspExpedientesJudicialesTotales_Result1">
+          <Property Type="Int32" Name="IDSYS" Nullable="false" />
+          <Property Type="Int32" Name="ID" Nullable="true" />
+          <Property Type="String" Name="Descripcion" Nullable="true" />
+          <Property Type="Int32" Name="Total" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="uspExpedientesJudicialesClaseProcesoTotales_Result">
+          <Property Type="Int32" Name="IDSYS" Nullable="false" />
+          <Property Type="Int32" Name="ID" Nullable="true" />
+          <Property Type="String" Name="Descripcion" Nullable="true" />
+          <Property Type="Int32" Name="Total" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="uspExpedientesJudicialesSedeJudicialTotales_Result">
+          <Property Type="Int32" Name="IDSYS" Nullable="false" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Descripcion" Nullable="true" />
+          <Property Type="Int32" Name="Total" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="OrganoExpedientePersona">
+          <Key>
+            <PropertyRef Name="IdOrganoPersona" />
+          </Key>
+          <Property Type="Int32" Name="IdOrganoPersona" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdOrgano" />
+          <Property Type="Int32" Name="IdJuez" />
+          <Property Type="Int32" Name="IdSecretario" />
+          <Property Type="Int32" Name="IdExpediente" />
+          <Property Type="Int32" Name="IdDemandante" />
+          <Property Type="Int32" Name="IdDemandado" />
+          <NavigationProperty Name="ExpedienteDemandante" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_Expediente" FromRole="OrganoExpedientePersona" ToRole="Expediente" />
+          <NavigationProperty Name="OrganoJudicial" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_OrganoJudicial" FromRole="OrganoExpedientePersona" ToRole="OrganoJudicial" />
+          <NavigationProperty Name="JuezOrganoJudicial" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa" FromRole="OrganoExpedientePersona" ToRole="PersonaEmpresa" />
+          <NavigationProperty Name="SecretarioOrganoJudicial" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa1" FromRole="OrganoExpedientePersona" ToRole="PersonaEmpresa" />
+          <NavigationProperty Name="DemandanteExpediente" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa2" FromRole="OrganoExpedientePersona" ToRole="PersonaEmpresa" />
+          <NavigationProperty Name="DemandadoExpediente" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa3" FromRole="OrganoExpedientePersona" ToRole="PersonaEmpresa" />
+          <Property Type="Int32" Name="IdOrganoSecretario" />
+          <Property Type="Int32" Name="IdExpedienteDemandado" />
+          <NavigationProperty Name="ExpedienteDemandado" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_Expediente1" FromRole="OrganoExpedientePersona" ToRole="Expediente" />
+          <NavigationProperty Name="OrganoJudicial1" Relationship="SIGCLINEWModel.FK_OrganoExpedientePersona_OrganoJudicial1" FromRole="OrganoExpedientePersona" ToRole="OrganoJudicial" />
+        </EntityType>
+        <Association Name="FK_OrganoExpedientePersona_Expediente">
+          <End Type="SIGCLINEWModel.Expediente" Role="Expediente" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.OrganoExpedientePersona" Role="OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expediente">
+              <PropertyRef Name="IdExpediente" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdExpediente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_OrganoJudicial">
+          <End Type="SIGCLINEWModel.OrganoJudicial" Role="OrganoJudicial" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.OrganoExpedientePersona" Role="OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganoJudicial">
+              <PropertyRef Name="IdOrgano" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdOrgano" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_PersonaEmpresa">
+          <End Type="SIGCLINEWModel.PersonaEmpresa" Role="PersonaEmpresa" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.OrganoExpedientePersona" Role="OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdJuez" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_PersonaEmpresa1">
+          <End Type="SIGCLINEWModel.PersonaEmpresa" Role="PersonaEmpresa" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.OrganoExpedientePersona" Role="OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdSecretario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_PersonaEmpresa2">
+          <End Type="SIGCLINEWModel.PersonaEmpresa" Role="PersonaEmpresa" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.OrganoExpedientePersona" Role="OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdDemandante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_PersonaEmpresa3">
+          <End Type="SIGCLINEWModel.PersonaEmpresa" Role="PersonaEmpresa" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.OrganoExpedientePersona" Role="OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdDemandado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_Expediente1">
+          <End Type="SIGCLINEWModel.Expediente" Role="Expediente" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.OrganoExpedientePersona" Role="OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expediente">
+              <PropertyRef Name="IdExpediente" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdExpedienteDemandado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganoExpedientePersona_OrganoJudicial1">
+          <End Type="SIGCLINEWModel.OrganoJudicial" Role="OrganoJudicial" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.OrganoExpedientePersona" Role="OrganoExpedientePersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganoJudicial">
+              <PropertyRef Name="IdOrgano" />
+            </Principal>
+            <Dependent Role="OrganoExpedientePersona">
+              <PropertyRef Name="IdOrganoSecretario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="VLocalidad">
+          <Key>
+            <PropertyRef Name="IdLocalidad" />
+          </Key>
+          <Property Type="Int32" Name="IdLocalidad" Nullable="false" />
+          <Property Type="String" Name="DescripcionPro" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DescripcionDis" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DescripcionLugar" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Derecho">
+          <Key>
+            <PropertyRef Name="IdDerecho" />
+          </Key>
+          <Property Type="Int32" Name="IdDerecho" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdUsuario" />
+          <Property Type="Int32" Name="IdOpcion" />
+          <Property Type="Boolean" Name="Derecho1" />
+          <NavigationProperty Name="Opcion" Relationship="SIGCLINEWModel.FK_Derecho_Opcion" FromRole="Derecho" ToRole="Opcion" />
+          <NavigationProperty Name="Usuario" Relationship="SIGCLINEWModel.FK_Derecho_Usuario" FromRole="Derecho" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Type="Int32" Name="IdUsuario" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Codigo" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Nombre" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Clave" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Detalle" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Derecho" Relationship="SIGCLINEWModel.FK_Derecho_Usuario" FromRole="Usuario" ToRole="Derecho" />
+        </EntityType>
+        <Association Name="FK_Derecho_Opcion">
+          <End Type="SIGCLINEWModel.Opcion" Role="Opcion" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SIGCLINEWModel.Derecho" Role="Derecho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Opcion">
+              <PropertyRef Name="IdOpcion" />
+            </Principal>
+            <Dependent Role="Derecho">
+              <PropertyRef Name="IdOpcion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Derecho_Usuario">
+          <End Type="SIGCLINEWModel.Usuario" Role="Usuario" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SIGCLINEWModel.Derecho" Role="Derecho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Derecho">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ActoProcesal_TipoContenidoNotificacion">
+          <End Type="SIGCLINEWModel.TipoContenido" Role="TipoContenido" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.ActoProcesal" Role="ActoProcesal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoContenido">
+              <PropertyRef Name="IdTipoContenido" />
+            </Principal>
+            <Dependent Role="ActoProcesal">
+              <PropertyRef Name="IdNotificacionTipoContenido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ExpedienteIntancia_PersonaEmpresaContrato">
+          <End Type="SIGCLINEWModel.PersonaEmpresa" Role="PersonaEmpresa" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.ExpedienteInstancia" Role="ExpedienteInstancia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="ExpedienteInstancia">
+              <PropertyRef Name="IdPersonaContrato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Expediente_TipoContenidoNotificacion">
+          <End Type="SIGCLINEWModel.TipoContenido" Role="TipoContenido" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.Expediente" Role="Expediente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoContenido">
+              <PropertyRef Name="IdTipoContenido" />
+            </Principal>
+            <Dependent Role="Expediente">
+              <PropertyRef Name="IdNotificacionTipoContenido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ExpedienteAsesorLegal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="IdExpediente" Type="Int32" />
+          <Property Name="IdAsesorLegalEstudio" Type="Int32" />
+          <Property Name="IdAsesorLegalAbogado" Type="Int32" />
+          <Property Name="FechaInicio" Type="DateTime" Precision="3" />
+          <Property Name="FechaFIn" Type="DateTime" Precision="3" />
+          <Property Name="Observaciones" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Expediente" Relationship="SIGCLINEWModel.fk_ExpedienteAsesorLegal_Expediente" FromRole="ExpedienteAsesorLegal" ToRole="Expediente" />
+          <NavigationProperty Name="PersonaEmpresa" Relationship="SIGCLINEWModel.fk_ExpedienteAsesorLegal_AbogadoEngargado_PersonaEmpresa" FromRole="ExpedienteAsesorLegal" ToRole="PersonaEmpresa" />
+          <NavigationProperty Name="PersonaEmpresa1" Relationship="SIGCLINEWModel.fk_ExpedienteAsesorLegal_EstudioAbogado_PersonaEmpresa" FromRole="ExpedienteAsesorLegal" ToRole="PersonaEmpresa" />
+          <Property Name="NroOS_RA_C" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="NroOS_RA_C_Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="fk_ExpedienteAsesorLegal_Expediente">
+          <End Type="SIGCLINEWModel.Expediente" Role="Expediente" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.ExpedienteAsesorLegal" Role="ExpedienteAsesorLegal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expediente">
+              <PropertyRef Name="IdExpediente" />
+            </Principal>
+            <Dependent Role="ExpedienteAsesorLegal">
+              <PropertyRef Name="IdExpediente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ExpedienteAsesorLegal_AbogadoEngargado_PersonaEmpresa">
+          <End Type="SIGCLINEWModel.PersonaEmpresa" Role="PersonaEmpresa" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.ExpedienteAsesorLegal" Role="ExpedienteAsesorLegal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="ExpedienteAsesorLegal">
+              <PropertyRef Name="IdAsesorLegalAbogado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ExpedienteAsesorLegal_EstudioAbogado_PersonaEmpresa">
+          <End Type="SIGCLINEWModel.PersonaEmpresa" Role="PersonaEmpresa" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.ExpedienteAsesorLegal" Role="ExpedienteAsesorLegal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="ExpedienteAsesorLegal">
+              <PropertyRef Name="IdAsesorLegalEstudio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Expediente_TEstadoActual">
+          <End Type="SIGCLINEWModel.TipoContenido" Role="TipoContenido" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.Expediente" Role="Expediente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoContenido">
+              <PropertyRef Name="IdTipoContenido" />
+            </Principal>
+            <Dependent Role="Expediente">
+              <PropertyRef Name="IdEstadoActual" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Expediente_SupervisorInternoPersonaEmpresa">
+          <End Type="SIGCLINEWModel.PersonaEmpresa" Role="PersonaEmpresa" Multiplicity="0..1" />
+          <End Type="SIGCLINEWModel.Expediente" Role="Expediente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaEmpresa">
+              <PropertyRef Name="IdPersonaEmpresa" />
+            </Principal>
+            <Dependent Role="Expediente">
+              <PropertyRef Name="IdSupervisorINternoRela" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SIGCLINEWModelStoreContainer" CdmEntityContainer="ContextoModelo">
+          <EntitySetMapping Name="ActoProcesal">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.ActoProcesal">
+              <MappingFragment StoreEntitySet="ActoProcesal">
+                <ScalarProperty Name="EtapaProceso" ColumnName="EtapaProceso" />
+                <ScalarProperty Name="IdNotificacionTipoContenido" ColumnName="IdNotificacionTipoContenido" />
+                <ScalarProperty Name="FechaRecepcion" ColumnName="FechaRecepcion" />
+                <ScalarProperty Name="FechaAvisoAlerta" ColumnName="FechaAvisoAlerta" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="IdExpedienteInstancia" ColumnName="IdExpedienteInstancia" />
+                <ScalarProperty Name="IdNEWID" ColumnName="IdNEWID" />
+                <ScalarProperty Name="Contenido1" ColumnName="Contenido1" />
+                <ScalarProperty Name="Contenido" ColumnName="Contenido" />
+                <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+                <ScalarProperty Name="IdActoPro" ColumnName="IdActoPro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ActoProcesalContenido">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.ActoProcesalContenido">
+              <MappingFragment StoreEntitySet="ActoProcesalContenido">
+                <ScalarProperty Name="IdTipoContenido" ColumnName="IdTipoContenido" />
+                <ScalarProperty Name="IdActoPro" ColumnName="IdActoPro" />
+                <ScalarProperty Name="IdActoProCont" ColumnName="IdActoProCont" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClaseProceso">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.ClaseProceso">
+              <MappingFragment StoreEntitySet="ClaseProceso">
+                <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdClaseProceso" ColumnName="IdClaseProceso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Documento">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.Documento">
+              <MappingFragment StoreEntitySet="Documento">
+                <ScalarProperty Name="TipoInterno" ColumnName="TipoInterno" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="RutaPc" ColumnName="RutaPc" />
+                <ScalarProperty Name="Documento1" ColumnName="Documento" />
+                <ScalarProperty Name="IdNEWID" ColumnName="IdNEWID" />
+                <ScalarProperty Name="Extension" ColumnName="Extension" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Expediente">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.Expediente">
+              <MappingFragment StoreEntitySet="Expediente">
+                <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+                <ScalarProperty Name="FechaInstalacionTribText" ColumnName="FechaInstalacionTribText" />
+                <ScalarProperty Name="UsuarioModifica" ColumnName="UsuarioModifica" />
+                <ScalarProperty Name="UsuarioCrea" ColumnName="UsuarioCrea" />
+                <ScalarProperty Name="SecretarioArbitral" ColumnName="SecretarioArbitral" />
+                <ScalarProperty Name="JustificacionContingencia" ColumnName="JustificacionContingencia" />
+                <ScalarProperty Name="LaudoFavor" ColumnName="LaudoFavor" />
+                <ScalarProperty Name="IdSedeArbitral" ColumnName="IdSedeArbitral" />
+                <ScalarProperty Name="MontoLaudado" ColumnName="MontoLaudado" />
+                <ScalarProperty Name="TipoMonedaLaudado" ColumnName="TipoMonedaLaudado" />
+                <ScalarProperty Name="MontoReconvencion" ColumnName="MontoReconvencion" />
+                <ScalarProperty Name="TipoMonedaReconvencion" ColumnName="TipoMonedaReconvencion" />
+                <ScalarProperty Name="MontoControversia" ColumnName="MontoControversia" />
+                <ScalarProperty Name="TipoMonedaControversia" ColumnName="TipoMonedaControversia" />
+                <ScalarProperty Name="FechaInstalacionTrib" ColumnName="FechaInstalacionTrib" />
+                <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+                <ScalarProperty Name="Modalidad" ColumnName="Modalidad" />
+                <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+                <ScalarProperty Name="CorreoParaNotificacion" ColumnName="CorreoParaNotificacion" />
+                <ScalarProperty Name="DescripcionTipoContenidadMateria" ColumnName="DescripcionTipoContenidadMateria" />
+                <ScalarProperty Name="IdTipoContenidadMateria" ColumnName="IdTipoContenidadMateria" />
+                <ScalarProperty Name="DescripcionTipoArbitraje" ColumnName="DescripcionTipoArbitraje" />
+                <ScalarProperty Name="DescripcionEstadoActual" ColumnName="DescripcionEstadoActual" />
+                <ScalarProperty Name="DescripcionContrato" ColumnName="DescripcionContrato" />
+                <ScalarProperty Name="TercerArbitro" ColumnName="TercerArbitro" />
+                <ScalarProperty Name="TipoExpediente" ColumnName="TipoExpediente" />
+                <ScalarProperty Name="IdSupervisorINternoRela" ColumnName="IdSupervisorINternoRela" />
+                <ScalarProperty Name="NroDiasNotificacionRest" ColumnName="NroDiasNotificacionRest" />
+                <ScalarProperty Name="NroDiasNotificacion" ColumnName="NroDiasNotificacion" />
+                <ScalarProperty Name="TipoNotificacionMail" ColumnName="TipoNotificacionMail" />
+                <ScalarProperty Name="IdEstadoActual" ColumnName="IdEstadoActual" />
+                <ScalarProperty Name="MontoProbable" ColumnName="MontoProbable" />
+                <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+                <ScalarProperty Name="LugarProximaAudiencia" ColumnName="LugarProximaAudiencia" />
+                <ScalarProperty Name="HoraProximaAudiencia" ColumnName="HoraProximaAudiencia" />
+                <ScalarProperty Name="FechaProximaAudiencia" ColumnName="FechaProximaAudiencia" />
+                <ScalarProperty Name="TipoContingencia" ColumnName="TipoContingencia" />
+                <ScalarProperty Name="NroCasillaNotificacion" ColumnName="NroCasillaNotificacion" />
+                <ScalarProperty Name="TipoNotificacion" ColumnName="TipoNotificacion" />
+                <ScalarProperty Name="Archivado" ColumnName="Archivado" />
+                <ScalarProperty Name="IdAbogadoPatrocinante" ColumnName="IdAbogadoPatrocinante" />
+                <ScalarProperty Name="IdNotificacionTipoContenido" ColumnName="IdNotificacionTipoContenido" />
+                <ScalarProperty Name="IdContrato" ColumnName="IdContrato" />
+                <ScalarProperty Name="IdSupervisorInterno" ColumnName="IdSupervisorInterno" />
+                <ScalarProperty Name="NDemandados" ColumnName="NDemandados" />
+                <ScalarProperty Name="NDemandantes" ColumnName="NDemandantes" />
+                <ScalarProperty Name="MontoDolares" ColumnName="MontoDolares" />
+                <ScalarProperty Name="MontoSoles" ColumnName="MontoSoles" />
+                <ScalarProperty Name="NroInstancia" ColumnName="NroInstancia" />
+                <ScalarProperty Name="FechaMovimiento" ColumnName="FechaMovimiento" />
+                <ScalarProperty Name="IdNEWID" ColumnName="IdNEWID" />
+                <ScalarProperty Name="IdExpedientePadre" ColumnName="IdExpedientePadre" />
+                <ScalarProperty Name="IdAbogado" ColumnName="IdAbogado" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdClaseProceso" ColumnName="IdClaseProceso" />
+                <ScalarProperty Name="IdDemandado" ColumnName="IdDemandado" />
+                <ScalarProperty Name="IdDemandante" ColumnName="IdDemandante" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="IdTipoProceso" ColumnName="IdTipoProceso" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExpedienteInstancia">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.ExpedienteInstancia">
+              <MappingFragment StoreEntitySet="ExpedienteInstancia">
+                <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+                <ScalarProperty Name="Apelacion" ColumnName="Apelacion" />
+                <ScalarProperty Name="TasacionInstancia" ColumnName="TasacionInstancia" />
+                <ScalarProperty Name="Automisorio" ColumnName="Automisorio" />
+                <ScalarProperty Name="IdPersonaContrato" ColumnName="IdPersonaContrato" />
+                <ScalarProperty Name="IdOrgano" ColumnName="IdOrgano" />
+                <ScalarProperty Name="IdNEWID" ColumnName="IdNEWID" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="IdInstancia" ColumnName="IdInstancia" />
+                <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+                <ScalarProperty Name="IdExpedienteInstancia" ColumnName="IdExpedienteInstancia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InstanciaJudicial">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.InstanciaJudicial">
+              <MappingFragment StoreEntitySet="InstanciaJudicial">
+                <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdInstancia" ColumnName="IdInstancia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Localidad">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.Localidad">
+              <MappingFragment StoreEntitySet="Localidad">
+                <ScalarProperty Name="IdLocalidadPadre" ColumnName="IdLocalidadPadre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdLocalidad" ColumnName="IdLocalidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonaEmpresa">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.PersonaEmpresa">
+              <MappingFragment StoreEntitySet="PersonaEmpresa">
+                <ScalarProperty Name="RepresentanteLegalDNI" ColumnName="RepresentanteLegalDNI" />
+                <ScalarProperty Name="RepresentanteLegalNombre" ColumnName="RepresentanteLegalNombre" />
+                <ScalarProperty Name="RepresentanteLegal" ColumnName="RepresentanteLegal" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="FechaIncio" ColumnName="FechaIncio" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="TipoFiltro" ColumnName="TipoFiltro" />
+                <ScalarProperty Name="TipoInterno" ColumnName="TipoInterno" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="IdLocalidad" ColumnName="IdLocalidad" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Documento" ColumnName="Documento" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdPersonaEmpresa" ColumnName="IdPersonaEmpresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoContenido">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.TipoContenido">
+              <MappingFragment StoreEntitySet="TipoContenido">
+                <ScalarProperty Name="TipoInterno" ColumnName="TipoInterno" />
+                <ScalarProperty Name="NroDias" ColumnName="NroDias" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Abreviado" ColumnName="Abreviado" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdTipoContenido" ColumnName="IdTipoContenido" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoProceso">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.TipoProceso">
+              <MappingFragment StoreEntitySet="TipoProceso">
+                <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdTipoProceso" ColumnName="IdTipoProceso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="viewExpediente">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.viewExpediente">
+              <MappingFragment StoreEntitySet="viewExpediente">
+                <ScalarProperty Name="UsuarioModifica" ColumnName="UsuarioModifica" />
+                <ScalarProperty Name="UsuarioCrea" ColumnName="UsuarioCrea" />
+                <ScalarProperty Name="NombreAsesorLegalPatrocinador" ColumnName="NombreAsesorLegalPatrocinador" />
+                <ScalarProperty Name="TipoMonedaControversia" ColumnName="TipoMonedaControversia" />
+                <ScalarProperty Name="DescripcionTipoArbitraje" ColumnName="DescripcionTipoArbitraje" />
+                <ScalarProperty Name="SedeArbitral" ColumnName="SedeArbitral" />
+                <ScalarProperty Name="Modalidad" ColumnName="Modalidad" />
+                <ScalarProperty Name="MateriaArbitral" ColumnName="MateriaArbitral" />
+                <ScalarProperty Name="TipoExpediente" ColumnName="TipoExpediente" />
+                <ScalarProperty Name="Archivado" ColumnName="Archivado" />
+                <ScalarProperty Name="ArchivadoSIoNO" ColumnName="ArchivadoSIoNO" />
+                <ScalarProperty Name="NDemandados" ColumnName="NDemandados" />
+                <ScalarProperty Name="NDemandantes" ColumnName="NDemandantes" />
+                <ScalarProperty Name="MontoDolares" ColumnName="MontoDolares" />
+                <ScalarProperty Name="MontoSoles" ColumnName="MontoSoles" />
+                <ScalarProperty Name="NroInstancia" ColumnName="NroInstancia" />
+                <ScalarProperty Name="FechaMovimiento" ColumnName="FechaMovimiento" />
+                <ScalarProperty Name="IdNEWID" ColumnName="IdNEWID" />
+                <ScalarProperty Name="IdExpedientePadre" ColumnName="IdExpedientePadre" />
+                <ScalarProperty Name="DocumentoAbogado" ColumnName="DocumentoAbogado" />
+                <ScalarProperty Name="NombreAbogado" ColumnName="NombreAbogado" />
+                <ScalarProperty Name="IdAbogado" ColumnName="IdAbogado" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="SiglaClaseProceso" ColumnName="SiglaClaseProceso" />
+                <ScalarProperty Name="DescripcionClaseProceso" ColumnName="DescripcionClaseProceso" />
+                <ScalarProperty Name="IdClaseProceso" ColumnName="IdClaseProceso" />
+                <ScalarProperty Name="DocumentoDemandado" ColumnName="DocumentoDemandado" />
+                <ScalarProperty Name="NombreDemandado" ColumnName="NombreDemandado" />
+                <ScalarProperty Name="IdDemandado" ColumnName="IdDemandado" />
+                <ScalarProperty Name="NroDocumentoDemandante" ColumnName="NroDocumentoDemandante" />
+                <ScalarProperty Name="NombreDemandante" ColumnName="NombreDemandante" />
+                <ScalarProperty Name="IdDemandante" ColumnName="IdDemandante" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="DescripcionTipoProceso" ColumnName="DescripcionTipoProceso" />
+                <ScalarProperty Name="IdTipoProceso" ColumnName="IdTipoProceso" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrganoJudicial">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.OrganoJudicial">
+              <MappingFragment StoreEntitySet="OrganoJudicial">
+                <ScalarProperty Name="IdSede" ColumnName="IdSede" />
+                <ScalarProperty Name="IdSecretario" ColumnName="IdSecretario" />
+                <ScalarProperty Name="IdJuez" ColumnName="IdJuez" />
+                <ScalarProperty Name="IdLocalidad" ColumnName="IdLocalidad" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="IdOrgano" ColumnName="IdOrgano" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SedeJudicial">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.SedeJudicial">
+              <MappingFragment StoreEntitySet="SedeJudicial">
+                <ScalarProperty Name="TipoInterno" ColumnName="TipoInterno" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="IdLocalidad" ColumnName="IdLocalidad" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdSede" ColumnName="IdSede" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="viewExpedienteInstancia">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.viewExpedienteInstancia">
+              <MappingFragment StoreEntitySet="viewExpedienteInstancia">
+                <ScalarProperty Name="NroContrato" ColumnName="NroContrato" />
+                <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+                <ScalarProperty Name="Apelacion" ColumnName="Apelacion" />
+                <ScalarProperty Name="TasacionInstancia" ColumnName="TasacionInstancia" />
+                <ScalarProperty Name="Automisorio" ColumnName="Automisorio" />
+                <ScalarProperty Name="DescripcionSedeJudicial" ColumnName="DescripcionSedeJudicial" />
+                <ScalarProperty Name="IdSede" ColumnName="IdSede" />
+                <ScalarProperty Name="DescripcionOrganoJ" ColumnName="DescripcionOrganoJ" />
+                <ScalarProperty Name="TipoOrganoJ" ColumnName="TipoOrganoJ" />
+                <ScalarProperty Name="IdOrgano" ColumnName="IdOrgano" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="SiglaInstancia" ColumnName="SiglaInstancia" />
+                <ScalarProperty Name="DescripcionInstancia" ColumnName="DescripcionInstancia" />
+                <ScalarProperty Name="IdInstancia" ColumnName="IdInstancia" />
+                <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+                <ScalarProperty Name="IdExpedienteInstancia" ColumnName="IdExpedienteInstancia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Opcion">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.Opcion">
+              <MappingFragment StoreEntitySet="Opcion">
+                <ScalarProperty Name="NroGrupo" ColumnName="NroGrupo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdOpcion" ColumnName="IdOpcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="viewExpedienteReport">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.viewExpedienteReport">
+              <MappingFragment StoreEntitySet="viewExpedienteReport">
+                <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+                <ScalarProperty Name="MontoLaudado" ColumnName="MontoLaudado" />
+                <ScalarProperty Name="TipoMonedaLaudado" ColumnName="TipoMonedaLaudado" />
+                <ScalarProperty Name="MontoReconvencion" ColumnName="MontoReconvencion" />
+                <ScalarProperty Name="TipoMonedaReconvencion" ColumnName="TipoMonedaReconvencion" />
+                <ScalarProperty Name="MontoControversia" ColumnName="MontoControversia" />
+                <ScalarProperty Name="JustificacionContingencia" ColumnName="JustificacionContingencia" />
+                <ScalarProperty Name="Contingencia" ColumnName="Contingencia" />
+                <ScalarProperty Name="LaudoFavor" ColumnName="LaudoFavor" />
+                <ScalarProperty Name="ArbitroParteDemandante" ColumnName="ArbitroParteDemandante" />
+                <ScalarProperty Name="ArbitroParteEntidad" ColumnName="ArbitroParteEntidad" />
+                <ScalarProperty Name="ArbitroUnicoPresidente" ColumnName="ArbitroUnicoPresidente" />
+                <ScalarProperty Name="SecretarioArbitral" ColumnName="SecretarioArbitral" />
+                <ScalarProperty Name="CentroArbitral" ColumnName="CentroArbitral" />
+                <ScalarProperty Name="FechaInstalacionTribText" ColumnName="FechaInstalacionTribText" />
+                <ScalarProperty Name="ContratoOrigen" ColumnName="ContratoOrigen" />
+                <ScalarProperty Name="CorreoParaNotificacion" ColumnName="CorreoParaNotificacion" />
+                <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+                <ScalarProperty Name="EstadoProceso" ColumnName="EstadoProceso" />
+                <ScalarProperty Name="SupervisorInterno" ColumnName="SupervisorInterno" />
+                <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+                <ScalarProperty Name="NombreAsesorLegalPatrocinador" ColumnName="NombreAsesorLegalPatrocinador" />
+                <ScalarProperty Name="TipoMonedaControversia" ColumnName="TipoMonedaControversia" />
+                <ScalarProperty Name="DescripcionTipoArbitraje" ColumnName="DescripcionTipoArbitraje" />
+                <ScalarProperty Name="SedeArbitral" ColumnName="SedeArbitral" />
+                <ScalarProperty Name="Modalidad" ColumnName="Modalidad" />
+                <ScalarProperty Name="MateriaArbitral" ColumnName="MateriaArbitral" />
+                <ScalarProperty Name="TipoExpediente" ColumnName="TipoExpediente" />
+                <ScalarProperty Name="NDemandados" ColumnName="NDemandados" />
+                <ScalarProperty Name="NDemandantes" ColumnName="NDemandantes" />
+                <ScalarProperty Name="FechaAvisoAlertaActoPro" ColumnName="FechaAvisoAlertaActoPro" />
+                <ScalarProperty Name="FechaRegistroActoPro" ColumnName="FechaRegistroActoPro" />
+                <ScalarProperty Name="ContenidoActoProcesal" ColumnName="ContenidoActoProcesal" />
+                <ScalarProperty Name="CodigoActoProcesal" ColumnName="CodigoActoProcesal" />
+                <ScalarProperty Name="IdActoPro" ColumnName="IdActoPro" />
+                <ScalarProperty Name="DescripcionInstancia" ColumnName="DescripcionInstancia" />
+                <ScalarProperty Name="IdInstancia" ColumnName="IdInstancia" />
+                <ScalarProperty Name="IdExpedienteInstancia" ColumnName="IdExpedienteInstancia" />
+                <ScalarProperty Name="MontoDolares" ColumnName="MontoDolares" />
+                <ScalarProperty Name="MontoSoles" ColumnName="MontoSoles" />
+                <ScalarProperty Name="NroInstancia" ColumnName="NroInstancia" />
+                <ScalarProperty Name="FechaMovimiento" ColumnName="FechaMovimiento" />
+                <ScalarProperty Name="IdNEWID" ColumnName="IdNEWID" />
+                <ScalarProperty Name="IdExpedientePadre" ColumnName="IdExpedientePadre" />
+                <ScalarProperty Name="DocumentoAbogado" ColumnName="DocumentoAbogado" />
+                <ScalarProperty Name="NombreAbogado" ColumnName="NombreAbogado" />
+                <ScalarProperty Name="IdAbogado" ColumnName="IdAbogado" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="SiglaClaseProceso" ColumnName="SiglaClaseProceso" />
+                <ScalarProperty Name="DescripcionClaseProceso" ColumnName="DescripcionClaseProceso" />
+                <ScalarProperty Name="IdClaseProceso" ColumnName="IdClaseProceso" />
+                <ScalarProperty Name="DocumentoDemandado" ColumnName="DocumentoDemandado" />
+                <ScalarProperty Name="NombreDemandado" ColumnName="NombreDemandado" />
+                <ScalarProperty Name="IdDemandado" ColumnName="IdDemandado" />
+                <ScalarProperty Name="NroDocumentoDemandante" ColumnName="NroDocumentoDemandante" />
+                <ScalarProperty Name="NombreDemandante" ColumnName="NombreDemandante" />
+                <ScalarProperty Name="IdDemandante" ColumnName="IdDemandante" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="DescripcionTipoProceso" ColumnName="DescripcionTipoProceso" />
+                <ScalarProperty Name="IdTipoProceso" ColumnName="IdTipoProceso" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="viewEstructuraTotales">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.viewEstructuraTotales">
+              <MappingFragment StoreEntitySet="viewEstructuraTotales">
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDSYS" ColumnName="IDSYS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspExpedientesJudicialesTotales" FunctionName="SIGCLINEWModel.Store.uspExpedientesJudicialesTotales" />
+          <FunctionImportMapping FunctionImportName="uspExpedientesJudicialesClaseProcesoTotales" FunctionName="SIGCLINEWModel.Store.uspExpedientesJudicialesClaseProcesoTotales" />
+          <FunctionImportMapping FunctionImportName="uspExpedientesJudicialesSedeJudicialTotales" FunctionName="SIGCLINEWModel.Store.uspExpedientesJudicialesSedeJudicialTotales" />
+          <EntitySetMapping Name="OrganoExpedientePersona">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.OrganoExpedientePersona">
+              <MappingFragment StoreEntitySet="OrganoExpedientePersona">
+                <ScalarProperty Name="IdExpedienteDemandado" ColumnName="IdExpedienteDemandado" />
+                <ScalarProperty Name="IdOrganoSecretario" ColumnName="IdOrganoSecretario" />
+                <ScalarProperty Name="IdDemandado" ColumnName="IdDemandado" />
+                <ScalarProperty Name="IdDemandante" ColumnName="IdDemandante" />
+                <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+                <ScalarProperty Name="IdSecretario" ColumnName="IdSecretario" />
+                <ScalarProperty Name="IdJuez" ColumnName="IdJuez" />
+                <ScalarProperty Name="IdOrgano" ColumnName="IdOrgano" />
+                <ScalarProperty Name="IdOrganoPersona" ColumnName="IdOrganoPersona" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VLocalidad">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.VLocalidad">
+              <MappingFragment StoreEntitySet="VLocalidad">
+                <ScalarProperty Name="DescripcionLugar" ColumnName="DescripcionLugar" />
+                <ScalarProperty Name="DescripcionDis" ColumnName="DescripcionDis" />
+                <ScalarProperty Name="DescripcionPro" ColumnName="DescripcionPro" />
+                <ScalarProperty Name="IdLocalidad" ColumnName="IdLocalidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Derecho">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.Derecho">
+              <MappingFragment StoreEntitySet="Derecho">
+                <ScalarProperty Name="Derecho1" ColumnName="Derecho" />
+                <ScalarProperty Name="IdOpcion" ColumnName="IdOpcion" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdDerecho" ColumnName="IdDerecho" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExpedienteAsesorLegal">
+            <EntityTypeMapping TypeName="SIGCLINEWModel.ExpedienteAsesorLegal">
+              <MappingFragment StoreEntitySet="ExpedienteAsesorLegal">
+                <ScalarProperty Name="NroOS_RA_C_Descripcion" ColumnName="NroOS_RA_C_Descripcion" />
+                <ScalarProperty Name="NroOS_RA_C" ColumnName="NroOS_RA_C" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="FechaFIn" ColumnName="FechaFIn" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="IdAsesorLegalAbogado" ColumnName="IdAsesorLegalAbogado" />
+                <ScalarProperty Name="IdAsesorLegalEstudio" ColumnName="IdAsesorLegalEstudio" />
+                <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="False" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <edmx:DesignerProperty Name="CodeGenerationStrategy" Value="Predeterminado" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams />
+   </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,11 @@
+TIPO-ACEPTA NULO-LONGITUD
+
+TIPOS
+-----
+COMUNES:
+
+N       ->not null
+N-N=8   ->numero
+N-N<20  ->numero
+D-N=8   ->decimal
+S-N-8   ->string

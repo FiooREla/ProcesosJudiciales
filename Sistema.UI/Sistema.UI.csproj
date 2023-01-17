@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4996422-4DBF-4DB0-B1DA-052B23D4B665}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sistema.UI</RootNamespace>
+    <AssemblyName>Sistema.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\BIN\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.2.Wizard, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.2.UI, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.2.UI, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.2.Extensions, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Core.Desktop, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\clsMail.cs" />
+    <Compile Include="Control\Control.cs" />
+    <Compile Include="FMensajeProximaA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMensajeProximaA.designer.cs">
+      <DependentUpon>FMensajeProximaA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMensaje.designer.cs">
+      <DependentUpon>FMensaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSistema.Designer.cs">
+      <DependentUpon>FSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FActoProcesalArbitralEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FActoProcesalArbitralEdit.Designer.cs">
+      <DependentUpon>FActoProcesalArbitralEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FExpedienteArbitrales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FExpedienteArbitrales.Designer.cs">
+      <DependentUpon>FExpedienteArbitrales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FExpedienteInstancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FExpedienteInstancia.Designer.cs">
+      <DependentUpon>FExpedienteInstancia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FRListadosExpedientesArb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FRListadosExpedientesArb.Designer.cs">
+      <DependentUpon>FRListadosExpedientesArb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FRListadosTrimestrales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FRListadosTrimestrales.Designer.cs">
+      <DependentUpon>FRListadosTrimestrales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FRListadosExpedientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FRListadosExpedientes.Designer.cs">
+      <DependentUpon>FRListadosExpedientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FClaseProceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FClaseProceso.Designer.cs">
+      <DependentUpon>FClaseProceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FSedeArbitral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FSedeArbitral.Designer.cs">
+      <DependentUpon>FSedeArbitral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FUsuarios.Designer.cs">
+      <DependentUpon>FUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FOpciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FOpciones.Designer.cs">
+      <DependentUpon>FOpciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FActoProcesalE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FActoProcesalE.Designer.cs">
+      <DependentUpon>FActoProcesalE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FExpediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FExpediente.Designer.cs">
+      <DependentUpon>FExpediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FInstanciaJudicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FInstanciaJudicial.Designer.cs">
+      <DependentUpon>FInstanciaJudicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FRAgendaJudicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FRAgendaJudicial.Designer.cs">
+      <DependentUpon>FRAgendaJudicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FTipoProceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FTipoProceso.Designer.cs">
+      <DependentUpon>FTipoProceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FSedeJudicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FSedeJudicial.Designer.cs">
+      <DependentUpon>FSedeJudicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FTipoContenido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FTipoContenido.Designer.cs">
+      <DependentUpon>FTipoContenido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FOrganoJudicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FOrganoJudicial.Designer.cs">
+      <DependentUpon>FOrganoJudicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\RExpedienteDetalleArbitral.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Judicial\RExpedienteDetalleArbitral.designer.cs">
+      <DependentUpon>RExpedienteDetalleArbitral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\RExpedienteDetalle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Judicial\RExpedienteDetalle.designer.cs">
+      <DependentUpon>RExpedienteDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persona\FInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persona\FInicio.Designer.cs">
+      <DependentUpon>FInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persona\FLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persona\FLocalidad.Designer.cs">
+      <DependentUpon>FLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persona\FPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persona\FPersona.Designer.cs">
+      <DependentUpon>FPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\clsData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FMensajeProximaA.resx">
+      <DependentUpon>FMensajeProximaA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMensaje.resx">
+      <DependentUpon>FMensaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSistema.resx">
+      <DependentUpon>FSistema.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FActoProcesalArbitralEdit.resx">
+      <DependentUpon>FActoProcesalArbitralEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FExpedienteArbitrales.resx">
+      <DependentUpon>FExpedienteArbitrales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FExpedienteInstancia.resx">
+      <DependentUpon>FExpedienteInstancia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FRListadosExpedientesArb.resx">
+      <DependentUpon>FRListadosExpedientesArb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FRListadosTrimestrales.resx">
+      <DependentUpon>FRListadosTrimestrales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FRListadosExpedientes.resx">
+      <DependentUpon>FRListadosExpedientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FClaseProceso.resx">
+      <DependentUpon>FClaseProceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FSedeArbitral.resx">
+      <DependentUpon>FSedeArbitral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FUsuarios.resx">
+      <DependentUpon>FUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FOpciones.resx">
+      <DependentUpon>FOpciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FActoProcesalE.resx">
+      <DependentUpon>FActoProcesalE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FExpediente.resx">
+      <DependentUpon>FExpediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FInstanciaJudicial.resx">
+      <DependentUpon>FInstanciaJudicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FRAgendaJudicial.resx">
+      <DependentUpon>FRAgendaJudicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FTipoProceso.resx">
+      <DependentUpon>FTipoProceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FSedeJudicial.resx">
+      <DependentUpon>FSedeJudicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FTipoContenido.resx">
+      <DependentUpon>FTipoContenido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FOrganoJudicial.resx">
+      <DependentUpon>FOrganoJudicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\RExpedienteDetalleArbitral.resx">
+      <DependentUpon>RExpedienteDetalleArbitral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\RExpedienteDetalle.resx">
+      <DependentUpon>RExpedienteDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persona\FInicio.resx">
+      <DependentUpon>FInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persona\FLocalidad.resx">
+      <DependentUpon>FLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persona\FPersona.resx">
+      <DependentUpon>FPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Sistema.Model.ActoJudicial.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.ActoProcesal.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.ActoProcesalContenido.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.ClaseProceso.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.Classes.SesionActual.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.ContextoModelo.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.Derecho.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.Documento.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.Empleado.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.Expediente.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.ExpedienteAsesorLegal.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.ExpedienteInstancia.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.ExpedienteJuzgado.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.InstanciaJudicial.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.Juzgado.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.Localidad.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.Opcion.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.OrganoExpedientePersona.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.OrganoJudicial.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.Partial.Juzgado.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.Partial.ObjectHelper.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.PersonaEmpresa.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.SalaJudicial.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.SedeJudicial.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoArbitraje.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoCentroArbitral.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoContenido.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoContingencia.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoDerecho.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoDocumentoAdd.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoEtapaProceso.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoFiltro.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoInternoContenido.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoInternoPersona.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoLaudoFavor.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoModalidad.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoMoneda.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoNotificacionEx.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoOrganoJudicial.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoPersona.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoProceso.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Sistema.Model.TipoUbicacion.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.uspExpedientesJudicialesClaseProcesoTotales_Result.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.uspExpedientesJudicialesSedeJudicialTotales_Result.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.uspExpedientesJudicialesTotales_Result.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.uspExpedientesJudicialesTotales_Result1.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.Usuario.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.viewEstructuraTotales.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.viewExpediente.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.viewExpedienteInstancia.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.viewExpedienteReport.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.VLocalidad.datasource" />
+    <None Include="Properties\DataSources\Sistema.UI.Judicial.templateEx.datasource" />
+    <None Include="Resources\place32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Building.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Claseroceso32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import_Server_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InstaciasJudiciales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Juzgados32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\place32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Procesos32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salajudiacila32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tag32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personas32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documents32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Security32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search216x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FolderAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explore16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoFinalELP2008.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo ELP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReportList32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import_Files_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1340986261_accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AsesoresJuridicos32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrabajadoresJudiciales32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo ELP2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo ELP - SAM-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Attach16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseR\BaseR.csproj">
+      <Project>{226f7118-a908-431e-9f52-75012e90ea16}</Project>
+      <Name>BaseR</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\Base.csproj">
+      <Project>{18f0b3f6-59fd-4328-916c-a183edd3b8f9}</Project>
+      <Name>Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sistema.Model\Sistema.Model.csproj">
+      <Project>{f6b7f252-c44d-42ae-afd2-ef0eb148f672}</Project>
+      <Name>Sistema.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sistema.Query\Sistema.Query.csproj">
+      <Project>{085002a2-4ab5-40da-8746-91b6de627258}</Project>
+      <Name>Sistema.Query</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sistema.Services\Sistema.Services.csproj">
+      <Project>{FDEBA674-279F-406E-8BC7-FAE46B2C1C85}</Project>
+      <Name>Sistema.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sistemas.GestionDeArchivos\Sistemas.GestionDeArchivos.csproj">
+      <Project>{9AC9CBB7-0919-41A7-B5AB-A6C4453B2F64}</Project>
+      <Name>Sistemas.GestionDeArchivos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo ELP3.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <ProjectGuid>{226F7118-A908-431E-9F52-75012E90EA16}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>1.Images\app.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BaseR</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BaseR</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\BIN\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>0</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>2</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\BIN\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>0</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\B. SIGCLI.NET - Bin.x86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>0</BaseAddress>
+    <WarningLevel>2</WarningLevel>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>0</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\B. SIGCLI.NET - Bin.x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>0</BaseAddress>
+    <WarningLevel>2</WarningLevel>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>0</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v18.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v18.2">
+      <Name>DevExpress.Data.v18.2</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v18.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.2.Export">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.2">
+      <Name>DevExpress.Utils.v18.2</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.2">
+      <Name>DevExpress.XtraBars.v18.2</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2">
+      <Name>DevExpress.XtraEditors.v18.2</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2.Core, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v18.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="2.Custom\GridControl\ExtGridControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="2.Custom\GridControl\ExtGridView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="2.Custom\GridControl\ExtGridViewInfoRegistrator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="A.Reporte\1.Configuracion\FConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A.Reporte\1.Configuracion\FConfiguracion.Designer.cs">
+      <DependentUpon>FConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A.Reporte\1.Configuracion\FReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A.Reporte\1.Configuracion\FReporte.Designer.cs">
+      <DependentUpon>FReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5.List\Grid.cs" />
+    <Compile Include="10.DB\SQL.cs" />
+    <Compile Include="5.List\IdDescripcion.cs" />
+    <Compile Include="6.Fns\FnFiltroVB.cs" />
+    <Compile Include="7.Ctrl\Cache.cs" />
+    <Compile Include="6.Fns\FnFiltro.cs" />
+    <Compile Include="7.Ctrl\Form2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="7.Ctrl\Format.cs" />
+    <Compile Include="7.Ctrl\Layout.cs" />
+    <Compile Include="7.Ctrl\Grid.cs" />
+    <Compile Include="7.Ctrl\ValidacionRules.cs" />
+    <Compile Include="7.Ctrl\Form.cs" />
+    <Compile Include="7.Ctrl\Utils.cs" />
+    <Compile Include="7.Ctrl\Glue.cs" />
+    <Compile Include="7.Ctrl\Msg.cs" />
+    <Compile Include="7.Ctrl\Validation.cs" />
+    <Compile Include="3.Delegate\Edicion.cs" />
+    <Compile Include="5.List\Año.cs" />
+    <Compile Include="5.List\Glue.cs" />
+    <Compile Include="ClsFile.cs" />
+    <Compile Include="ClsYear.cs" />
+    <Compile Include="ContextoReporte.cs" />
+    <Compile Include="KeyValue.cs" />
+    <Compile Include="5.List\Mes.cs" />
+    <Compile Include="5.List\SiNo.cs" />
+    <Compile Include="BaseSession.cs" />
+    <Compile Include="8.Contexto\Contexto.cs" />
+    <Compile Include="2.Custom\Parameter.cs" />
+    <Compile Include="9.Form\FBaseFormV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="9.Form\FBaseFormV2.Designer.cs">
+      <DependentUpon>FBaseFormV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="9.Form\FBaseModalV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="9.Form\FBaseModalV2.Designer.cs">
+      <DependentUpon>FBaseModalV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="9.Form\FBaseReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="9.Form\FBaseReporte.Designer.cs">
+      <DependentUpon>FBaseReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="9.Form\FBaseModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="9.Form\FBaseModal.Designer.cs">
+      <DependentUpon>FBaseModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="6.Fns\Utils.cs" />
+    <Compile Include="ClsMsg.cs" />
+    <Compile Include="ModeloReporte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloReporte.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="7.Ctrl\File.cs" />
+    <Compile Include="4.Enum\EnumsUI.cs" />
+    <Compile Include="9.Form\FBaseFormEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="9.Form\FBaseFormEdicion.Designer.cs">
+      <DependentUpon>FBaseFormEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="9.Form\FBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="9.Form\FBaseForm.Designer.cs">
+      <DependentUpon>FBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="6.Fns\Print.cs" />
+    <Compile Include="TipoReporte.cs" />
+    <None Include="1.Images\consulta.png" />
+    <EmbeddedResource Include="A.Reporte\1.Configuracion\FConfiguracion.resx">
+      <DependentUpon>FConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A.Reporte\1.Configuracion\FReporte.resx">
+      <DependentUpon>FReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="9.Form\FBaseFormV2.resx">
+      <DependentUpon>FBaseFormV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="9.Form\FBaseModalV2.resx">
+      <DependentUpon>FBaseModalV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="9.Form\FBaseReporte.resx">
+      <DependentUpon>FBaseReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="9.Form\FBaseModal.resx">
+      <DependentUpon>FBaseModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="9.Form\FBaseFormEdicion.resx">
+      <DependentUpon>FBaseFormEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="9.Form\FBaseForm.resx">
+      <DependentUpon>FBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="ModeloReporte.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloReporte.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="1.Images\edit.png" />
+    <None Include="1.Images\logout.png" />
+    <None Include="1.Images\office.png" />
+    <None Include="1.Images\Server.png" />
+    <None Include="1.Images\setting.png" />
+    <None Include="1.Images\close.png" />
+    <None Include="1.Images\delete.png" />
+    <None Include="1.Images\new.png" />
+    <None Include="1.Images\print.png" />
+    <None Include="1.Images\save.png" />
+    <None Include="1.Images\view.png" />
+    <None Include="1.Images\cancel.png" />
+    <None Include="1.Images\Home.png" />
+    <None Include="1.Images\acceso.png" />
+    <None Include="1.Images\money.png" />
+    <None Include="1.Images\aceptar.png" />
+    <None Include="1.Images\check.png" />
+    <None Include="1.Images\hospitalizar.png" />
+    <None Include="1.Images\corazon.png" />
+    <None Include="1.Images\clinica.png" />
+    <None Include="1.Images\lista1.png" />
+    <None Include="1.Images\lista2.png" />
+    <None Include="1.Images\refresh.png" />
+    <None Include="1.Images\analisas.png" />
+    <None Include="1.Images\descuento.png" />
+    <None Include="1.Images\cierrecaja.png" />
+    <None Include="1.Images\atender.png" />
+    <None Include="1.Images\descuento2.png" />
+    <None Include="1.Images\print2.png" />
+    <None Include="1.Images\print3.png" />
+    <None Include="1.Images\anular.png" />
+    <None Include="1.Images\alta.png" />
+    <None Include="1.Images\detalle.png" />
+    <None Include="1.Images\cama.png" />
+    <None Include="1.Images\resultado.png" />
+    <None Include="1.Images\asignacion.png" />
+    <None Include="1.Images\uci.png" />
+    <None Include="1.Images\solicitud.png" />
+    <None Include="1.Images\editx16.png" />
+    <None Include="1.Images\zoomx16.png" />
+    <None Include="1.Images\reprogramar.png" />
+    <None Include="1.Images\addx16.png" />
+    <None Include="1.Images\refreshx16.png" />
+    <None Include="1.Images\adjuntarX32.png" />
+    <None Include="1.Images\viewX32.png" />
+    <None Include="1.Images\1.estado\e-blue.png" />
+    <None Include="1.Images\1.estado\e-green.png" />
+    <None Include="1.Images\1.estado\e-red.png" />
+    <None Include="1.Images\informeX32.png" />
+    <None Include="1.Images\1.estado\e-amarillo.png" />
+    <None Include="1.Images\1.estado\e-azul.png" />
+    <None Include="1.Images\1.estado\e-marron.png" />
+    <None Include="1.Images\1.estado\e-morado.png" />
+    <None Include="1.Images\1.estado\e-naranja.png" />
+    <None Include="1.Images\1.estado\e-rojo.png" />
+    <None Include="1.Images\1.estado\e-verde.png" />
+    <None Include="1.Images\install.png" />
+    <None Include="1.Images\filtro.png" />
+    <None Include="1.Images\verFiltro.png" />
+    <None Include="1.Images\1.estado\e-blanco.png" />
+    <None Include="1.Images\baja.png" />
+    <None Include="1.Images\2.laboratorio\lab_condiciones_16x16.png" />
+    <None Include="1.Images\2.laboratorio\lab_sobre_32x32.png" />
+    <None Include="1.Images\2.laboratorio\lab_lista_16x16.png" />
+    <None Include="1.Images\2.laboratorio\lab_mail_16x16.png" />
+    <None Include="1.Images\2.laboratorio\lab_informe_16x16.png" />
+    <None Include="1.Images\2.laboratorio\lab_verinforme_16x16.png" />
+    <None Include="1.Images\2.laboratorio\lab_print_32x32.png" />
+    <None Include="1.Images\2.laboratorio\lab_print_seleccion_32x32.png" />
+    <None Include="1.Images\1.estado\e-negro.png" />
+    <Content Include="1.Images\CLINICA ORTEGA %28pequeño%29.png" />
+    <None Include="1.Images\password.png" />
+    <None Include="1.Images\judicial.png" />
+    <None Include="1.Images\pagar.png" />
+    <None Include="1.Images\refacturar.png" />
+    <None Include="1.Images\tramite.png" />
+    <None Include="1.Images\conciliacion.png" />
+    <None Include="1.Images\distribuirGlobal.png" />
+    <None Include="1.Images\relacionPaciente.png" />
+    <None Include="1.Images\distribuir.png" />
+    <None Include="1.Images\consolidado.png" />
+    <None Include="1.Images\detallePago.png" />
+    <None Include="1.Images\sobre.png" />
+    <None Include="1.Images\print4.png" />
+    <None Include="1.Images\DefaultPrinter_16x16.png" />
+    <None Include="1.Images\Print_16x16.png" />
+    <None Include="1.Images\SavePageSetup_16x16.png" />
+    <None Include="1.Images\Squeeze_32x32.png" />
+    <None Include="1.Images\LogoOrtega.jpg" />
+    <None Include="1.Images\LogoOrtegaSmall.jpg" />
+    <Content Include="7.Ctrl\Controles.txt" />
+    <Content Include="1.Images\app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="1.Images\facturacion\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+  </PropertyGroup>
+</Project>

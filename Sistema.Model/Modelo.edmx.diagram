@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="feaa6ce47d324125b588b2608563a13c" Name="Catalogos" ZoomLevel="55">
+        <EntityTypeShape EntityType="SIGCLINEWModel.ActoProcesal" Width="1.875" PointX="5.75" PointY="16.125" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.ActoProcesalContenido" Width="2" PointX="8.375" PointY="16.875" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.ClaseProceso" Width="1.5" PointX="1" PointY="5" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.Documento" Width="1.5" PointX="0.75" PointY="13.125" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.Expediente" Width="2.5" PointX="3.5" PointY="6.25" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.ExpedienteInstancia" Width="1.875" PointX="9.75" PointY="7.375" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.InstanciaJudicial" Width="1.75" PointX="7.25" PointY="3.875" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.Localidad" Width="1.75" PointX="4.5" PointY="20.375" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.PersonaEmpresa" Width="1.75" PointX="3.25" PointY="0.75" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.TipoContenido" Width="1.75" PointX="5.875" PointY="12.875" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.TipoProceso" Width="1.75" PointX="0.75" PointY="8" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_ActoProcesal_Expediente" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_ActoProcesalContenido_ActoProcesal" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_ActoProcesalContenido_TipoContenido" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_Expediente_ClaseProceso" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="SIGCLINEWModel.FK_Expediente_Expediente" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_Expediente_TipoProceso" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="SIGCLINEWModel.FK_ExpedienteInstancia_Expediente" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_ExpedienteInstancia_InstanciaJudicial" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_Localidad_Localidad" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_PersonaEmpresa_Localidad" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_PersonaEmpresa_PersonaEmpresa" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.OrganoJudicial" Width="2" PointX="7" PointY="21.375" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_ExpedienteInstancia_OrganoJudicial" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_OrganoJudicial_Localidad" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.SedeJudicial" Width="1.5" PointX="4.75" PointY="23.75" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_SedeJudicial_Localidad" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_OrganoJudicial_SedeJudicial" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.Opcion" Width="1.5" PointX="9.75" PointY="2.375" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.OrganoExpedientePersona" Width="2.375" PointX="6.75" PointY="6.875" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_OrganoExpedientePersona_Expediente" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="SIGCLINEWModel.FK_OrganoExpedientePersona_OrganoJudicial" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa1" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa2" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_OrganoExpedientePersona_PersonaEmpresa3" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_OrganoExpedientePersona_Expediente1" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_OrganoExpedientePersona_OrganoJudicial1" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.VLocalidad" Width="1.75" PointX="7.25" PointY="1.75" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.Derecho" Width="1.5" PointX="11.074353860260151" PointY="7.8676385171095085" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.Usuario" Width="1.5" PointX="11.57968686128952" PointY="6.1944630621906667" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_Derecho_Opcion" />
+        <AssociationConnector Association="SIGCLINEWModel.FK_Derecho_Usuario" />
+        <AssociationConnector Association="SIGCLINEWModel.fk_ActoProcesal_TipoContenidoNotificacion" />
+        <AssociationConnector Association="SIGCLINEWModel.fk_ExpedienteIntancia_PersonaEmpresaContrato" />
+        <AssociationConnector Association="SIGCLINEWModel.fk_Expediente_TipoContenidoNotificacion" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.ExpedienteAsesorLegal" Width="1.5" PointX="12.625" PointY="0.75" />
+        <AssociationConnector Association="SIGCLINEWModel.fk_ExpedienteAsesorLegal_Expediente" ManuallyRouted="true" >
+          <ConnectorPoint PointX="6" PointY="16.114645182291667" />
+          <ConnectorPoint PointX="13.725" PointY="490.12308759953646" />
+          <ConnectorPoint PointX="13.725" PointY="3.6917936197916665" />
+        </AssociationConnector>
+        <AssociationConnector Association="SIGCLINEWModel.fk_ExpedienteAsesorLegal_AbogadoEngargado_PersonaEmpresa" />
+        <AssociationConnector Association="SIGCLINEWModel.fk_ExpedienteAsesorLegal_EstudioAbogado_PersonaEmpresa" />
+        <AssociationConnector Association="SIGCLINEWModel.fk_Expediente_TEstadoActual" />
+        <AssociationConnector Association="SIGCLINEWModel.fk_Expediente_SupervisorInternoPersonaEmpresa" />
+      </Diagram>
+      <Diagram DiagramId="6b436c6746e146d7bb5ab437c9de5480" Name="Consultas" ZoomLevel="98" >
+        <EntityTypeShape EntityType="SIGCLINEWModel.viewExpediente" Width="2" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.viewExpedienteInstancia" Width="2.375" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.viewExpedienteReport" Width="3.125" PointX="3.625" PointY="4.75" />
+        <EntityTypeShape EntityType="SIGCLINEWModel.viewEstructuraTotales" Width="1.875" PointX="6.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,21 @@
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BIN\Sistema.Query.dll
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BIN\Sistema.Query.pdb
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Query\obj\Debug\Sistema.Query.csprojAssemblyReference.cache
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Query\obj\Debug\Sistema.Query.csproj.CoreCompileInputs.cache
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Query\obj\Debug\Sistema.Query.csproj.CopyComplete
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Query\obj\Debug\Sistema.Query.dll
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Query\obj\Debug\Sistema.Query.pdb
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BIN\Sistema.Query.dll
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BIN\Sistema.Query.pdb
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Query\obj\Debug\Sistema.Query.csproj.AssemblyReference.cache
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Query\obj\Debug\Sistema.Query.csproj.CoreCompileInputs.cache
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Query\obj\Debug\Sistema.Query.csproj.CopyComplete
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Query\obj\Debug\Sistema.Query.dll
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Query\obj\Debug\Sistema.Query.pdb
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BIN\Sistema.Query.dll
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BIN\Sistema.Query.pdb
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.Query\obj\Debug\Sistema.Query.csproj.CoreCompileInputs.cache
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.Query\obj\Debug\Sistema.Query.csproj.CopyComplete
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.Query\obj\Debug\Sistema.Query.dll
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.Query\obj\Debug\Sistema.Query.pdb
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.Query\obj\Debug\Sistema.Query.csproj.AssemblyReference.cache

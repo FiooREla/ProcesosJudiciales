@@ -1,0 +1,23 @@
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BIN\Sistema.Model.dll.config
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BIN\Sistema.Model.dll
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BIN\Sistema.Model.pdb
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Model\obj\Debug\Sistema.Model.csprojAssemblyReference.cache
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Model\obj\Debug\Sistema.Model.csproj.CoreCompileInputs.cache
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Model\obj\Debug\Sistema.Model.csproj.CopyComplete
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Model\obj\Debug\Sistema.Model.dll
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Model\obj\Debug\Sistema.Model.pdb
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BIN\Sistema.Model.dll.config
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BIN\Sistema.Model.dll
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BIN\Sistema.Model.pdb
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Model\obj\Debug\Sistema.Model.csproj.CoreCompileInputs.cache
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Model\obj\Debug\Sistema.Model.csproj.CopyComplete
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Model\obj\Debug\Sistema.Model.dll
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Model\obj\Debug\Sistema.Model.pdb
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Model\obj\Debug\Sistema.Model.csproj.AssemblyReference.cache
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BIN\Sistema.Model.dll.config
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BIN\Sistema.Model.dll
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BIN\Sistema.Model.pdb
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.Model\obj\Debug\Sistema.Model.csproj.CoreCompileInputs.cache
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.Model\obj\Debug\Sistema.Model.dll
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.Model\obj\Debug\Sistema.Model.pdb
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.Model\obj\Debug\Sistema.Model.csproj.AssemblyReference.cache

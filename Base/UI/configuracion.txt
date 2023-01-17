@@ -1,0 +1,47 @@
+﻿##Formulario de Edicion
+Nombres de los controles
+
+"dlcData" -> Si la opcion tiene un layoutControl
+"tpListaEdicion" -> EL tabControl que contiene la edicion y la lista
+"tpLista" -> Tab con la lista
+"tpEdicion" -> Tab con la edicion
+
+##GridControl
+
+Tag:
+NB: Para no agregar valores por defecto
+
+TIPO-ACEPTA NULO-LONGITUD
+
+TIPOS
+-----
+COMUNES:
+
+N4-NUMERO 4 DECIMALES
+N-NUMERO SIN DECIMALES
+NO-SOLO NUMEROS PUEDEN SER 0001
+S-SOLO LETRAS
+SN-LETRAS Y NUMEROS
+SS-TODOS LOS CARACTERES
+
+DEFINIDOS:
+
+DNI: SOLO SE INGRESARAN DNI
+RUC: SE INGRESARAN RUC
+DNI,RUC: SE PUEDE INGRESA DNI O UN RUC
+
+ACEPTA NULO
+-----------
+S: SI ACEPTA NULOS
+N: NO ACEPTA NULOS
+
+LONGITUD
+--------
+NUMERO: EL NUMERO DE CARACTERES ACEPTADOS (* no especifico)
+>NUMERO: EL NUMERO DE CARACTERES TIENE QUE SER MAYOR AL NUMERO
+<NUMERO: EL NUMERO DE CARACTERES TIENE QUE SER MENOR NUMERO
+,: LA COMA SEPARA A LAS DOS CONDICIONES
+
+EJEMPLO: 
+N4-N-10
+S-N->10,<20

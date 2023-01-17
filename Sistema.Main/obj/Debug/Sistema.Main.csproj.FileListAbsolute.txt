@@ -1,0 +1,24 @@
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BIN\SIG-PJ.NET.exe.config
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BIN\SIG-PJ.NET.exe
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BIN\SIG-PJ.NET.pdb
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Main\obj\Debug\Sistema.Main.csprojAssemblyReference.cache
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Main\obj\Debug\Sistema.Main.csproj.CoreCompileInputs.cache
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Main\obj\Debug\Sistema.Main.csproj.CopyComplete
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Main\obj\Debug\SIG-PJ.NET.exe
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\Sistema.Main\obj\Debug\SIG-PJ.NET.pdb
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Main\obj\Debug\Sistema.Main.csproj.AssemblyReference.cache
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Main\obj\Debug\Sistema.Main.csproj.CoreCompileInputs.cache
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BIN\SIG-PJ.NET.exe.config
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BIN\SIG-PJ.NET.exe
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BIN\SIG-PJ.NET.pdb
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Main\obj\Debug\Sistema.Main.csproj.CopyComplete
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Main\obj\Debug\SIG-PJ.NET.exe
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\Sistema.Main\obj\Debug\SIG-PJ.NET.pdb
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BIN\SIG-PJ.NET.exe.config
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BIN\SIG-PJ.NET.exe
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BIN\SIG-PJ.NET.pdb
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.Main\obj\Debug\Sistema.Main.csproj.CoreCompileInputs.cache
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.Main\obj\Debug\Sistema.Main.csproj.CopyComplete
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.Main\obj\Debug\SIG-PJ.NET.exe
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.Main\obj\Debug\SIG-PJ.NET.pdb
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistema.Main\obj\Debug\Sistema.Main.csproj.AssemblyReference.cache

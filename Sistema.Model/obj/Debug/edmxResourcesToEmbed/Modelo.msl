@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SIGCLINEWModelStoreContainer" CdmEntityContainer="ContextoModelo">
+    <EntitySetMapping Name="ActoProcesal">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.ActoProcesal">
+        <MappingFragment StoreEntitySet="ActoProcesal">
+          <ScalarProperty Name="EtapaProceso" ColumnName="EtapaProceso" />
+          <ScalarProperty Name="IdNotificacionTipoContenido" ColumnName="IdNotificacionTipoContenido" />
+          <ScalarProperty Name="FechaRecepcion" ColumnName="FechaRecepcion" />
+          <ScalarProperty Name="FechaAvisoAlerta" ColumnName="FechaAvisoAlerta" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="IdExpedienteInstancia" ColumnName="IdExpedienteInstancia" />
+          <ScalarProperty Name="IdNEWID" ColumnName="IdNEWID" />
+          <ScalarProperty Name="Contenido1" ColumnName="Contenido1" />
+          <ScalarProperty Name="Contenido" ColumnName="Contenido" />
+          <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+          <ScalarProperty Name="IdActoPro" ColumnName="IdActoPro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActoProcesalContenido">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.ActoProcesalContenido">
+        <MappingFragment StoreEntitySet="ActoProcesalContenido">
+          <ScalarProperty Name="IdTipoContenido" ColumnName="IdTipoContenido" />
+          <ScalarProperty Name="IdActoPro" ColumnName="IdActoPro" />
+          <ScalarProperty Name="IdActoProCont" ColumnName="IdActoProCont" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClaseProceso">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.ClaseProceso">
+        <MappingFragment StoreEntitySet="ClaseProceso">
+          <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdClaseProceso" ColumnName="IdClaseProceso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documento">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.Documento">
+        <MappingFragment StoreEntitySet="Documento">
+          <ScalarProperty Name="TipoInterno" ColumnName="TipoInterno" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="RutaPc" ColumnName="RutaPc" />
+          <ScalarProperty Name="Documento1" ColumnName="Documento" />
+          <ScalarProperty Name="IdNEWID" ColumnName="IdNEWID" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expediente">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.Expediente">
+        <MappingFragment StoreEntitySet="Expediente">
+          <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+          <ScalarProperty Name="FechaInstalacionTribText" ColumnName="FechaInstalacionTribText" />
+          <ScalarProperty Name="UsuarioModifica" ColumnName="UsuarioModifica" />
+          <ScalarProperty Name="UsuarioCrea" ColumnName="UsuarioCrea" />
+          <ScalarProperty Name="SecretarioArbitral" ColumnName="SecretarioArbitral" />
+          <ScalarProperty Name="JustificacionContingencia" ColumnName="JustificacionContingencia" />
+          <ScalarProperty Name="LaudoFavor" ColumnName="LaudoFavor" />
+          <ScalarProperty Name="IdSedeArbitral" ColumnName="IdSedeArbitral" />
+          <ScalarProperty Name="MontoLaudado" ColumnName="MontoLaudado" />
+          <ScalarProperty Name="TipoMonedaLaudado" ColumnName="TipoMonedaLaudado" />
+          <ScalarProperty Name="MontoReconvencion" ColumnName="MontoReconvencion" />
+          <ScalarProperty Name="TipoMonedaReconvencion" ColumnName="TipoMonedaReconvencion" />
+          <ScalarProperty Name="MontoControversia" ColumnName="MontoControversia" />
+          <ScalarProperty Name="TipoMonedaControversia" ColumnName="TipoMonedaControversia" />
+          <ScalarProperty Name="FechaInstalacionTrib" ColumnName="FechaInstalacionTrib" />
+          <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+          <ScalarProperty Name="Modalidad" ColumnName="Modalidad" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="CorreoParaNotificacion" ColumnName="CorreoParaNotificacion" />
+          <ScalarProperty Name="DescripcionTipoContenidadMateria" ColumnName="DescripcionTipoContenidadMateria" />
+          <ScalarProperty Name="IdTipoContenidadMateria" ColumnName="IdTipoContenidadMateria" />
+          <ScalarProperty Name="DescripcionTipoArbitraje" ColumnName="DescripcionTipoArbitraje" />
+          <ScalarProperty Name="DescripcionEstadoActual" ColumnName="DescripcionEstadoActual" />
+          <ScalarProperty Name="DescripcionContrato" ColumnName="DescripcionContrato" />
+          <ScalarProperty Name="TercerArbitro" ColumnName="TercerArbitro" />
+          <ScalarProperty Name="TipoExpediente" ColumnName="TipoExpediente" />
+          <ScalarProperty Name="IdSupervisorINternoRela" ColumnName="IdSupervisorINternoRela" />
+          <ScalarProperty Name="NroDiasNotificacionRest" ColumnName="NroDiasNotificacionRest" />
+          <ScalarProperty Name="NroDiasNotificacion" ColumnName="NroDiasNotificacion" />
+          <ScalarProperty Name="TipoNotificacionMail" ColumnName="TipoNotificacionMail" />
+          <ScalarProperty Name="IdEstadoActual" ColumnName="IdEstadoActual" />
+          <ScalarProperty Name="MontoProbable" ColumnName="MontoProbable" />
+          <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+          <ScalarProperty Name="LugarProximaAudiencia" ColumnName="LugarProximaAudiencia" />
+          <ScalarProperty Name="HoraProximaAudiencia" ColumnName="HoraProximaAudiencia" />
+          <ScalarProperty Name="FechaProximaAudiencia" ColumnName="FechaProximaAudiencia" />
+          <ScalarProperty Name="TipoContingencia" ColumnName="TipoContingencia" />
+          <ScalarProperty Name="NroCasillaNotificacion" ColumnName="NroCasillaNotificacion" />
+          <ScalarProperty Name="TipoNotificacion" ColumnName="TipoNotificacion" />
+          <ScalarProperty Name="Archivado" ColumnName="Archivado" />
+          <ScalarProperty Name="IdAbogadoPatrocinante" ColumnName="IdAbogadoPatrocinante" />
+          <ScalarProperty Name="IdNotificacionTipoContenido" ColumnName="IdNotificacionTipoContenido" />
+          <ScalarProperty Name="IdContrato" ColumnName="IdContrato" />
+          <ScalarProperty Name="IdSupervisorInterno" ColumnName="IdSupervisorInterno" />
+          <ScalarProperty Name="NDemandados" ColumnName="NDemandados" />
+          <ScalarProperty Name="NDemandantes" ColumnName="NDemandantes" />
+          <ScalarProperty Name="MontoDolares" ColumnName="MontoDolares" />
+          <ScalarProperty Name="MontoSoles" ColumnName="MontoSoles" />
+          <ScalarProperty Name="NroInstancia" ColumnName="NroInstancia" />
+          <ScalarProperty Name="FechaMovimiento" ColumnName="FechaMovimiento" />
+          <ScalarProperty Name="IdNEWID" ColumnName="IdNEWID" />
+          <ScalarProperty Name="IdExpedientePadre" ColumnName="IdExpedientePadre" />
+          <ScalarProperty Name="IdAbogado" ColumnName="IdAbogado" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdClaseProceso" ColumnName="IdClaseProceso" />
+          <ScalarProperty Name="IdDemandado" ColumnName="IdDemandado" />
+          <ScalarProperty Name="IdDemandante" ColumnName="IdDemandante" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="IdTipoProceso" ColumnName="IdTipoProceso" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpedienteInstancia">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.ExpedienteInstancia">
+        <MappingFragment StoreEntitySet="ExpedienteInstancia">
+          <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+          <ScalarProperty Name="Apelacion" ColumnName="Apelacion" />
+          <ScalarProperty Name="TasacionInstancia" ColumnName="TasacionInstancia" />
+          <ScalarProperty Name="Automisorio" ColumnName="Automisorio" />
+          <ScalarProperty Name="IdPersonaContrato" ColumnName="IdPersonaContrato" />
+          <ScalarProperty Name="IdOrgano" ColumnName="IdOrgano" />
+          <ScalarProperty Name="IdNEWID" ColumnName="IdNEWID" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="IdInstancia" ColumnName="IdInstancia" />
+          <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+          <ScalarProperty Name="IdExpedienteInstancia" ColumnName="IdExpedienteInstancia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstanciaJudicial">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.InstanciaJudicial">
+        <MappingFragment StoreEntitySet="InstanciaJudicial">
+          <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdInstancia" ColumnName="IdInstancia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localidad">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.Localidad">
+        <MappingFragment StoreEntitySet="Localidad">
+          <ScalarProperty Name="IdLocalidadPadre" ColumnName="IdLocalidadPadre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdLocalidad" ColumnName="IdLocalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonaEmpresa">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.PersonaEmpresa">
+        <MappingFragment StoreEntitySet="PersonaEmpresa">
+          <ScalarProperty Name="RepresentanteLegalDNI" ColumnName="RepresentanteLegalDNI" />
+          <ScalarProperty Name="RepresentanteLegalNombre" ColumnName="RepresentanteLegalNombre" />
+          <ScalarProperty Name="RepresentanteLegal" ColumnName="RepresentanteLegal" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="FechaIncio" ColumnName="FechaIncio" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoFiltro" ColumnName="TipoFiltro" />
+          <ScalarProperty Name="TipoInterno" ColumnName="TipoInterno" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="IdLocalidad" ColumnName="IdLocalidad" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdPersonaEmpresa" ColumnName="IdPersonaEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoContenido">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.TipoContenido">
+        <MappingFragment StoreEntitySet="TipoContenido">
+          <ScalarProperty Name="TipoInterno" ColumnName="TipoInterno" />
+          <ScalarProperty Name="NroDias" ColumnName="NroDias" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Abreviado" ColumnName="Abreviado" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdTipoContenido" ColumnName="IdTipoContenido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoProceso">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.TipoProceso">
+        <MappingFragment StoreEntitySet="TipoProceso">
+          <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdTipoProceso" ColumnName="IdTipoProceso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewExpediente">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.viewExpediente">
+        <MappingFragment StoreEntitySet="viewExpediente">
+          <ScalarProperty Name="UsuarioModifica" ColumnName="UsuarioModifica" />
+          <ScalarProperty Name="UsuarioCrea" ColumnName="UsuarioCrea" />
+          <ScalarProperty Name="NombreAsesorLegalPatrocinador" ColumnName="NombreAsesorLegalPatrocinador" />
+          <ScalarProperty Name="TipoMonedaControversia" ColumnName="TipoMonedaControversia" />
+          <ScalarProperty Name="DescripcionTipoArbitraje" ColumnName="DescripcionTipoArbitraje" />
+          <ScalarProperty Name="SedeArbitral" ColumnName="SedeArbitral" />
+          <ScalarProperty Name="Modalidad" ColumnName="Modalidad" />
+          <ScalarProperty Name="MateriaArbitral" ColumnName="MateriaArbitral" />
+          <ScalarProperty Name="TipoExpediente" ColumnName="TipoExpediente" />
+          <ScalarProperty Name="Archivado" ColumnName="Archivado" />
+          <ScalarProperty Name="ArchivadoSIoNO" ColumnName="ArchivadoSIoNO" />
+          <ScalarProperty Name="NDemandados" ColumnName="NDemandados" />
+          <ScalarProperty Name="NDemandantes" ColumnName="NDemandantes" />
+          <ScalarProperty Name="MontoDolares" ColumnName="MontoDolares" />
+          <ScalarProperty Name="MontoSoles" ColumnName="MontoSoles" />
+          <ScalarProperty Name="NroInstancia" ColumnName="NroInstancia" />
+          <ScalarProperty Name="FechaMovimiento" ColumnName="FechaMovimiento" />
+          <ScalarProperty Name="IdNEWID" ColumnName="IdNEWID" />
+          <ScalarProperty Name="IdExpedientePadre" ColumnName="IdExpedientePadre" />
+          <ScalarProperty Name="DocumentoAbogado" ColumnName="DocumentoAbogado" />
+          <ScalarProperty Name="NombreAbogado" ColumnName="NombreAbogado" />
+          <ScalarProperty Name="IdAbogado" ColumnName="IdAbogado" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="SiglaClaseProceso" ColumnName="SiglaClaseProceso" />
+          <ScalarProperty Name="DescripcionClaseProceso" ColumnName="DescripcionClaseProceso" />
+          <ScalarProperty Name="IdClaseProceso" ColumnName="IdClaseProceso" />
+          <ScalarProperty Name="DocumentoDemandado" ColumnName="DocumentoDemandado" />
+          <ScalarProperty Name="NombreDemandado" ColumnName="NombreDemandado" />
+          <ScalarProperty Name="IdDemandado" ColumnName="IdDemandado" />
+          <ScalarProperty Name="NroDocumentoDemandante" ColumnName="NroDocumentoDemandante" />
+          <ScalarProperty Name="NombreDemandante" ColumnName="NombreDemandante" />
+          <ScalarProperty Name="IdDemandante" ColumnName="IdDemandante" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="DescripcionTipoProceso" ColumnName="DescripcionTipoProceso" />
+          <ScalarProperty Name="IdTipoProceso" ColumnName="IdTipoProceso" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrganoJudicial">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.OrganoJudicial">
+        <MappingFragment StoreEntitySet="OrganoJudicial">
+          <ScalarProperty Name="IdSede" ColumnName="IdSede" />
+          <ScalarProperty Name="IdSecretario" ColumnName="IdSecretario" />
+          <ScalarProperty Name="IdJuez" ColumnName="IdJuez" />
+          <ScalarProperty Name="IdLocalidad" ColumnName="IdLocalidad" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="IdOrgano" ColumnName="IdOrgano" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SedeJudicial">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.SedeJudicial">
+        <MappingFragment StoreEntitySet="SedeJudicial">
+          <ScalarProperty Name="TipoInterno" ColumnName="TipoInterno" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="IdLocalidad" ColumnName="IdLocalidad" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdSede" ColumnName="IdSede" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewExpedienteInstancia">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.viewExpedienteInstancia">
+        <MappingFragment StoreEntitySet="viewExpedienteInstancia">
+          <ScalarProperty Name="NroContrato" ColumnName="NroContrato" />
+          <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+          <ScalarProperty Name="Apelacion" ColumnName="Apelacion" />
+          <ScalarProperty Name="TasacionInstancia" ColumnName="TasacionInstancia" />
+          <ScalarProperty Name="Automisorio" ColumnName="Automisorio" />
+          <ScalarProperty Name="DescripcionSedeJudicial" ColumnName="DescripcionSedeJudicial" />
+          <ScalarProperty Name="IdSede" ColumnName="IdSede" />
+          <ScalarProperty Name="DescripcionOrganoJ" ColumnName="DescripcionOrganoJ" />
+          <ScalarProperty Name="TipoOrganoJ" ColumnName="TipoOrganoJ" />
+          <ScalarProperty Name="IdOrgano" ColumnName="IdOrgano" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="SiglaInstancia" ColumnName="SiglaInstancia" />
+          <ScalarProperty Name="DescripcionInstancia" ColumnName="DescripcionInstancia" />
+          <ScalarProperty Name="IdInstancia" ColumnName="IdInstancia" />
+          <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+          <ScalarProperty Name="IdExpedienteInstancia" ColumnName="IdExpedienteInstancia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Opcion">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.Opcion">
+        <MappingFragment StoreEntitySet="Opcion">
+          <ScalarProperty Name="NroGrupo" ColumnName="NroGrupo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdOpcion" ColumnName="IdOpcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewExpedienteReport">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.viewExpedienteReport">
+        <MappingFragment StoreEntitySet="viewExpedienteReport">
+          <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+          <ScalarProperty Name="MontoLaudado" ColumnName="MontoLaudado" />
+          <ScalarProperty Name="TipoMonedaLaudado" ColumnName="TipoMonedaLaudado" />
+          <ScalarProperty Name="MontoReconvencion" ColumnName="MontoReconvencion" />
+          <ScalarProperty Name="TipoMonedaReconvencion" ColumnName="TipoMonedaReconvencion" />
+          <ScalarProperty Name="MontoControversia" ColumnName="MontoControversia" />
+          <ScalarProperty Name="JustificacionContingencia" ColumnName="JustificacionContingencia" />
+          <ScalarProperty Name="Contingencia" ColumnName="Contingencia" />
+          <ScalarProperty Name="LaudoFavor" ColumnName="LaudoFavor" />
+          <ScalarProperty Name="ArbitroParteDemandante" ColumnName="ArbitroParteDemandante" />
+          <ScalarProperty Name="ArbitroParteEntidad" ColumnName="ArbitroParteEntidad" />
+          <ScalarProperty Name="ArbitroUnicoPresidente" ColumnName="ArbitroUnicoPresidente" />
+          <ScalarProperty Name="SecretarioArbitral" ColumnName="SecretarioArbitral" />
+          <ScalarProperty Name="CentroArbitral" ColumnName="CentroArbitral" />
+          <ScalarProperty Name="FechaInstalacionTribText" ColumnName="FechaInstalacionTribText" />
+          <ScalarProperty Name="ContratoOrigen" ColumnName="ContratoOrigen" />
+          <ScalarProperty Name="CorreoParaNotificacion" ColumnName="CorreoParaNotificacion" />
+          <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+          <ScalarProperty Name="EstadoProceso" ColumnName="EstadoProceso" />
+          <ScalarProperty Name="SupervisorInterno" ColumnName="SupervisorInterno" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="NombreAsesorLegalPatrocinador" ColumnName="NombreAsesorLegalPatrocinador" />
+          <ScalarProperty Name="TipoMonedaControversia" ColumnName="TipoMonedaControversia" />
+          <ScalarProperty Name="DescripcionTipoArbitraje" ColumnName="DescripcionTipoArbitraje" />
+          <ScalarProperty Name="SedeArbitral" ColumnName="SedeArbitral" />
+          <ScalarProperty Name="Modalidad" ColumnName="Modalidad" />
+          <ScalarProperty Name="MateriaArbitral" ColumnName="MateriaArbitral" />
+          <ScalarProperty Name="TipoExpediente" ColumnName="TipoExpediente" />
+          <ScalarProperty Name="NDemandados" ColumnName="NDemandados" />
+          <ScalarProperty Name="NDemandantes" ColumnName="NDemandantes" />
+          <ScalarProperty Name="FechaAvisoAlertaActoPro" ColumnName="FechaAvisoAlertaActoPro" />
+          <ScalarProperty Name="FechaRegistroActoPro" ColumnName="FechaRegistroActoPro" />
+          <ScalarProperty Name="ContenidoActoProcesal" ColumnName="ContenidoActoProcesal" />
+          <ScalarProperty Name="CodigoActoProcesal" ColumnName="CodigoActoProcesal" />
+          <ScalarProperty Name="IdActoPro" ColumnName="IdActoPro" />
+          <ScalarProperty Name="DescripcionInstancia" ColumnName="DescripcionInstancia" />
+          <ScalarProperty Name="IdInstancia" ColumnName="IdInstancia" />
+          <ScalarProperty Name="IdExpedienteInstancia" ColumnName="IdExpedienteInstancia" />
+          <ScalarProperty Name="MontoDolares" ColumnName="MontoDolares" />
+          <ScalarProperty Name="MontoSoles" ColumnName="MontoSoles" />
+          <ScalarProperty Name="NroInstancia" ColumnName="NroInstancia" />
+          <ScalarProperty Name="FechaMovimiento" ColumnName="FechaMovimiento" />
+          <ScalarProperty Name="IdNEWID" ColumnName="IdNEWID" />
+          <ScalarProperty Name="IdExpedientePadre" ColumnName="IdExpedientePadre" />
+          <ScalarProperty Name="DocumentoAbogado" ColumnName="DocumentoAbogado" />
+          <ScalarProperty Name="NombreAbogado" ColumnName="NombreAbogado" />
+          <ScalarProperty Name="IdAbogado" ColumnName="IdAbogado" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="SiglaClaseProceso" ColumnName="SiglaClaseProceso" />
+          <ScalarProperty Name="DescripcionClaseProceso" ColumnName="DescripcionClaseProceso" />
+          <ScalarProperty Name="IdClaseProceso" ColumnName="IdClaseProceso" />
+          <ScalarProperty Name="DocumentoDemandado" ColumnName="DocumentoDemandado" />
+          <ScalarProperty Name="NombreDemandado" ColumnName="NombreDemandado" />
+          <ScalarProperty Name="IdDemandado" ColumnName="IdDemandado" />
+          <ScalarProperty Name="NroDocumentoDemandante" ColumnName="NroDocumentoDemandante" />
+          <ScalarProperty Name="NombreDemandante" ColumnName="NombreDemandante" />
+          <ScalarProperty Name="IdDemandante" ColumnName="IdDemandante" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="DescripcionTipoProceso" ColumnName="DescripcionTipoProceso" />
+          <ScalarProperty Name="IdTipoProceso" ColumnName="IdTipoProceso" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewEstructuraTotales">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.viewEstructuraTotales">
+        <MappingFragment StoreEntitySet="viewEstructuraTotales">
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDSYS" ColumnName="IDSYS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspExpedientesJudicialesTotales" FunctionName="SIGCLINEWModel.Store.uspExpedientesJudicialesTotales" />
+    <FunctionImportMapping FunctionImportName="uspExpedientesJudicialesClaseProcesoTotales" FunctionName="SIGCLINEWModel.Store.uspExpedientesJudicialesClaseProcesoTotales" />
+    <FunctionImportMapping FunctionImportName="uspExpedientesJudicialesSedeJudicialTotales" FunctionName="SIGCLINEWModel.Store.uspExpedientesJudicialesSedeJudicialTotales" />
+    <EntitySetMapping Name="OrganoExpedientePersona">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.OrganoExpedientePersona">
+        <MappingFragment StoreEntitySet="OrganoExpedientePersona">
+          <ScalarProperty Name="IdExpedienteDemandado" ColumnName="IdExpedienteDemandado" />
+          <ScalarProperty Name="IdOrganoSecretario" ColumnName="IdOrganoSecretario" />
+          <ScalarProperty Name="IdDemandado" ColumnName="IdDemandado" />
+          <ScalarProperty Name="IdDemandante" ColumnName="IdDemandante" />
+          <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+          <ScalarProperty Name="IdSecretario" ColumnName="IdSecretario" />
+          <ScalarProperty Name="IdJuez" ColumnName="IdJuez" />
+          <ScalarProperty Name="IdOrgano" ColumnName="IdOrgano" />
+          <ScalarProperty Name="IdOrganoPersona" ColumnName="IdOrganoPersona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VLocalidad">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.VLocalidad">
+        <MappingFragment StoreEntitySet="VLocalidad">
+          <ScalarProperty Name="DescripcionLugar" ColumnName="DescripcionLugar" />
+          <ScalarProperty Name="DescripcionDis" ColumnName="DescripcionDis" />
+          <ScalarProperty Name="DescripcionPro" ColumnName="DescripcionPro" />
+          <ScalarProperty Name="IdLocalidad" ColumnName="IdLocalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Derecho">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.Derecho">
+        <MappingFragment StoreEntitySet="Derecho">
+          <ScalarProperty Name="Derecho1" ColumnName="Derecho" />
+          <ScalarProperty Name="IdOpcion" ColumnName="IdOpcion" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdDerecho" ColumnName="IdDerecho" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpedienteAsesorLegal">
+      <EntityTypeMapping TypeName="SIGCLINEWModel.ExpedienteAsesorLegal">
+        <MappingFragment StoreEntitySet="ExpedienteAsesorLegal">
+          <ScalarProperty Name="NroOS_RA_C_Descripcion" ColumnName="NroOS_RA_C_Descripcion" />
+          <ScalarProperty Name="NroOS_RA_C" ColumnName="NroOS_RA_C" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="FechaFIn" ColumnName="FechaFIn" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="IdAsesorLegalAbogado" ColumnName="IdAsesorLegalAbogado" />
+          <ScalarProperty Name="IdAsesorLegalEstudio" ColumnName="IdAsesorLegalEstudio" />
+          <ScalarProperty Name="IdExpediente" ColumnName="IdExpediente" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

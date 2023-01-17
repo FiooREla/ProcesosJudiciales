@@ -1,0 +1,36 @@
+﻿#LayoutSplitter .HeaderPane
+{
+	background: #eeeef3;
+}
+
+.CalendarNavArea
+{
+	background: #f4f5f6;
+}
+
+#LayoutSplitter .HeaderSubMenu.dxm-popup .dxm-item .dxm-content
+{
+    padding-top: 4px;
+    padding-left: 6px;
+}
+
+#LayoutSplitter .HeaderSubMenu.dxm-popup .dxm-item .dxm-image
+{
+	margin-top: -1px;
+	margin-right: 12px;
+}
+
+#LayoutSplitter .CornerMenu.dxm-vertical .dxm-image-l .dxm-item .dxm-content
+{
+    padding-top: 14px;
+}
+
+#LayoutSplitter .CornerMenu.dxm-vertical .dxm-image-l .dxm-item .dxm-image
+{
+    margin-top: -10px;
+}
+
+.MailMenuSearchBox
+{
+    margin-top: 1px;
+}

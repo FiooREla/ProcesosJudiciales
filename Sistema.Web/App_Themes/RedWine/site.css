@@ -1,0 +1,51 @@
+﻿#LayoutSplitter .HeaderPane
+{
+    background: #78002b url("Images/HeaderBack.jpg") no-repeat left top;
+}
+
+.ThemeSelectorLabel
+{
+    color: White;
+}
+
+.CalendarNavArea
+{
+    background: #d5d5d5;
+}
+
+.Sprite_Logo
+{
+    background-position: -1px -32px; /* Sprite_Logo_Light */
+}
+
+.MailGridHeaderAttachment.Sprite_Attachment
+{
+    background-position: -118px -96px; /* Sprite_Attachment_Light */
+}
+
+#LayoutSplitter .HeaderSubMenu.dxm-popup .dxm-item .dxm-content
+{
+    padding-top: 4px;
+    padding-left: 6px;
+}
+
+#LayoutSplitter .HeaderSubMenu.dxm-popup .dxm-item .dxm-image
+{
+    margin-right: 12px;
+	margin-top: -1px;
+}
+
+#LayoutSplitter .CornerMenu.dxm-vertical .dxm-image-l .dxm-item .dxm-content
+{
+    padding-top: 14px;
+}
+
+#LayoutSplitter .CornerMenu.dxm-vertical .dxm-image-l .dxm-item .dxm-image
+{
+    margin-top: -9px;
+}
+
+.MailMenuSearchBox
+{
+    margin-top: 1px;
+}

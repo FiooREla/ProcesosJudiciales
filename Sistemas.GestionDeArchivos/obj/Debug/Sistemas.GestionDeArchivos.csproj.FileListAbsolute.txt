@@ -1,0 +1,6 @@
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistemas.GestionDeArchivos\bin\Debug\Sistemas.GestionDeArchivos.dll
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistemas.GestionDeArchivos\bin\Debug\Sistemas.GestionDeArchivos.pdb
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistemas.GestionDeArchivos\obj\Debug\Sistemas.GestionDeArchivos.csproj.AssemblyReference.cache
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistemas.GestionDeArchivos\obj\Debug\Sistemas.GestionDeArchivos.csproj.CoreCompileInputs.cache
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistemas.GestionDeArchivos\obj\Debug\Sistemas.GestionDeArchivos.dll
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\Sistemas.GestionDeArchivos\obj\Debug\Sistemas.GestionDeArchivos.pdb

@@ -1,0 +1,350 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Sistema Judicial</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link type="text/css" rel="Stylesheet" href="Content/styles.css" />
+    <link type="text/css" rel="Stylesheet" href="Content/sprite.css" />
+    <script type="text/javascript" src="Scripts/Judicial.js"></script>
+    <style type="text/css">
+        .auto-style1 {
+            font-style: normal;
+            font-size: x-large;
+            color: #000066;
+        }
+        .CornerMenu {}
+        .CornerMenu {}
+        .auto-style2 {
+            width: 10px;
+        }
+        .auto-style3 {
+            width: 100%;
+        }
+        .auto-style4 {
+            width: 188px;
+        }
+        .auto-style5 {
+            height: 10px;
+            width: 88px;
+        }
+        .auto-style6 {
+            width: 188px;
+            height: 10px;
+        }
+        .auto-style7 {
+            width: 88px;
+        }
+    </style>
+</head>
+<body onload="Judicial.LoadPage">
+    <form id="form1" runat="server">
+        <dx:ASPxSplitter ID="LayoutSplitter" runat="server" FullscreenMode="True" Width="100%" Height="100%" Orientation="Vertical" SaveStateToCookies="True">
+            <Panes>
+                <dx:SplitterPane Size="80" Name="HeaderPane">
+                    <ContentCollection>
+                        <dx:SplitterContentControl runat="server">
+                            <table id="HeaderArea">
+                                <tr>
+                                    <td class="auto-style3">
+                                        <address class="auto-style1">
+                                            Consulta de Procesos Judiciales - Electroperu S.A.</address>
+                                    </td>
+                                    <td class="auto-style2">
+                                        
+                                        <dx:ASPxButton ID="btnLogout" runat="server" Text="Cerrar Sesión" Width="120px">
+                                            <ClientSideEvents Click="Judicial.LogoutButton_Click" />
+                                        </dx:ASPxButton>
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td style="border-left-style: double">
+                                        
+                                    </td>
+                                    <td>
+                                        Tema:<dx:ASPxComboBox runat="server" ID="ThemeSelector" CssClass="ThemeSelector" DataSourceID="ThemesDataSource" AutoPostBack="True"
+                                            ClientInstanceName="ClientThemeSelector" OnDataBound="ThemeSelector_DataBound">
+                                            <ClientSideEvents SelectedIndexChanged="Judicial.ClientThemeSelector_SelectedIndexChanged" />
+
+<ValidationSettings ErrorText="Valor inv&#225;lido">
+<RegularExpression ErrorText="Fall&#243; la validaci&#243;n de expresi&#243;n Regular"></RegularExpression>
+</ValidationSettings>
+                                        </dx:ASPxComboBox>
+                                        <asp:XmlDataSource runat="server" ID="ThemesDataSource" DataFile="~/App_Data/Themes.xml" XPath="//Theme" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <dx:ASPxMenu runat="server" ID="HeaderMenu" RenderMode="Lightweight" Width="100%" ItemAutoWidth="false" ClientInstanceName="ClientHeaderMenu" HorizontalAlign="Right">
+                                <Items>
+                                    <dx:MenuItem Text="File" Visible="False">
+                                        <Items>
+                                            <dx:MenuItem Text="New" Enabled="false" Image-SpriteProperties-CssClass="Sprite_New">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_New"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Open" Enabled="false" Image-SpriteProperties-CssClass="Sprite_Open">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Open"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Save as..." Enabled="false" Image-SpriteProperties-CssClass="Sprite_SaveAs">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_SaveAs"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Import" BeginGroup="True" Enabled="false" Image-SpriteProperties-CssClass="Sprite_Import">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Import"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Export" Enabled="false" Image-SpriteProperties-CssClass="Sprite_Export">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Export"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Show Preview" BeginGroup="True" Enabled="false" Image-SpriteProperties-CssClass="Sprite_ShowPreview">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_ShowPreview"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Print..." Enabled="false" Image-SpriteProperties-CssClass="Sprite_Print">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Print"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Exit" BeginGroup="True" Enabled="false" Image-SpriteProperties-CssClass="Sprite_Exit">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Exit"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                        </Items>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Edit" Visible="False">
+                                        <Items>
+                                            <dx:MenuItem Text="Cut" Enabled="false" Image-SpriteProperties-CssClass="Sprite_Cut">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Cut"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Copy" Enabled="false" Image-SpriteProperties-CssClass="Sprite_Copy">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Copy"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Paste" Enabled="false" Image-SpriteProperties-CssClass="Sprite_Paste">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Paste"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Delete" BeginGroup="True" Enabled="false" Image-SpriteProperties-CssClass="Sprite_Delete">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Delete"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Mark as read" BeginGroup="True" Enabled="false" Image-SpriteProperties-CssClass="Sprite_MarkAsRead">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_MarkAsRead"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Mark as unread" Enabled="false" Image-SpriteProperties-CssClass="Sprite_MarkAsUnread">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_MarkAsUnread"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                        </Items>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="View" Enabled="False" Visible="False" />
+                                    <dx:MenuItem Text="Go" Visible="False">
+                                        <Items>
+                                            <dx:MenuItem Text="Mail" NavigateUrl="~/Default.aspx" Image-SpriteProperties-CssClass="Sprite_Mail">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Mail"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Calendar" NavigateUrl="~/Calendar.aspx" Image-SpriteProperties-CssClass="Sprite_Calendar">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Calendar"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Contacts" NavigateUrl="~/Contacts.aspx" Image-SpriteProperties-CssClass="Sprite_Contacts">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Contacts"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Feeds" NavigateUrl="~/Feeds.aspx" Image-SpriteProperties-CssClass="Sprite_Feeds">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Feeds"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                        </Items>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Tools" Enabled="False" Visible="False" />
+                                    <dx:MenuItem Text="Actions" Enabled="False" Visible="False" />
+                                    <dx:MenuItem Text="Ayuda">
+                                        <Items>
+                                            <dx:MenuItem Text="Acerca" NavigateUrl="http://www.devexpress.com/Products/NET/Controls/ASP/" Target="_blank"
+                                                Image-SpriteProperties-CssClass="Sprite_Info">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Info"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Contacto" NavigateUrl="https://www.devexpress.com/ClientCenter/Purchase/" Target="_blank"
+                                                Image-SpriteProperties-CssClass="Sprite_Download">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_BuyNow"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Ayuda" NavigateUrl="https://www.devexpress.com/ClientCenter/Downloads/#Trials" Target="_blank"
+                                                Image-SpriteProperties-CssClass="Sprite_BuyNow">
+                                                <Image>
+                                                    <SpriteProperties CssClass="Sprite_Download"></SpriteProperties>
+                                                </Image>
+                                            </dx:MenuItem>
+                                        </Items>
+                                    </dx:MenuItem>
+                                </Items>
+                                <BorderLeft BorderWidth="0" />
+                                <BorderRight BorderWidth="0" />
+                                <BorderBottom BorderWidth="0" />
+                                <SubMenuStyle CssClass="HeaderSubMenu" />
+                            </dx:ASPxMenu>
+                        </dx:SplitterContentControl>
+                    </ContentCollection>
+                    <PaneStyle CssClass="HeaderPane">
+                        <BorderBottom BorderWidth="0" />
+                        <Paddings Padding="0" />
+                    </PaneStyle>
+                </dx:SplitterPane>
+                <dx:SplitterPane AllowResize="False" ShowSeparatorImage="False">
+                    <Panes>
+                        <dx:SplitterPane ShowCollapseBackwardButton="True" MinSize="150" MaxSize="500" Size="300" Visible="False">
+                            <Panes>
+                                <dx:SplitterPane ScrollBars="Auto" Name="SidePane">
+                                    <ContentCollection>
+                                        <dx:SplitterContentControl runat="server">
+                                            <asp:ContentPlaceHolder ID="SideHolder" runat="server" />
+                                        </dx:SplitterContentControl>
+                                    </ContentCollection>
+                                    <PaneStyle>
+                                        <BorderBottom BorderWidth="1" />
+                                        <Paddings Padding="0" />
+                                    </PaneStyle>
+                                </dx:SplitterPane>
+                                <dx:SplitterPane AllowResize="False" ShowSeparatorImage="False" Size="165" Name="CornerPane">
+                                    <PaneStyle>
+                                        <Paddings Padding="0" />
+                                    </PaneStyle>
+                                    <ContentCollection>
+                                        <dx:SplitterContentControl>
+                                            <dx:ASPxMenu runat="server" ID="CornerMenu" RenderMode="Lightweight" Width="100%" Orientation="Vertical"
+                                                ClientInstanceName="ClientCornerMenu" CssClass="CornerMenu" Height="20px">
+                                                <Border BorderWidth="0" />
+                                                <Items>
+                                                    <dx:MenuItem Text="Procesos Judiciales" NavigateUrl="~/Default.aspx" Image-SpriteProperties-CssClass="Menu_Menu1">
+                                                        <Image>
+                                                            <SpriteProperties CssClass="Menu_Menu1"></SpriteProperties>
+                                                        </Image>
+                                                    </dx:MenuItem>
+                                                    <dx:MenuItem Text="Información Judicial" NavigateUrl="~/Calendar.aspx" Image-SpriteProperties-CssClass="Menu_Menu2">
+                                                        <Image>
+                                                            <SpriteProperties CssClass="Menu_Menu2"></SpriteProperties>
+                                                        </Image>
+                                                    </dx:MenuItem>
+                                                    <dx:MenuItem Text="Entidades Judiciales" NavigateUrl="~/Contacts.aspx" Image-SpriteProperties-CssClass="Menu_Menu3">
+                                                        <Image>
+                                                            <SpriteProperties CssClass="Menu_Menu3"></SpriteProperties>
+                                                        </Image>
+                                                    </dx:MenuItem>
+                                                    <dx:MenuItem Text="Información General" NavigateUrl="~/Feeds.aspx" Image-SpriteProperties-CssClass="Menu_Menu4">
+                                                        <Image>
+                                                            <SpriteProperties CssClass="Menu_Menu4"></SpriteProperties>
+                                                        </Image>
+                                                    </dx:MenuItem>
+                                                </Items>
+                                            </dx:ASPxMenu>
+                                        </dx:SplitterContentControl>
+                                    </ContentCollection>
+                                </dx:SplitterPane>
+                            </Panes>
+                            <ContentCollection>
+                                <dx:SplitterContentControl runat="server" SupportsDisabledAttribute="True"></dx:SplitterContentControl>
+                            </ContentCollection>
+                        </dx:SplitterPane>
+                        <dx:SplitterPane Name="MainPane">
+                            <ContentCollection>
+                                <dx:SplitterContentControl runat="server">
+                                    <asp:ContentPlaceHolder ID="MainHolder" runat="server" />
+                                </dx:SplitterContentControl>
+                            </ContentCollection>
+                            <PaneStyle>
+                                <Border BorderWidth="0" />
+                                <Paddings Padding="0" />
+                            </PaneStyle>
+                        </dx:SplitterPane>
+                    </Panes>
+                    <Separator Visible="False" />
+                    <PaneStyle>
+                        <BorderBottom BorderWidth="0" />
+                    </PaneStyle>
+                    <ContentCollection>
+                        <dx:SplitterContentControl runat="server" SupportsDisabledAttribute="True"></dx:SplitterContentControl>
+                    </ContentCollection>
+                </dx:SplitterPane>
+            </Panes>
+            <ClientSideEvents Init="Judicial.LoadPage" />
+        </dx:ASPxSplitter>
+        <dx:ASPxPopupControl ID="pcLogin" runat="server" AllowDragging="True" CloseAction="None" EnableAnimation="False" FooterText="Ingrese sus datos para iniciar sesión." HeaderText="Iniciar Sesión - SIG-PJ.NET" Height="161px" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" RenderMode="Lightweight" ShowFooter="True" Width="312px" ClientInstanceName="PCLogin" Modal="True" ShowCloseButton="False">
+            <ModalBackgroundStyle BackColor="White" Opacity="100">
+            </ModalBackgroundStyle>
+            <ContentCollection>
+<dx:PopupControlContentControl runat="server" SupportsDisabledAttribute="True">
+    <table style="width:100%;">
+        <tr>
+            <td class="auto-style7">Usuario:</td>
+            <td class="auto-style4">
+                <dx:ASPxTextBox ID="teUsuario" runat="server" ClientInstanceName="TeUsuario" Width="100%">
+<ValidationSettings ErrorText="Valor inv&#225;lido">
+<RegularExpression ErrorText="Fall&#243; la validaci&#243;n de expresi&#243;n Regular"></RegularExpression>
+</ValidationSettings>
+                </dx:ASPxTextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style7">Contraseña:</td>
+            <td class="auto-style4">
+                <dx:ASPxTextBox ID="tePassword" runat="server" ClientInstanceName="TePassword" Width="100%" Password="True">
+<ValidationSettings ErrorText="Valor inv&#225;lido">
+<RegularExpression ErrorText="Fall&#243; la validaci&#243;n de expresi&#243;n Regular"></RegularExpression>
+</ValidationSettings>
+                </dx:ASPxTextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style5"></td>
+            <td class="auto-style6"></td>
+        </tr>
+        <tr>
+            <td align="left" colspan="2">
+                <dx:ASPxLabel ID="lbError" runat="server" ClientInstanceName="LBError" Font-Bold="True" ForeColor="Red" Text=" ">
+                </dx:ASPxLabel>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style7">&nbsp;</td>
+            <td align="right" class="auto-style4">
+                <dx:ASPxButton ID="btnAceptar" runat="server" OnClick="btnAceptar_Click" style="height: 25px" Text="Iniciar Sesión">
+                    <ClientSideEvents Click="Judicial.LoginButton_Click" />
+                </dx:ASPxButton>
+            </td>
+        </tr>
+    </table>
+                </dx:PopupControlContentControl>
+</ContentCollection>
+        </dx:ASPxPopupControl>
+    </form>
+</body>
+</html>

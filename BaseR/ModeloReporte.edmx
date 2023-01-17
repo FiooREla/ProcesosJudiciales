@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SIGCLINEWModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SIGCLINEWModel1StoreContainer">
+          <EntitySet Name="Reporte" EntityType="SIGCLINEWModel1.Store.Reporte" store:Type="Tables" Schema="Reporte" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="ReporteDetalle" EntityType="SIGCLINEWModel1.Store.ReporteDetalle" store:Type="Tables" Schema="Reporte" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <AssociationSet Name="fkReporteDetalle_Reporte" Association="SIGCLINEWModel1.Store.fkReporteDetalle_Reporte">
+            <End Role="Reporte" EntitySet="Reporte" />
+            <End Role="ReporteDetalle" EntitySet="ReporteDetalle" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Reporte">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Orden" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Codigo" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Query" Type="varchar(max)" />
+          <Property Name="ConfXml1" Type="varbinary(max)" />
+          <Property Name="ConfXml2" Type="varbinary(max)" />
+          <Property Name="Filtro" Type="bit" Nullable="false" />
+          <Property Name="FormFiltro" Type="varchar" MaxLength="500" />
+          <Property Name="MostrarPivot" Type="bit" Nullable="false" />
+          <Property Name="FiltroFecha" Type="bit" Nullable="false" />
+          <Property Name="ColumnFecha" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="ReporteDetalle">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDReporte" Type="int" Nullable="false" />
+          <Property Name="Numero" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="FieldName" Type="varchar" MaxLength="100" />
+          <Property Name="Caption" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="TipoInterno" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <Association Name="fkReporteDetalle_Reporte">
+          <End Role="Reporte" Type="SIGCLINEWModel1.Store.Reporte" Multiplicity="1" />
+          <End Role="ReporteDetalle" Type="SIGCLINEWModel1.Store.ReporteDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reporte">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ReporteDetalle">
+              <PropertyRef Name="IDReporte" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SisClinicaModel11" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="ReporteEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="Reporte" EntityType="SisClinicaModel11.Reporte" />
+          <EntitySet Name="ReporteDetalle" EntityType="SisClinicaModel11.ReporteDetalle" />
+          <AssociationSet Name="fkReporteDetalle_Reporte" Association="SisClinicaModel11.fkReporteDetalle_Reporte">
+            <End Role="Reporte" EntitySet="Reporte" />
+            <End Role="ReporteDetalle" EntitySet="ReporteDetalle" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Reporte">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Orden" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Codigo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Query" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="ConfXml1" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="ConfXml2" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="ReporteDetalle" Relationship="SisClinicaModel11.fkReporteDetalle_Reporte" FromRole="Reporte" ToRole="ReporteDetalle" />
+          <Property Type="Boolean" Name="Filtro" Nullable="false" />
+          <Property Type="String" Name="FormFiltro" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="MostrarPivot" Nullable="false" />
+          <Property Type="Boolean" Name="FiltroFecha" Nullable="false" />
+          <Property Type="String" Name="ColumnFecha" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ReporteDetalle">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="Int32" Name="IDReporte" Nullable="false" />
+          <Property Type="Int32" Name="Numero" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FieldName" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Caption" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TipoInterno" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Reporte" Relationship="SisClinicaModel11.fkReporteDetalle_Reporte" FromRole="ReporteDetalle" ToRole="Reporte" />
+        </EntityType>
+        <Association Name="fkReporteDetalle_Reporte">
+          <End Type="SisClinicaModel11.Reporte" Role="Reporte" Multiplicity="1" />
+          <End Type="SisClinicaModel11.ReporteDetalle" Role="ReporteDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reporte">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ReporteDetalle">
+              <PropertyRef Name="IDReporte" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SIGCLINEWModel1StoreContainer" CdmEntityContainer="ReporteEntities">
+          <EntitySetMapping Name="Reporte">
+            <EntityTypeMapping TypeName="SisClinicaModel11.Reporte">
+              <MappingFragment StoreEntitySet="Reporte">
+                <ScalarProperty Name="ColumnFecha" ColumnName="ColumnFecha" />
+                <ScalarProperty Name="FiltroFecha" ColumnName="FiltroFecha" />
+                <ScalarProperty Name="MostrarPivot" ColumnName="MostrarPivot" />
+                <ScalarProperty Name="FormFiltro" ColumnName="FormFiltro" />
+                <ScalarProperty Name="Filtro" ColumnName="Filtro" />
+                <ScalarProperty Name="ConfXml2" ColumnName="ConfXml2" />
+                <ScalarProperty Name="ConfXml1" ColumnName="ConfXml1" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReporteDetalle">
+            <EntityTypeMapping TypeName="SisClinicaModel11.ReporteDetalle">
+              <MappingFragment StoreEntitySet="ReporteDetalle">
+                <ScalarProperty Name="TipoInterno" ColumnName="TipoInterno" />
+                <ScalarProperty Name="Caption" ColumnName="Caption" />
+                <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="IDReporte" ColumnName="IDReporte" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram DiagramId="dbcc6c860b5a45ba9d6ebc8dd128be86" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="SisClinicaModel11.Reporte" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="SisClinicaModel11.ReporteDetalle" Width="1.5" PointX="2.375" PointY="0.5" />
+        <AssociationConnector Association="SisClinicaModel11.fkReporteDetalle_Reporte" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

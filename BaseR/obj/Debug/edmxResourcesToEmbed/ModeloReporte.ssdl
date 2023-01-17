@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SIGCLINEWModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SIGCLINEWModel1StoreContainer">
+    <EntitySet Name="Reporte" EntityType="SIGCLINEWModel1.Store.Reporte" store:Type="Tables" Schema="Reporte" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ReporteDetalle" EntityType="SIGCLINEWModel1.Store.ReporteDetalle" store:Type="Tables" Schema="Reporte" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <AssociationSet Name="fkReporteDetalle_Reporte" Association="SIGCLINEWModel1.Store.fkReporteDetalle_Reporte">
+      <End Role="Reporte" EntitySet="Reporte" />
+      <End Role="ReporteDetalle" EntitySet="ReporteDetalle" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Reporte">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Orden" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Codigo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Query" Type="varchar(max)" />
+    <Property Name="ConfXml1" Type="varbinary(max)" />
+    <Property Name="ConfXml2" Type="varbinary(max)" />
+    <Property Name="Filtro" Type="bit" Nullable="false" />
+    <Property Name="FormFiltro" Type="varchar" MaxLength="500" />
+    <Property Name="MostrarPivot" Type="bit" Nullable="false" />
+    <Property Name="FiltroFecha" Type="bit" Nullable="false" />
+    <Property Name="ColumnFecha" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ReporteDetalle">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDReporte" Type="int" Nullable="false" />
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FieldName" Type="varchar" MaxLength="100" />
+    <Property Name="Caption" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TipoInterno" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <Association Name="fkReporteDetalle_Reporte">
+    <End Role="Reporte" Type="SIGCLINEWModel1.Store.Reporte" Multiplicity="1" />
+    <End Role="ReporteDetalle" Type="SIGCLINEWModel1.Store.ReporteDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reporte">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ReporteDetalle">
+        <PropertyRef Name="IDReporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

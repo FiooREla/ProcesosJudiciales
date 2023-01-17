@@ -1,0 +1,330 @@
+.Sprite_Logo,
+.Sprite_Logo_Light,
+.Sprite_ContactsLarge,
+.Sprite_CalendarLarge,
+.Sprite_FeedsLarge,
+.Sprite_MailLarge,
+.Sprite_Frameworks,
+.Sprite_Drafts,
+.Sprite_Person,
+.Sprite_SentItems,
+.Sprite_IDE,
+.Sprite_Inbox,
+.Sprite_ASP,
+.Sprite_Announcements,
+.Sprite_New,
+.Sprite_MarkAsUnread,
+.Sprite_MarkAsRead,
+.Sprite_Attachment_Light,
+.Sprite_Mail,
+.Sprite_Attachment,
+.Sprite_Reply,
+.Sprite_SaveAs,
+.Sprite_ShowPreview,
+.Sprite_Open,
+.Sprite_Paste,
+.Sprite_Print,
+.Sprite_Export,
+.Sprite_Feeds,
+.Sprite_Copy,
+.Sprite_Exit,
+.Sprite_Delete,
+.Sprite_Download,
+.Sprite_Cut,
+.Sprite_Calendar,
+.Sprite_Info,
+.Sprite_BuyNow,
+.Sprite_Import,
+.Sprite_Forward,
+.Sprite_Contacts,
+.Sprite_Compose,
+.Sprite_SearchHover,
+.Sprite_Search
+{
+    background-image: url('sprite.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+.Sprite_Logo
+{
+    background-position: -1px -1px;
+    width: 244px;
+    height: 30px;
+}
+.Sprite_Logo_Light
+{
+    background-position: -1px -32px;
+    width: 244px;
+    height: 30px;
+}
+.Sprite_ContactsLarge
+{
+    background-position: -1px -63px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_CalendarLarge
+{
+    background-position: -34px -63px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_FeedsLarge
+{
+    background-position: -67px -63px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_MailLarge
+{
+    background-position: -100px -63px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_Frameworks
+{
+    background-position: -133px -63px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Drafts
+{
+    background-position: -155px -63px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Person
+{
+    background-position: -177px -63px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_SentItems
+{
+    background-position: -199px -63px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_IDE
+{
+    background-position: -221px -63px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Inbox
+{
+    background-position: -1px -96px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_ASP
+{
+    background-position: -23px -96px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Announcements
+{
+    background-position: -45px -96px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_New
+{
+    background-position: -67px -96px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_MarkAsUnread
+{
+    background-position: -84px -96px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_MarkAsRead
+{
+    background-position: -101px -96px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Attachment_Light
+{
+    background-position: -118px -96px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Mail
+{
+    background-position: -135px -96px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Attachment
+{
+    background-position: -152px -96px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Reply
+{
+    background-position: -169px -96px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_SaveAs
+{
+    background-position: -186px -96px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_ShowPreview
+{
+    background-position: -203px -96px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Open
+{
+    background-position: -220px -96px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Paste
+{
+    background-position: -1px -119px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Print
+{
+    background-position: -18px -119px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Export
+{
+    background-position: -35px -119px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Feeds
+{
+    background-position: -52px -119px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Copy
+{
+    background-position: -69px -119px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Exit
+{
+    background-position: -86px -119px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Delete
+{
+    background-position: -103px -119px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Download
+{
+    background-position: -120px -119px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Cut
+{
+    background-position: -137px -119px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Calendar
+{
+    background-position: -154px -119px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Info
+{
+    background-position: -171px -119px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_BuyNow
+{
+    background-position: -188px -119px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Import
+{
+    background-position: -205px -119px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Forward
+{
+    background-position: -222px -119px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Contacts
+{
+    background-position: -1px -136px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Compose
+{
+    background-position: -18px -136px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_SearchHover
+{
+    background-position: -35px -136px;
+    width: 13px;
+    height: 13px;
+}
+.Sprite_Search
+{
+    background-position: -49px -136px;
+    width: 13px;
+    height: 13px;
+}
+
+.Menu_Menu1,
+.Menu_Menu2,
+.Menu_Menu3,
+.Menu_Menu4
+{
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 32px;
+    height: 32px;    
+}
+
+.Menu_Menu1
+{    
+    background-image: url('/Content/Images/Menu/Menu1.png');
+}
+
+.Menu_Menu2
+{    
+    background-image: url('/Content/Images/Menu/Menu2.png');
+}
+
+.Menu_Menu3
+{    
+    background-image: url('/Content/Images/Menu/Menu3.png');
+}
+
+.Menu_Menu4
+{    
+    background-image: url('/Content/Images/Menu/Menu4.png');
+}

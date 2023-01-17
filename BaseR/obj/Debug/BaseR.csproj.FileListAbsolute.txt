@@ -1,0 +1,57 @@
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BIN\BaseR.dll.config
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BIN\BaseR.dll
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BIN\BaseR.pdb
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.csprojAssemblyReference.cache
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FConfiguracion.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FReporte.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FBaseFormV2.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FBaseModalV2.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FBaseReporte.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FBaseModal.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FBaseFormEdicion.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FBaseForm.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.Properties.Resources.resources
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.csproj.GenerateResource.cache
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.dll.licenses
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.csproj.CoreCompileInputs.cache
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.csproj.CopyComplete
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.dll
+F:\Documents\Documentos HP\Sistemas .NET\SIGPJ.NET\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.pdb
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BIN\BaseR.dll.config
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BIN\BaseR.dll
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BIN\BaseR.pdb
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FConfiguracion.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FReporte.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FBaseFormV2.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FBaseModalV2.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FBaseReporte.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FBaseModal.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FBaseFormEdicion.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.FBaseForm.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.Properties.Resources.resources
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.csproj.GenerateResource.cache
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.dll.licenses
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.csproj.CoreCompileInputs.cache
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.csproj.CopyComplete
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.dll
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.pdb
+C:\Users\51940\Documents\DATA IX\ELP\Code\SIGPJ.NET.GIT\BaseR\obj\Debug\BaseR.csproj.AssemblyReference.cache
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BIN\BaseR.dll.config
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BIN\BaseR.dll
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BIN\BaseR.pdb
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.csprojAssemblyReference.cache
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.FConfiguracion.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.FReporte.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.FBaseFormV2.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.FBaseModalV2.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.FBaseReporte.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.FBaseModal.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.FBaseFormEdicion.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.FBaseForm.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.Properties.Resources.resources
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.csproj.GenerateResource.cache
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.dll.licenses
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.csproj.CoreCompileInputs.cache
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.csproj.CopyComplete
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.dll
+C:\Fio\procesos judiciales\nuevo\SIGPJ.NET.GIT - Source\BaseR\obj\Debug\BaseR.pdb
